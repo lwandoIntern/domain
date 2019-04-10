@@ -1,6 +1,6 @@
 package Factory;
 
-import model.Book;
+import model.Author;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -8,20 +8,20 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class BookFactoryTest {
+public class AuthorFactoryTest {
 
-
-    private Book book;
+    private Author author;
     @Before
     public void setUp() throws Exception {
-        book = BookFactory.createBook("144444444","Nceba","Deseased","Fifth",2010);
+        author = AuthorFactory.createAuthor(1447,"John","Smith","18 Waxberry","0117149555");
     }
 
     @After
     public void tearDown() throws Exception {
     }
+
     @Test
-    public void createBook(){
-        Assert.assertEquals(book.getAuthor(),book.getAuthor());
+    public void createAuthor() {
+        Assert.assertEquals(author.getAddress(),author.getAddress());
     }
 }

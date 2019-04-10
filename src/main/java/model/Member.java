@@ -3,7 +3,7 @@ package model;
 public class Member {
     private String name,surname,address;
     private boolean owing;
-    private Long memberNumber;
+    private String memberNumber;
 
     private Member(){}
     public Member(Builder builder) {
@@ -30,16 +30,16 @@ public class Member {
         return owing;
     }
 
-    public Long getMemberNumber() {
+    public String getMemberNumber() {
         return memberNumber;
     }
 
     public static class Builder{
         private String name,surname,address;
         private boolean owing;
-        private Long memberNumber;
+        private String memberNumber;
 
-        public Builder memberNumber(Long value){
+        public Builder memberNumber(String value){
             this.memberNumber = value;
             return this;
         }
@@ -71,5 +71,16 @@ public class Member {
         public Member build(){
             return new Member(this);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", address='" + address + '\'' +
+                ", owing=" + owing +
+                ", memberNumber=" + memberNumber +
+                '}';
     }
 }
