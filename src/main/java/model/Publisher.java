@@ -1,72 +1,102 @@
 package model;
 
-public class Publisher {
-    private String id;
-    private String name,address,phone;
+import interfaces.Address;
+import interfaces.Contact;
+
+public class Publisher implements Contact, Address {
+    private Author author;
+    private Book book;
+    private String name,cell,tel,suburb,city,province;
+    private int zipCode;
 
     private Publisher(){}
     public Publisher(Builder builder){
-        this.id = builder.id;
         this.name = builder.name;
-        this.address = builder.address;
-        this.phone = builder.phone;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public static class Builder{
-        private String id;
-        private String name,address,phone;
-
-        public Builder id(String value){
-            this.id = value;
-            return this;
-        }
-        public Builder name(String value){
-            this.name = value;
-            return this;
-        }
-        public Builder address(String value){
-            this.address = value;
-            return this;
-        }
-        public Builder phone(String value){
-            this.phone = value;
-            return this;
-        }
-        public Builder copy(Publisher publisher){
-            this.id = publisher.id;
-            this.name = publisher.name;
-            this.address =publisher.address;
-            this.phone = publisher.phone;
-            return this;
-        }
-        public Publisher build(){
-            return new Publisher(this);
-        }
+        this.cell = builder.cellphone;
+        this.tel = builder.telephone;
+        this.zipCode = builder.zipCode;
+        this.suburb = builder.suburb;
+        this.city = builder.city;
+        this.province = builder.province;
     }
 
     @Override
-    public String toString() {
-        return "Publisher{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                ", phone='" + phone + '\'' +
-                '}';
+    public String getCellphone() {
+        return null;
+    }
+
+    @Override
+    public String getTelephone() {
+        return null;
+    }
+
+    @Override
+    public int getZipCode() {
+        return 0;
+    }
+
+    @Override
+    public String getSurbub() {
+        return null;
+    }
+
+    @Override
+    public String getCity() {
+        return null;
+    }
+
+    @Override
+    public String getProvince() {
+        return null;
+    }
+    public static class Builder {
+        private Author author;
+        private Book book;
+        private String name, surname, cellphone, telephone, city, suburb, province;
+        private int zipCode, numOfBooksWritten;
+
+        public Builder numOfBooksWritten(int v) {
+            this.numOfBooksWritten = v;
+            return this;
+        }
+
+        public Builder name(String value) {
+            this.name = value;
+            return this;
+        }
+
+        public Builder cellphone(String value) {
+            this.cellphone = value;
+            return this;
+        }
+
+        public Builder telephone(String v) {
+            this.telephone = v;
+            return this;
+        }
+
+        public Builder zipCode(int v) {
+            this.zipCode = v;
+            return this;
+        }
+
+        public Builder city(String a) {
+            this.city = a;
+            return this;
+        }
+
+        public Builder suburb(String c) {
+            this.suburb = c;
+            return this;
+        }
+
+        public Builder province(String x) {
+            this.province = x;
+            return this;
+        }
+
+        public Publisher build() {
+            return new Publisher(this);
+        }
     }
 }

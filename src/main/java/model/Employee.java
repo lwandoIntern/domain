@@ -4,13 +4,13 @@ import interfaces.Address;
 import interfaces.Contact;
 import interfaces.Names;
 
-public class Author implements Names, Contact, Address {
+public class Employee implements Names, Contact, Address {
 
     private String name,surname,cellphone,telephone,city,suburb,province;
-    private int zipCode,numOfBooksWritten;
+    private int zipCode;
 
-    private Author(){}
-    public Author(Builder builder){
+    private Employee(){}
+    public Employee(Builder builder){
         this.name = builder.name;
         this.surname = builder.surname;
         this.cellphone = builder.cellphone;
@@ -19,11 +19,8 @@ public class Author implements Names, Contact, Address {
         this.suburb = builder.suburb;
         this.city = builder.city;
         this.province = builder.province;
-        this.numOfBooksWritten = builder.numOfBooksWritten;
     }
-    public int getNumOfBooksWritten(){
-        return numOfBooksWritten;
-    }
+
     @Override
     public String getName() {
         return name;
@@ -65,12 +62,8 @@ public class Author implements Names, Contact, Address {
     }
     public static class Builder{
         private String name,surname,cellphone,telephone,city,suburb,province;
-        private int zipCode,numOfBooksWritten;
+        private int zipCode;
 
-        public Builder numOfBooksWritten(int v){
-            this.numOfBooksWritten = v;
-            return this;
-        }
         public Builder name(String value){
             this.name = value;
             return this;
@@ -103,14 +96,11 @@ public class Author implements Names, Contact, Address {
             this.province = x;
             return this;
         }
-        public Author build(){
-            return new Author(this);
-        }
     }
 
     @Override
     public String toString() {
-        return "Author{" +
+        return "Employee{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", cellphone='" + cellphone + '\'' +
@@ -119,7 +109,6 @@ public class Author implements Names, Contact, Address {
                 ", suburb='" + suburb + '\'' +
                 ", province='" + province + '\'' +
                 ", zipCode=" + zipCode +
-                ", numOfBooksWritten=" + numOfBooksWritten +
                 '}';
     }
 }
