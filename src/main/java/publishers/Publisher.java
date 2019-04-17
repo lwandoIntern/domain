@@ -1,13 +1,15 @@
-package model;
+package publishers;
 
+import book.Book;
 import interfaces.Address;
 import interfaces.Contact;
+import authors.Author;
 
 public class Publisher implements Contact, Address {
     private Author author;
     private Book book;
     private String name,cell,tel,suburb,city,province;
-    private int zipCode;
+    private int zipCode,numOfBooksWritten;
 
     private Publisher(){}
     public Publisher(Builder builder){
@@ -18,41 +20,47 @@ public class Publisher implements Contact, Address {
         this.suburb = builder.suburb;
         this.city = builder.city;
         this.province = builder.province;
+        this.author = builder.author;
+        this.book = builder.book;
+        this.numOfBooksWritten = builder.numOfBooksWritten;
     }
 
     @Override
     public String getCellphone() {
-        return null;
+        return cell;
     }
 
     @Override
     public String getTelephone() {
-        return null;
+        return tel;
     }
 
     @Override
     public int getZipCode() {
-        return 0;
+        return zipCode;
     }
 
     @Override
     public String getSurbub() {
-        return null;
+        return suburb;
     }
 
     @Override
     public String getCity() {
-        return null;
+        return city;
     }
 
     @Override
     public String getProvince() {
-        return null;
+        return province;
+    }
+    public int getNumOfBooksWritten(){
+        return numOfBooksWritten;
     }
     public static class Builder {
         private Author author;
         private Book book;
-        private String name, surname, cellphone, telephone, city, suburb, province;
+        private String name, cellphone, telephone, city, suburb, province;
         private int zipCode, numOfBooksWritten;
 
         public Builder numOfBooksWritten(int v) {
@@ -94,9 +102,45 @@ public class Publisher implements Contact, Address {
             this.province = x;
             return this;
         }
+        public Builder author(Author value){
+            this.author = value;
+            return this;
+        }
+        public Builder book(Book v){
+            this.book = v;
+            return this;
+        }
+        public Builder copy(Publisher publisher){
+            this.name = publisher.name;
+            this.cellphone = publisher.cell;
+            this.telephone = publisher.tel;
+            this.zipCode = publisher.zipCode;
+            this.suburb = publisher.suburb;
+            this.city = publisher.city;
+            this.province = publisher.province;
+            this.book = publisher.book;
+            this.author = publisher.author;
+            this.numOfBooksWritten = publisher.numOfBooksWritten;
+            return this;
+        }
 
         public Publisher build() {
             return new Publisher(this);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Publisher{" +
+                "author=" + author +
+                ", book=" + book +
+                ", name='" + name + '\'' +
+                ", cell='" + cell + '\'' +
+                ", tel='" + tel + '\'' +
+                ", suburb='" + suburb + '\'' +
+                ", city='" + city + '\'' +
+                ", province='" + province + '\'' +
+                ", zipCode=" + zipCode +
+                '}';
     }
 }

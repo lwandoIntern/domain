@@ -1,16 +1,17 @@
-package model;
+package employees;
 
 import interfaces.Address;
 import interfaces.Contact;
 import interfaces.Names;
 
-public class Author implements Names, Contact, Address {
+public class Employee implements Names, Contact, Address,Position {
 
-    private String name,surname,cellphone,telephone,city,suburb,province;
-    private int zipCode,numOfBooksWritten;
+    private String name,surname,cellphone,telephone,city,suburb,province,positionName;
+    private boolean hasSubordinates,hasSuperior;
+    private int zipCode;
 
-    private Author(){}
-    public Author(Builder builder){
+    private Employee(){}
+    public Employee(Builder builder){
         this.name = builder.name;
         this.surname = builder.surname;
         this.cellphone = builder.cellphone;
@@ -19,11 +20,11 @@ public class Author implements Names, Contact, Address {
         this.suburb = builder.suburb;
         this.city = builder.city;
         this.province = builder.province;
-        this.numOfBooksWritten = builder.numOfBooksWritten;
+        this.positionName = builder.positionName;
+        this.hasSubordinates = builder.hasSubordinates;
+        this.hasSuperior = builder.hasSuperior;
     }
-    public int getNumOfBooksWritten(){
-        return numOfBooksWritten;
-    }
+
     @Override
     public String getName() {
         return name;
@@ -63,14 +64,27 @@ public class Author implements Names, Contact, Address {
     public String getProvince() {
         return province;
     }
-    public static class Builder{
-        private String name,surname,cellphone,telephone,city,suburb,province;
-        private int zipCode,numOfBooksWritten;
 
-        public Builder numOfBooksWritten(int v){
-            this.numOfBooksWritten = v;
-            return this;
-        }
+    @Override
+    public String getPosition() {
+        return positionName;
+    }
+
+    @Override
+    public boolean isSuperior() {
+        return hasSuperior;
+    }
+
+    @Override
+    public boolean isSubordinates() {
+        return hasSubordinates;
+    }
+
+    public static class Builder{
+        private String name,surname,cellphone,telephone,city,suburb,province,positionName;
+        private boolean hasSuperior,hasSubordinates;
+        private int zipCode;
+
         public Builder name(String value){
             this.name = value;
             return this;
@@ -103,14 +117,40 @@ public class Author implements Names, Contact, Address {
             this.province = x;
             return this;
         }
-        public Author build(){
-            return new Author(this);
+        public Builder positionName(String val){
+            this.positionName = val;
+            return this;
+        }
+        public Builder hasSuperior(boolean v){
+            this.hasSuperior = v;
+            return this;
+        }
+        public Builder hasSubordinates(boolean v){
+            this.hasSubordinates = v;
+            return this;
+        }
+        public Builder copy(Employee employee){
+            this.name = employee.name;
+            this.surname = employee.surname;
+            this.cellphone = employee.cellphone;
+            this.telephone = employee.telephone;
+            this.zipCode = employee.zipCode;
+            this.suburb = employee.suburb;
+            this.city = employee.city;
+            this.province = employee.province;
+            this.hasSuperior = employee.hasSuperior;
+            this.positionName = employee.positionName;
+            this.hasSubordinates = employee.hasSubordinates;
+            return this;
+        }
+        public Employee build(){
+            return new Employee(this);
         }
     }
 
     @Override
     public String toString() {
-        return "Author{" +
+        return "Employee{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", cellphone='" + cellphone + '\'' +
@@ -119,7 +159,6 @@ public class Author implements Names, Contact, Address {
                 ", suburb='" + suburb + '\'' +
                 ", province='" + province + '\'' +
                 ", zipCode=" + zipCode +
-                ", numOfBooksWritten=" + numOfBooksWritten +
                 '}';
     }
 }

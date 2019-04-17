@@ -1,14 +1,20 @@
 package Factory;
 
-import model.Publisher;
+import authors.Author;
+import book.Book;
+import publishers.Publisher;
 
 public class PublisherFactory {
-    public static Publisher createPublisher(String id,String name,String address,String phone){
+    public static Publisher createPublisher(Author author, Book book,String name,String tel,int zip,String suburb,String city,String province){
         return new Publisher.Builder()
-                .id(id)
+                .author(author)
+                .book(book)
                 .name(name)
-                .address(address)
-                .phone(phone)
+                .telephone(tel)
+                .zipCode(zip)
+                .suburb(suburb)
+                .city(city)
+                .province(province)
                 .build();
     }
 }

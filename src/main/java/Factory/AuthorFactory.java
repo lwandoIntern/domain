@@ -1,15 +1,20 @@
 package Factory;
 
-import model.Author;
+import authors.Author;
 
 public class AuthorFactory {
-    public static Author createAuthor(int id, String name, String lastName, String address,String phone){
+    public static Author createAuthor(String name, String surname, String cell, String tell, int zip, String suburb,
+                                      String city, String province,int numOfBooks){
         return new Author.Builder()
-                .authId(id)
                 .name(name)
-                .address(address)
-                .lastName(lastName)
-                .phone(phone)
+                .surname(surname)
+                .cellphone(cell)
+                .telephone(tell)
+                .zipCode(zip)
+                .suburb(suburb)
+                .city(city)
+                .province(province)
+                .numOfBooksWritten(numOfBooks)
                 .build();
     }
 }

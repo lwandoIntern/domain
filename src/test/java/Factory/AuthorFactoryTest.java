@@ -1,7 +1,6 @@
 package Factory;
 
-import model.Author;
-import org.junit.After;
+import authors.Author;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,15 +12,12 @@ public class AuthorFactoryTest {
     private Author author;
     @Before
     public void setUp() throws Exception {
-        author = AuthorFactory.createAuthor(1447,"John","Smith","18 Waxberry","0117149555");
-    }
-
-    @After
-    public void tearDown() throws Exception {
+        author = AuthorFactory.createAuthor("James","Bond",null,null,7441,"Mil","CPT","WC",
+                12);
     }
 
     @Test
     public void createAuthor() {
-        Assert.assertEquals(author.getAddress(),author.getAddress());
+        Assert.assertNotNull(author);
     }
 }

@@ -1,16 +1,16 @@
-package model;
+package authors;
 
 import interfaces.Address;
 import interfaces.Contact;
 import interfaces.Names;
 
-public class Employee implements Names, Contact, Address {
+public class Author implements Names, Contact, Address {
 
     private String name,surname,cellphone,telephone,city,suburb,province;
-    private int zipCode;
+    private int zipCode,numOfBooksWritten;
 
-    private Employee(){}
-    public Employee(Builder builder){
+    private Author(){}
+    public Author(Builder builder){
         this.name = builder.name;
         this.surname = builder.surname;
         this.cellphone = builder.cellphone;
@@ -19,8 +19,11 @@ public class Employee implements Names, Contact, Address {
         this.suburb = builder.suburb;
         this.city = builder.city;
         this.province = builder.province;
+        this.numOfBooksWritten = builder.numOfBooksWritten;
     }
-
+    public int getNumOfBooksWritten(){
+        return numOfBooksWritten;
+    }
     @Override
     public String getName() {
         return name;
@@ -62,8 +65,12 @@ public class Employee implements Names, Contact, Address {
     }
     public static class Builder{
         private String name,surname,cellphone,telephone,city,suburb,province;
-        private int zipCode;
+        private int zipCode,numOfBooksWritten;
 
+        public Builder numOfBooksWritten(int v){
+            this.numOfBooksWritten = v;
+            return this;
+        }
         public Builder name(String value){
             this.name = value;
             return this;
@@ -96,11 +103,25 @@ public class Employee implements Names, Contact, Address {
             this.province = x;
             return this;
         }
+        public Builder copy(Author author){
+            this.name = author.name;
+            this.surname = author.surname;
+            this.cellphone = author.cellphone;
+            this.telephone = author.telephone;
+            this.zipCode = author.zipCode;
+            this.suburb = author.suburb;
+            this.city = author.city;
+            this.province = author.province;
+            return this;
+        }
+        public Author build(){
+            return new Author(this);
+        }
     }
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "Author{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", cellphone='" + cellphone + '\'' +
@@ -109,6 +130,7 @@ public class Employee implements Names, Contact, Address {
                 ", suburb='" + suburb + '\'' +
                 ", province='" + province + '\'' +
                 ", zipCode=" + zipCode +
+                ", numOfBooksWritten=" + numOfBooksWritten +
                 '}';
     }
 }
