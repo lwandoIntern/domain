@@ -11,3 +11,4 @@ The Admin can also manipulate data relating to the librarian but cannot touch an
 library members. A registration form is given to all new members,admin and librarians.
 
 This system is for a recently constructed library in my community.
+![](domain%20class%20diagram.PNG)
