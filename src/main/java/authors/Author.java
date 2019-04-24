@@ -4,13 +4,16 @@ import interfaces.Address;
 import interfaces.Contact;
 import interfaces.Names;
 
+import java.util.Objects;
+
 public class Author implements Names, Contact, Address {
 
-    private String name,surname,cellphone,telephone,city,suburb,province;
+    private String authId,name,surname,cellphone,telephone,city,suburb,province;
     private int zipCode,numOfBooksWritten;
 
     private Author(){}
     public Author(Builder builder){
+        this.authId = builder.authId;
         this.name = builder.name;
         this.surname = builder.surname;
         this.cellphone = builder.cellphone;
@@ -21,6 +24,11 @@ public class Author implements Names, Contact, Address {
         this.province = builder.province;
         this.numOfBooksWritten = builder.numOfBooksWritten;
     }
+
+    public String getAuthId() {
+        return authId;
+    }
+
     public int getNumOfBooksWritten(){
         return numOfBooksWritten;
     }
@@ -64,9 +72,13 @@ public class Author implements Names, Contact, Address {
         return province;
     }
     public static class Builder{
-        private String name,surname,cellphone,telephone,city,suburb,province;
+        private String authId,name,surname,cellphone,telephone,city,suburb,province;
         private int zipCode,numOfBooksWritten;
 
+        public Builder authId(String value){
+            this.authId = value;
+            return this;
+        }
         public Builder numOfBooksWritten(int v){
             this.numOfBooksWritten = v;
             return this;
@@ -132,5 +144,18 @@ public class Author implements Names, Contact, Address {
                 ", zipCode=" + zipCode +
                 ", numOfBooksWritten=" + numOfBooksWritten +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return authId.equals(author.authId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(authId);
     }
 }

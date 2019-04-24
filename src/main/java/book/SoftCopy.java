@@ -27,4 +27,6 @@ public class SoftCopy extends Book{
             return new SoftCopy(this);
         }
     }
+
+
 }
