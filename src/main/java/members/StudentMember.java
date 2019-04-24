@@ -18,10 +18,6 @@ public class StudentMember extends Member{
             this.borrowingAmountAllowed = val;
             return this;
         }
-        public Builder copy(StudentMember student){
-            this.borrowingAmountAllowed = student.borrowingAmountAllowed;
-            return this;
-        }
         public StudentMember build(){
             return new StudentMember(this);
         }

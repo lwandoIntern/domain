@@ -4,12 +4,20 @@ import interfaces.Address;
 import interfaces.Contact;
 import interfaces.Names;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
+
+@Entity
 public class Member implements Names, Contact, Address {
+
+    @Id private String memberId;
     private String name,surname,cellphone,telephone,suburb,city,province;
     private int zipCode;
 
     private Member(){}
     public Member(Builder builder){
+        this.memberId = builder.memberId;
         this.name = builder.name;
         this.suburb = builder.suburb;
         this.surname = builder.surname;
@@ -19,6 +27,11 @@ public class Member implements Names, Contact, Address {
         this.province = builder.province;
         this.zipCode = builder.zipCode;
     }
+
+    public String getMemberId() {
+        return memberId;
+    }
+
     @Override
     public String getName() {
         return null;
@@ -60,8 +73,14 @@ public class Member implements Names, Contact, Address {
     }
 
     public static class Builder{
+        private String memberId;
         private String name,surname,cellphone,telephone,suburb,city,province;
         private int zipCode;
+
+        public Builder memberId(String id){
+            this.memberId = memberId;
+            return this;
+        }
         public Builder name(String value){
             this.name = value;
             return this;
@@ -94,17 +113,6 @@ public class Member implements Names, Contact, Address {
             this.province = prov;
             return this;
         }
-        public Builder copy(Member member){
-            this.name = member.name;
-            this.suburb = member.suburb;
-            this.surname = member.surname;
-            this.cellphone = member.cellphone;
-            this.telephone = member.telephone;
-            this.city =member.city;
-            this.province = member.province;
-            this.zipCode = member.zipCode;
-            return this;
-        }
         public Member build(){
             return new Member(this);
         }
@@ -113,7 +121,8 @@ public class Member implements Names, Contact, Address {
     @Override
     public String toString() {
         return "Member{" +
-                "name='" + name + '\'' +
+                "memberId='" + memberId + '\'' +
+                ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", cellphone='" + cellphone + '\'' +
                 ", telephone='" + telephone + '\'' +
@@ -122,5 +131,18 @@ public class Member implements Names, Contact, Address {
                 ", province='" + province + '\'' +
                 ", zipCode=" + zipCode +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Member member = (Member) o;
+        return memberId.equals(member.memberId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(memberId);
     }
 }

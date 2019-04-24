@@ -4,11 +4,15 @@ import interfaces.Address;
 import interfaces.Contact;
 import interfaces.Names;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
-
+@Entity
 public class Author implements Names, Contact, Address {
 
-    private String authId,name,surname,cellphone,telephone,city,suburb,province;
+    @Id
+    private String authId;
+    private String name,surname,cellphone,telephone,city,suburb,province;
     private int zipCode,numOfBooksWritten;
 
     private Author(){}
@@ -115,7 +119,7 @@ public class Author implements Names, Contact, Address {
             this.province = x;
             return this;
         }
-        public Builder copy(Author author){
+        /*public Builder copy(Author author){
             this.name = author.name;
             this.surname = author.surname;
             this.cellphone = author.cellphone;
@@ -125,7 +129,7 @@ public class Author implements Names, Contact, Address {
             this.city = author.city;
             this.province = author.province;
             return this;
-        }
+        }*/
         public Author build(){
             return new Author(this);
         }

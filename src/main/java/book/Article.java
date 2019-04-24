@@ -1,5 +1,6 @@
 package book;
 
+
 public class Article extends Book{
     private String datePublished;
     private boolean downloadable;
@@ -27,11 +28,6 @@ public class Article extends Book{
         }
         public Builder downloadable(boolean val){
             this.downloadable = val;
-            return this;
-        }
-        public Builder copy(Article article){
-            this.datePublished = article.datePublished;
-            this.downloadable = article.downloadable;
             return this;
         }
         public Article build(){

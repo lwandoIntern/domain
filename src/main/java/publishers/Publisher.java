@@ -5,9 +5,16 @@ import interfaces.Address;
 import interfaces.Contact;
 import authors.Author;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
+
+@Entity
 public class Publisher implements Contact, Address {
     private Author author;
     private Book book;
+    @Id
+    private String publishId;
     private String name,cell,tel,suburb,city,province;
     private int zipCode,numOfBooksWritten;
 
@@ -24,7 +31,9 @@ public class Publisher implements Contact, Address {
         this.book = builder.book;
         this.numOfBooksWritten = builder.numOfBooksWritten;
     }
-
+    public String getPublishId() {
+        return publishId;
+    }
     @Override
     public String getCellphone() {
         return cell;
@@ -60,9 +69,14 @@ public class Publisher implements Contact, Address {
     public static class Builder {
         private Author author;
         private Book book;
+        private String publishId;
         private String name, cellphone, telephone, city, suburb, province;
         private int zipCode, numOfBooksWritten;
 
+        public Builder publishedId(String id){
+            this.publishId = id;
+            return this;
+        }
         public Builder numOfBooksWritten(int v) {
             this.numOfBooksWritten = v;
             return this;
@@ -110,20 +124,6 @@ public class Publisher implements Contact, Address {
             this.book = v;
             return this;
         }
-        public Builder copy(Publisher publisher){
-            this.name = publisher.name;
-            this.cellphone = publisher.cell;
-            this.telephone = publisher.tel;
-            this.zipCode = publisher.zipCode;
-            this.suburb = publisher.suburb;
-            this.city = publisher.city;
-            this.province = publisher.province;
-            this.book = publisher.book;
-            this.author = publisher.author;
-            this.numOfBooksWritten = publisher.numOfBooksWritten;
-            return this;
-        }
-
         public Publisher build() {
             return new Publisher(this);
         }
@@ -134,6 +134,7 @@ public class Publisher implements Contact, Address {
         return "Publisher{" +
                 "author=" + author +
                 ", book=" + book +
+                ", publishId='" + publishId + '\'' +
                 ", name='" + name + '\'' +
                 ", cell='" + cell + '\'' +
                 ", tel='" + tel + '\'' +
@@ -141,6 +142,20 @@ public class Publisher implements Contact, Address {
                 ", city='" + city + '\'' +
                 ", province='" + province + '\'' +
                 ", zipCode=" + zipCode +
+                ", numOfBooksWritten=" + numOfBooksWritten +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Publisher publisher = (Publisher) o;
+        return author.equals(publisher.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(author);
     }
 }

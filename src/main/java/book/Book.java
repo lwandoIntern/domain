@@ -3,8 +3,16 @@ package book;
 import authors.Author;
 import publishers.Publisher;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
+
+
+@Entity
 public class Book {
-    private int isbnNum,yearPublished;
+    @Id
+    private String isbnNum;
+    private int yearPublished;
     private String title;
     private Author author;
     private Publisher publisher;
@@ -20,7 +28,7 @@ public class Book {
         this.category = builder.category;
     }
 
-    public int getIsbnNum() {
+    public String getIsbnNum() {
         return isbnNum;
     }
 
@@ -45,13 +53,14 @@ public class Book {
     }
 
     public static class Builder{
-        private int isbnNum,yearPublished;
+        public String isbnNum;
+        private int yearPublished;
         private String title;
         private Author author;
         private Publisher publisher;
         private String category;
 
-        public Builder isbnNum(int num){
+        public Builder isbnNum(String num){
             this.isbnNum = num;
             return this;
         }
@@ -75,15 +84,6 @@ public class Book {
             this.category = v;
             return this;
         }
-        public Builder copy(Book book){
-            this.isbnNum = book.isbnNum;
-            this.yearPublished = book.yearPublished;
-            this.title = book.title;
-            this.author = book.author;
-            this.publisher = book.publisher;
-            this.category = book.category;
-            return this;
-        }
         public Book build(){
             return new Book(this);
         }
@@ -92,12 +92,25 @@ public class Book {
     @Override
     public String toString() {
         return "Book{" +
-                "isbnNum=" + isbnNum +
+                "isbnNum='" + isbnNum + '\'' +
                 ", yearPublished=" + yearPublished +
                 ", title='" + title + '\'' +
                 ", author=" + author +
                 ", publisher=" + publisher +
                 ", category='" + category + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return isbnNum.equals(book.isbnNum);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(isbnNum);
     }
 }

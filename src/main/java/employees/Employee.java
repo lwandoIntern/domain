@@ -129,20 +129,6 @@ public class Employee implements Names, Contact, Address,Position {
             this.hasSubordinates = v;
             return this;
         }
-        public Builder copy(Employee employee){
-            this.name = employee.name;
-            this.surname = employee.surname;
-            this.cellphone = employee.cellphone;
-            this.telephone = employee.telephone;
-            this.zipCode = employee.zipCode;
-            this.suburb = employee.suburb;
-            this.city = employee.city;
-            this.province = employee.province;
-            this.hasSuperior = employee.hasSuperior;
-            this.positionName = employee.positionName;
-            this.hasSubordinates = employee.hasSubordinates;
-            return this;
-        }
         public Employee build(){
             return new Employee(this);
         }
