@@ -4,6 +4,7 @@ import authors.Author;
 import za.ac.cput.domain.repository.AuthorRepository;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class AuthorRepositoryImpl implements AuthorRepository {
@@ -22,7 +23,9 @@ public class AuthorRepositoryImpl implements AuthorRepository {
 
     @Override
     public Set<Author> getAll() {
-        return null;
+        //List all authors
+        repository.getAll().forEach(authorSet::add);
+        return authorSet;
     }
 
     @Override
@@ -33,16 +36,22 @@ public class AuthorRepositoryImpl implements AuthorRepository {
 
     @Override
     public Author read(Author author) {
+
         return null;
     }
 
     @Override
     public Author update(Author author) {
+        Iterator<Author> iterable = authorSet.iterator();
+
+        while (iterable.hasNext()){
+            iterable.next();
+        }
         return null;
     }
 
     @Override
     public void delete(String s) {
-
+        authorSet.removeIf(t ->t.getAuthId().equals(s));
     }
 }
