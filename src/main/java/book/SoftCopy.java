@@ -29,35 +29,35 @@ public class SoftCopy implements Book{
         private Publisher publisher;
         private int yearPublished;
 
-        SoftCopyBuilder isbnNum(String id){
+        public SoftCopyBuilder isbnNum(String id){
             this.isbnNum = id;
             return this;
         }
-        SoftCopyBuilder title(String tit){
+        public SoftCopyBuilder title(String tit){
             this.title = tit;
             return this;
         }
-        SoftCopyBuilder category(String cat){
+        public SoftCopyBuilder category(String cat){
             this.category = cat;
             return this;
         }
-        SoftCopyBuilder author(Author author){
+        public SoftCopyBuilder author(Author author){
             this.author = author;
             return this;
         }
-        SoftCopyBuilder publisher(Publisher publisher){
+        public SoftCopyBuilder publisher(Publisher publisher){
             this.publisher = publisher;
             return this;
         }
-        SoftCopyBuilder yearPublished(int yearPublished){
+        public SoftCopyBuilder yearPublished(int yearPublished){
             this.yearPublished = yearPublished;
             return this;
         }
-        SoftCopyBuilder downloadable(boolean isDownloadable){
+        public SoftCopyBuilder downloadable(boolean isDownloadable){
             this.downloadable = isDownloadable;
             return this;
         }
-        SoftCopy build(){
+        public SoftCopy build(){
             return new SoftCopy(this);
         }
     }

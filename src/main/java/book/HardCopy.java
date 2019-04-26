@@ -31,39 +31,39 @@ public class HardCopy implements Book{
         private Publisher publisher;
         private int yearPublished;
 
-        Builder isbnNum(String id){
+         public Builder isbnNum(String id){
             this.isbnNum = id;
             return this;
         }
-        Builder title(String tit){
+        public Builder title(String tit){
             this.title = tit;
             return this;
         }
-        Builder category(String cat){
+        public Builder category(String cat){
             this.category = cat;
             return this;
         }
-        Builder condition(String condition){
+        public Builder condition(String condition){
             this.condition = condition;
             return this;
         }
-        Builder author(Author author){
+        public Builder author(Author author){
             this.author = author;
             return this;
         }
-        Builder publisher(Publisher publisher){
+        public Builder publisher(Publisher publisher){
             this.publisher = publisher;
             return this;
         }
-        Builder availableForLoan(boolean loan){
+        public Builder availableForLoan(boolean loan){
             this.availableForLoan = loan;
             return this;
         }
-        Builder yearPublished(int yearPublished){
+        public Builder yearPublished(int yearPublished){
             this.yearPublished = yearPublished;
             return this;
         }
-        HardCopy build(){
+        public HardCopy build(){
             return new HardCopy(this);
         }
     }

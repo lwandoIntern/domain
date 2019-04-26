@@ -2,92 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d9e7066-4dab-475d-939f-ece112913893" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/book_repository/BookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/book_repository/impl/BookRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/book/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/book/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/book/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/book/BookInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Factory/SoftCopyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/SoftCopyFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/book/HardCopy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/book/HardCopy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/book/SoftCopy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/book/SoftCopy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/AdminFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/AdminFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/AdminFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/ArticleFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/ArticleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/ArticleFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/AuthorFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/AuthorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/AuthorFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/BookListFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/BookListFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/BookListFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/BorrowFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/BorrowFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/BorrowFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/ForgotPasswordFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/ForgotPasswordFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/ForgotPasswordFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/HardCopyFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/HardCopyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/HardCopyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/LibrarianFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/LibrarianFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/LibrarianFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/ListOfPublishersFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/ListOfPublishersFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/ListOfPublishersFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/LoginFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/LoginFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/LoginFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/ManagerFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/ManagerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/ManagerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/MemberListFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/MemberListFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/MemberListFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/OutstandingBooksFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/OutstandingBooksFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/OutstandingBooksFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/PublisherFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/PublisherFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/PublisherFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/RegisterFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/RegisterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/RegisterFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/RegularMemberFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/RegularMemberFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/RegularMemberFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/ReturnFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/ReturnFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/ReturnFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/SoftCopyFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/SoftCopyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/SoftCopyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/StudentMemberFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/StudentMemberFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Factory/StudentMemberFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/AuthorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/authorRepository/AuthorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/impl/AuthorRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/authorRepository/impl/AuthorRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/AdminFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/AdminFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/AdminFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/ArticleFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/ArticleFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/ArticleFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/AuthorFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/AuthorFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/AuthorFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/BookListFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/BookListFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/BookListFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/BorrowFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/BorrowFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/BorrowFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/ForgotPasswordFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/ForgotPasswordFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/ForgotPasswordFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/HardCopyFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/HardCopyFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/HardCopyFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/LibrarianFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/LibrarianFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/LibrarianFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/ListOfPublishersFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/ListOfPublishersFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/ListOfPublishersFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/LoginFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/LoginFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/LoginFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/ManagerFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/ManagerFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/ManagerFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/MemberListFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/MemberListFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/MemberListFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/OutstandingBooksFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/OutstandingBooksFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/OutstandingBooksFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/PublisherFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/PublisherFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/PublisherFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/RegisterFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/RegisterFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/RegisterFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/RegularMemberFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/RegularMemberFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/RegularMemberFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/ReturnFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/ReturnFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/ReturnFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/SoftCopyFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/SoftCopyFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/SoftCopyFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/StudentMemberFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/Factory/StudentMemberFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Factory/StudentMemberFactoryTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -125,17 +43,17 @@
                 <element signature="e#429#430#0" expanded="true" />
                 <element signature="e#431#432#0" expanded="true" />
                 <element signature="e#458#459#0" expanded="true" />
-                <element signature="e#1260#1261#0" expanded="true" />
+                <element signature="e#1244#1245#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Factory/HardCopyFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="119">
+              <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -152,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Factory/SoftCopyFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            <state relative-caret-position="102">
+              <caret line="6" column="55" lean-forward="true" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -167,12 +85,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/book/HardCopy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="398">
+              <caret line="65" column="15" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3487#3488#0" expanded="true" />
                 <element signature="e#3540#3541#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/book/SoftCopy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3092#3093#0" expanded="true" />
+                <element signature="e#3141#3142#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -214,7 +146,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Factory/ReturnFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/Factory/BookListFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/Factory/ArticleFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Factory/SoftCopyFactory.java" />
         <option value="$PROJECT_DIR$/src/test/java/Factory/AdminFactoryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Factory/BookListFactoryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Factory/ArticleFactoryTest.java" />
@@ -251,14 +182,15 @@
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/book_repository/BookRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/authorRepository/AuthorRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/book/Book.java" />
-        <option value="$PROJECT_DIR$/src/main/java/book/SoftCopy.java" />
         <option value="$PROJECT_DIR$/src/main/java/book/Article.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/book_repository/BookRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/book_repository/impl/BookRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/SoftCopyFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/HardCopyFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/book/HardCopy.java" />
         <option value="$PROJECT_DIR$/src/main/java/Factory/HardCopyFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/book/HardCopy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Factory/SoftCopyFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/book/SoftCopy.java" />
       </list>
     </option>
   </component>
@@ -342,7 +274,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556282954425" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556284047572" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
@@ -353,6 +285,7 @@
       <recent name="Factory" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
       <recent name="za.ac.cput.domain" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -474,7 +407,7 @@
       <workItem from="1556087891196" duration="4380000" />
       <workItem from="1556094693364" duration="1110000" />
       <workItem from="1556182893949" duration="3655000" />
-      <workItem from="1556272791245" duration="8244000" />
+      <workItem from="1556272791245" duration="8549000" />
     </task>
     <task id="LOCAL-00001" summary="Updating the domain">
       <created>1555436128574</created>
@@ -490,7 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555462727057</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="alterations">
+      <created>1556284099298</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556284099308</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -526,10 +466,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49847000" />
+    <option name="totallyTimeSpent" value="50152000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24432677" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -607,7 +548,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updating the domain" />
     <MESSAGE value="25 classes with factories and tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="25 classes with factories and tests" />
+    <MESSAGE value="alterations" />
+    <option name="LAST_COMMIT_MESSAGE" value="alterations" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/Factory/BorrowFactory.java">
@@ -1039,18 +981,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/book/SoftCopy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3092#3093#0" expanded="true" />
-            <element signature="e#3141#3142#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/Repository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1088,6 +1018,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Factory/AuthorFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/book_repository/impl/BookRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
@@ -1098,15 +1035,25 @@
             <element signature="e#429#430#0" expanded="true" />
             <element signature="e#431#432#0" expanded="true" />
             <element signature="e#458#459#0" expanded="true" />
-            <element signature="e#1260#1261#0" expanded="true" />
+            <element signature="e#1244#1245#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Factory/HardCopyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/book/HardCopy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="398">
+          <caret line="65" column="15" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3487#3488#0" expanded="true" />
@@ -1115,27 +1062,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Factory/SoftCopyFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/book/SoftCopy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        <state relative-caret-position="357">
+          <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3092#3093#0" expanded="true" />
+            <element signature="e#3141#3142#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Factory/AuthorFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Factory/SoftCopyFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Factory/HardCopyFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="102">
+          <caret line="6" column="55" lean-forward="true" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
