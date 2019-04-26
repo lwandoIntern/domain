@@ -2,10 +2,17 @@ package za.ac.cput.domain.repository.book_repository.impl;
 
 
 import book.Book;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 import za.ac.cput.domain.repository.book_repository.BookRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class BookRepositoryImpl implements BookRepository {
     private static BookRepositoryImpl repository = null;
@@ -29,23 +36,23 @@ public class BookRepositoryImpl implements BookRepository {
 
     @Override
     public Book create(Book book) {
-        this.books.add(book);
-        return book;
+        //new book
+        //this.books.add(book);
+        repository.books.add(book);
+        int i = books.indexOf(book);
+        return books.get(i);
     }
 
     @Override
     public Book read(Book book) {
-        return book;
+        int i = books.indexOf(book);
+        return books.get(i);
     }
 
     @Override
     public Book update(Book book) {
-        for (int i = 0; i < books.size(); i++) {
-            if(books.get(i).getIsbnNum().equals(book.getIsbnNum())){
-
-            }
-        }
-        return book;
+        int booking = books.indexOf(book);
+        return repository.books.get(booking);
     }
 
     @Override
