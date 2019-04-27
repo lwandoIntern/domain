@@ -36,16 +36,22 @@ public class AuthorRepositoryImpl implements AuthorRepository {
 
     @Override
     public Author read(Author author) {
-
+        if (repository.authorSet.contains(author)){
+            for(Author author1:authorSet){
+                if (author1.equals(author))
+                    return author1;
+            }
+        }
         return null;
     }
 
     @Override
     public Author update(Author author) {
-        Iterator<Author> iterable = authorSet.iterator();
-
-        while (iterable.hasNext()){
-            iterable.next();
+        if (authorSet.contains(author)){
+            for (Author au: authorSet) {
+                if (au.equals(author))
+                    return au;
+            }
         }
         return null;
     }

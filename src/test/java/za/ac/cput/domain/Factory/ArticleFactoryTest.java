@@ -14,7 +14,7 @@ public class ArticleFactoryTest {
     private Publisher publisher;
     @Before
     public void setUp() throws Exception {
-        article = ArticleFactory.createArticle(1,2010,"Dooms Day 12",author,publisher,"Horror");
+        article = ArticleFactory.createArticle("1",2010,"Dooms Day 12",author,publisher,"Horror");
     }
 
     @Test

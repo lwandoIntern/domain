@@ -63,6 +63,9 @@ public class Article implements Book{
             this.yearPublished = yearPublished;
             return this;
         }
+        public Article build(){
+            return new Article(this);
+        }
     }
     @Override
     public String getIsbnNum() {

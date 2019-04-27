@@ -1,8 +1,8 @@
 package za.ac.cput.domain.repository.publisherRepository.impl;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+
 import publishers.Publisher;
-import za.ac.cput.domain.repository.Repository;
+
 import za.ac.cput.domain.repository.publisherRepository.PublisherRepository;
 
 import java.util.HashMap;

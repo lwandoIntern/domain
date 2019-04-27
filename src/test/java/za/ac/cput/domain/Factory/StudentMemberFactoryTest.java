@@ -15,6 +15,6 @@ public class StudentMemberFactoryTest {
 
     @Test
     public void createStudentMember() {
-        Assert.assertEquals(studentMember.getBorrowingAmountAllowed(),studentMember.getBorrowingAmountAllowed());
+        Assert.assertEquals(studentMember.getMemberId(),studentMember.getMemberId());
     }
 }

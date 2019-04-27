@@ -6,8 +6,8 @@ import book.Book;
 import publishers.Publisher;
 
 public class ArticleFactory {
-    public static Book createArticle(int num, int year, String name, Author author, Publisher publisher,String category){
-        return new Article.Builder()
+    public static Book createArticle(String num, int year, String name, Author author, Publisher publisher,String category){
+        return new Article.ArticleBuilder()
                 .isbnNum(num)
                 .yearPublished(year)
                 .title(name)
