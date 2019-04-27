@@ -8,11 +8,12 @@ import interfaces.Names;
 
 public class Register implements Names,Contact,Address{
 
-    private String name,surname,cellphone,telephone,suburb,city,province;
+    private String regNum,name,surname,cellphone,telephone,suburb,city,province;
     private int zipCode;
 
     private Register(){}
     public Register(Builder builder){
+        this.regNum = builder.regNum;
         this.name = builder.name;
         this.suburb = builder.suburb;
         this.surname = builder.surname;
@@ -22,6 +23,11 @@ public class Register implements Names,Contact,Address{
         this.province = builder.province;
         this.zipCode = builder.zipCode;
     }
+
+    public String getRegNum() {
+        return regNum;
+    }
+
     @Override
     public int getZipCode() {
         return 0;
@@ -63,8 +69,12 @@ public class Register implements Names,Contact,Address{
     }
 
     public static class Builder{
-        private String name,surname,cellphone,telephone,suburb,city,province;
+        private String regNum,name,surname,cellphone,telephone,suburb,city,province;
         private int zipCode;
+        public Builder regNum(String r){
+            this.regNum = r;
+            return this;
+        }
         public Builder name(String value){
             this.name = value;
             return this;

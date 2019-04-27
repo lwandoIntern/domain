@@ -24,7 +24,7 @@ public class AuthorRepositoryImpl implements AuthorRepository {
     @Override
     public Set<Author> getAll() {
         //List all authors
-        repository.getAll().forEach(authorSet::add);
+
         return authorSet;
     }
 

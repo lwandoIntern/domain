@@ -7,14 +7,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RegisterRepositoryImpl implements RegisterRepository {
-    private RegisterRepositoryImpl repository = null;
+    private static RegisterRepositoryImpl repository = null;
     private Map<String,Register> registrations;
 
     private RegisterRepositoryImpl(){
         this.registrations = new HashMap<>();
     }
 
-    public RegisterRepositoryImpl getRepository() {
+    public static RegisterRepositoryImpl getRepository() {
         if (repository == null)repository = new RegisterRepositoryImpl();
         return repository;
     }

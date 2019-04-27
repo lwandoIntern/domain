@@ -5,8 +5,9 @@ import borrowingProccess.Borrow;
 import members.Member;
 
 public class BorrowFactory {
-    public static Borrow createLoan(Book book, Member member){
+    public static Borrow createLoan(String id, Book book, Member member){
         return new Borrow.Builder()
+                .loanId(id)
                 .book(book)
                 .member(member)
                 .build();

@@ -10,7 +10,7 @@ public class LibrarianFactoryTest {
     private Employee librarian;
     @Before
     public void setUp() throws Exception {
-        librarian = LibrarianFactory.createLibrarian(false);
+        librarian = LibrarianFactory.createLibrarian("j4","x","y","z","a","b","c",7554,"f",false);
     }
 
     @Test

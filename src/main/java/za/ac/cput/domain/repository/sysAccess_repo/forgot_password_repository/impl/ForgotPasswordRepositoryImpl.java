@@ -7,14 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ForgotPasswordRepositoryImpl implements ForgotPasswordRepository {
-    private ForgotPasswordRepositoryImpl repository = null;
+    private static ForgotPasswordRepositoryImpl repository = null;
     private List<ForgotPassword> passwords;
 
     private ForgotPasswordRepositoryImpl(){
         this.passwords = new ArrayList<>();
     }
 
-    public ForgotPasswordRepositoryImpl getRepository() {
+    public static ForgotPasswordRepositoryImpl getRepository() {
         if (repository == null)repository = new ForgotPasswordRepositoryImpl();
         return repository;
     }

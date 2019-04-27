@@ -3,9 +3,10 @@ package za.ac.cput.domain.Factory;
 import sysemAccess.Register;
 
 public class RegisterFactory {
-    public static Register createRegister(String name,String surname,String cell,String tell,int zip,String town,String city,
+    public static Register createRegister(String regNum, String name,String surname,String cell,String tell,int zip,String town,String city,
                                           String province){
         return new Register.Builder()
+                .regNum(regNum)
                 .name(name)
                 .surname(surname)
                 .cellphone(cell)

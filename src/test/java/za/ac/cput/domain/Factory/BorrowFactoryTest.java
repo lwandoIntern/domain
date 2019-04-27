@@ -14,7 +14,7 @@ public class BorrowFactoryTest {
     private Member member;
     @Before
     public void setUp() throws Exception {
-        borrow = BorrowFactory.createLoan(book,member);
+        borrow = BorrowFactory.createLoan("1",book,member);
     }
 
     @Test
