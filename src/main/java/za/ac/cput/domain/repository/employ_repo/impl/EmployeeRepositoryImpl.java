@@ -1,6 +1,6 @@
 package za.ac.cput.domain.repository.employ_repo.impl;
 
-import employees.Employee;
+import za.ac.cput.domain.domain.employees.Employee;
 import za.ac.cput.domain.repository.employ_repo.EmployeeRepository;
 
 import java.util.ArrayList;

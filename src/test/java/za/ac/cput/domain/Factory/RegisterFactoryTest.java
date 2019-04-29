@@ -3,7 +3,8 @@ package za.ac.cput.domain.Factory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import sysemAccess.Register;
+import za.ac.cput.domain.Factory.registration.RegisterFactory;
+import za.ac.cput.domain.domain.sysemAccess.Register;
 
 public class RegisterFactoryTest {
 

@@ -3,7 +3,8 @@ package za.ac.cput.domain.Factory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import sysemAccess.Login;
+import za.ac.cput.domain.Factory.registration.LoginFactory;
+import za.ac.cput.domain.domain.sysemAccess.Login;
 
 public class LoginFactoryTest {
 

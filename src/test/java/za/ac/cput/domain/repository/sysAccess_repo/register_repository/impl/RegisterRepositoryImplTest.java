@@ -2,8 +2,8 @@ package za.ac.cput.domain.repository.sysAccess_repo.register_repository.impl;
 
 import org.junit.Before;
 import org.junit.Test;
-import sysemAccess.Register;
-import za.ac.cput.domain.Factory.RegisterFactory;
+import za.ac.cput.domain.domain.sysemAccess.Register;
+import za.ac.cput.domain.Factory.registration.RegisterFactory;
 import za.ac.cput.domain.repository.sysAccess_repo.register_repository.RegisterRepository;
 
 import static org.junit.Assert.*;

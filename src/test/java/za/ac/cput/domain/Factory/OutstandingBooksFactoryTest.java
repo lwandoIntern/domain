@@ -1,8 +1,9 @@
 package za.ac.cput.domain.Factory;
 
-import book.Book;
-import borrowingProccess.OutstandingBooks;
-import members.Member;
+import za.ac.cput.domain.Factory.loan.OutstandingBooksFactory;
+import za.ac.cput.domain.domain.book.Book;
+import za.ac.cput.domain.domain.borrowingProccess.OutstandingBooks;
+import za.ac.cput.domain.domain.members.Member;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

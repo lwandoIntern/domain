@@ -3,7 +3,8 @@ package za.ac.cput.domain.Factory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import sysemAccess.ForgotPassword;
+import za.ac.cput.domain.Factory.registration.ForgotPasswordFactory;
+import za.ac.cput.domain.domain.sysemAccess.ForgotPassword;
 
 public class ForgotPasswordFactoryTest {
 

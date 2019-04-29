@@ -1,6 +1,6 @@
 package za.ac.cput.domain.repository.borrow_repository.impl;
 
-import borrowingProccess.Borrow;
+import za.ac.cput.domain.domain.borrowingProccess.Borrow;
 import za.ac.cput.domain.repository.borrow_repository.BorrowRepository;
 
 import java.util.ArrayList;

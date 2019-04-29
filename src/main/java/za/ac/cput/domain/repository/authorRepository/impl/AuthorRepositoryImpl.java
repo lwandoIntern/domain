@@ -1,10 +1,9 @@
 package za.ac.cput.domain.repository.authorRepository.impl;
 
-import authors.Author;
+import za.ac.cput.domain.domain.authors.Author;
 import za.ac.cput.domain.repository.authorRepository.AuthorRepository;
 
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 public class AuthorRepositoryImpl implements AuthorRepository {
@@ -23,7 +22,7 @@ public class AuthorRepositoryImpl implements AuthorRepository {
 
     @Override
     public Set<Author> getAll() {
-        //List all authors
+        //List all za.ac.cput.domain.domain.author
 
         return authorSet;
     }

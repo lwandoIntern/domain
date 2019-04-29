@@ -1,7 +1,8 @@
 package za.ac.cput.domain.Factory;
 
-import book.Book;
-import book.BookList;
+import za.ac.cput.domain.Factory.books.BookListFactory;
+import za.ac.cput.domain.domain.book.Book;
+import za.ac.cput.domain.domain.book.BookList;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

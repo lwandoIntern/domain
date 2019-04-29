@@ -1,10 +1,9 @@
 package za.ac.cput.domain.repository.employ_repo.impl;
 
-import employees.Employee;
-import employees.Librarian;
+import za.ac.cput.domain.domain.employees.Employee;
 import org.junit.Before;
 import org.junit.Test;
-import za.ac.cput.domain.Factory.LibrarianFactory;
+import za.ac.cput.domain.Factory.staff.LibrarianFactory;
 import za.ac.cput.domain.repository.employ_repo.EmployeeRepository;
 
 import static org.junit.Assert.*;

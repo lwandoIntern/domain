@@ -1,9 +1,9 @@
 package za.ac.cput.domain.repository.authorRepository.impl;
 
-import authors.Author;
+import za.ac.cput.domain.domain.authors.Author;
 import org.junit.Before;
 import org.junit.Test;
-import za.ac.cput.domain.Factory.AuthorFactory;
+import za.ac.cput.domain.Factory.author.AuthorFactory;
 import za.ac.cput.domain.repository.authorRepository.AuthorRepository;
 
 import static org.junit.Assert.*;

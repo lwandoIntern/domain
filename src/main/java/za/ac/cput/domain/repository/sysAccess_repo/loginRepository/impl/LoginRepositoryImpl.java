@@ -1,11 +1,9 @@
 package za.ac.cput.domain.repository.sysAccess_repo.loginRepository.impl;
 
-import sysemAccess.Login;
+import za.ac.cput.domain.domain.sysemAccess.Login;
 import za.ac.cput.domain.repository.sysAccess_repo.loginRepository.LoginRepository;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class LoginRepositoryImpl implements LoginRepository {

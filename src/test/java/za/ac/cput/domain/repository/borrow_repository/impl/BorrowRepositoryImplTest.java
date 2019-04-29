@@ -1,14 +1,17 @@
 package za.ac.cput.domain.repository.borrow_repository.impl;
 
-import authors.Author;
-import book.Book;
-import borrowingProccess.Borrow;
-import members.Member;
-import members.RegularMember;
+import za.ac.cput.domain.Factory.author.AuthorFactory;
+import za.ac.cput.domain.Factory.books.ArticleFactory;
+import za.ac.cput.domain.Factory.loan.BorrowFactory;
+import za.ac.cput.domain.Factory.member.RegularMemberFactory;
+import za.ac.cput.domain.Factory.publisher.PublisherFactory;
+import za.ac.cput.domain.domain.authors.Author;
+import za.ac.cput.domain.domain.book.Book;
+import za.ac.cput.domain.domain.borrowingProccess.Borrow;
+import za.ac.cput.domain.domain.members.Member;
 import org.junit.Before;
 import org.junit.Test;
-import publishers.Publisher;
-import za.ac.cput.domain.Factory.*;
+import za.ac.cput.domain.domain.publishers.Publisher;
 import za.ac.cput.domain.repository.borrow_repository.BorrowRepository;
 
 import static org.junit.Assert.*;

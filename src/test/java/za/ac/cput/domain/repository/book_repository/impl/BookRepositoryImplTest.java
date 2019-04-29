@@ -1,14 +1,13 @@
 package za.ac.cput.domain.repository.book_repository.impl;
 
-import authors.Author;
-import book.Book;
+import za.ac.cput.domain.domain.authors.Author;
+import za.ac.cput.domain.domain.book.Book;
 import org.junit.Before;
 import org.junit.Test;
-import publishers.Publisher;
-import za.ac.cput.domain.Factory.ArticleFactory;
-import za.ac.cput.domain.Factory.AuthorFactory;
-import za.ac.cput.domain.Factory.HardCopyFactory;
-import za.ac.cput.domain.Factory.PublisherFactory;
+import za.ac.cput.domain.domain.publishers.Publisher;
+import za.ac.cput.domain.Factory.books.ArticleFactory;
+import za.ac.cput.domain.Factory.author.AuthorFactory;
+import za.ac.cput.domain.Factory.publisher.PublisherFactory;
 import za.ac.cput.domain.repository.book_repository.BookRepository;
 
 import static org.junit.Assert.*;

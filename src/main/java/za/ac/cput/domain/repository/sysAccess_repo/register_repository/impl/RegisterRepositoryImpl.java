@@ -1,6 +1,6 @@
 package za.ac.cput.domain.repository.sysAccess_repo.register_repository.impl;
 
-import sysemAccess.Register;
+import za.ac.cput.domain.domain.sysemAccess.Register;
 import za.ac.cput.domain.repository.sysAccess_repo.register_repository.RegisterRepository;
 
 import java.util.HashMap;

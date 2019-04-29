@@ -1,7 +1,7 @@
 package za.ac.cput.domain.repository.publisherRepository.impl;
 
 
-import publishers.Publisher;
+import za.ac.cput.domain.domain.publishers.Publisher;
 
 import za.ac.cput.domain.repository.publisherRepository.PublisherRepository;
 

@@ -1,6 +1,7 @@
 package za.ac.cput.domain.Factory;
 
-import authors.Author;
+import za.ac.cput.domain.Factory.author.AuthorFactory;
+import za.ac.cput.domain.domain.authors.Author;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

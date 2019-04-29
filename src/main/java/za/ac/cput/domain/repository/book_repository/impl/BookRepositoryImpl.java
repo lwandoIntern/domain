@@ -1,7 +1,7 @@
 package za.ac.cput.domain.repository.book_repository.impl;
 
 
-import book.Book;
+import za.ac.cput.domain.domain.book.Book;
 import za.ac.cput.domain.repository.book_repository.BookRepository;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,8 +28,8 @@ public class BookRepositoryImpl implements BookRepository {
 
     @Override
     public Book create(Book book) {
-        //new book
-        //this.books.add(book);
+        //new za.ac.cput.domain.domain.author.book
+        //this.books.add(za.ac.cput.domain.domain.author.book);
         repository.books.add(book);
         int i = books.indexOf(book);
         return books.get(i);

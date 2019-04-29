@@ -1,6 +1,6 @@
 package za.ac.cput.domain.repository.member_repo.impl;
 
-import members.Member;
+import za.ac.cput.domain.domain.members.Member;
 import za.ac.cput.domain.repository.member_repo.MemberRepository;
 
 import java.util.ArrayList;

@@ -2,8 +2,8 @@ package za.ac.cput.domain.repository.sysAccess_repo.forgot_password_repository.i
 
 import org.junit.Before;
 import org.junit.Test;
-import sysemAccess.ForgotPassword;
-import za.ac.cput.domain.Factory.ForgotPasswordFactory;
+import za.ac.cput.domain.domain.sysemAccess.ForgotPassword;
+import za.ac.cput.domain.Factory.registration.ForgotPasswordFactory;
 import za.ac.cput.domain.repository.sysAccess_repo.forgot_password_repository.ForgotPasswordRepository;
 
 import static org.junit.Assert.*;

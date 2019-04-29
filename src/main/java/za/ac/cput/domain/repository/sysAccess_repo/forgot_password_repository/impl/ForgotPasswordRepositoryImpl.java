@@ -1,6 +1,6 @@
 package za.ac.cput.domain.repository.sysAccess_repo.forgot_password_repository.impl;
 
-import sysemAccess.ForgotPassword;
+import za.ac.cput.domain.domain.sysemAccess.ForgotPassword;
 import za.ac.cput.domain.repository.sysAccess_repo.forgot_password_repository.ForgotPasswordRepository;
 
 import java.util.ArrayList;

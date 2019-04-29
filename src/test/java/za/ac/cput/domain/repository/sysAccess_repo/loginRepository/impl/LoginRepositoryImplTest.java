@@ -2,8 +2,8 @@ package za.ac.cput.domain.repository.sysAccess_repo.loginRepository.impl;
 
 import org.junit.Before;
 import org.junit.Test;
-import sysemAccess.Login;
-import za.ac.cput.domain.Factory.LoginFactory;
+import za.ac.cput.domain.domain.sysemAccess.Login;
+import za.ac.cput.domain.Factory.registration.LoginFactory;
 import za.ac.cput.domain.repository.sysAccess_repo.loginRepository.LoginRepository;
 
 import static org.junit.Assert.*;
