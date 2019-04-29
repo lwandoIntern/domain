@@ -4,6 +4,9 @@ package za.ac.cput.domain.domain.book;
 import za.ac.cput.domain.domain.authors.Author;
 import za.ac.cput.domain.domain.publishers.Publisher;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Article implements Book{
     private String datePublished;
     private boolean downloadable;

@@ -22,7 +22,7 @@ public class PublisherRepoImplTest {
     public void setUp() throws Exception {
         author = AuthorFactory.createAuthor("Zoe","Saldana","555-747-8164","555-814-7414",
                 2166,"MIT","LA","",14);
-        book = ArticleFactory.createArticle("1",2012,"Cyberwarfare At its Best",author,publisher,
+        book = ArticleFactory.createArticle(2012,"Cyberwarfare At its Best",author,publisher,
                 "Technology");
         publisher = PublisherFactory.createPublisher(author,book,"Norman Publishers","0215489963",8000,"D6",
                 "CPT","WC");

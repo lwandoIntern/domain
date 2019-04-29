@@ -5,7 +5,9 @@ import za.ac.cput.domain.domain.interfaces.Address;
 import za.ac.cput.domain.domain.interfaces.Contact;
 import za.ac.cput.domain.domain.interfaces.Names;
 
+import javax.persistence.Entity;
 
+@Entity
 public class Register implements Names,Contact,Address{
 
     private String regNum,name,surname,cellphone,telephone,suburb,city,province;

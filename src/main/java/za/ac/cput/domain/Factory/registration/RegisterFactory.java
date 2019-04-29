@@ -1,12 +1,13 @@
 package za.ac.cput.domain.Factory.registration;
 
 import za.ac.cput.domain.domain.sysemAccess.Register;
+import za.ac.cput.domain.util.Misc;
 
 public class RegisterFactory {
-    public static Register createRegister(String regNum, String name,String surname,String cell,String tell,int zip,String town,String city,
+    public static Register createRegister(String name,String surname,String cell,String tell,int zip,String town,String city,
                                           String province){
         return new Register.Builder()
-                .regNum(regNum)
+                .regNum(Misc.generateId())
                 .name(name)
                 .surname(surname)
                 .cellphone(cell)

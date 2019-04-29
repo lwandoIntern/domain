@@ -15,7 +15,7 @@ public class RegisterRepositoryImplTest {
     @Before
     public void setUp() throws Exception {
         repository = RegisterRepositoryImpl.getRepository();
-        register = RegisterFactory.createRegister("1000x","Nceba","Goniwe","0740740918","0117149333",7441,
+        register = RegisterFactory.createRegister("Nceba","Goniwe","0740740918","0117149333",7441,
                 "MLN","CPT","WC");
     }
 

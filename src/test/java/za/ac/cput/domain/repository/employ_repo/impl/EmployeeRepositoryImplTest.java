@@ -15,7 +15,7 @@ public class EmployeeRepositoryImplTest {
     @Before
     public void setUp() throws Exception {
         repository = EmployeeRepositoryImpl.getRepository();
-        employee = LibrarianFactory.createLibrarian("j4","x","y","z","a","b","c",7554,"f",false);
+        employee = LibrarianFactory.createLibrarian("j4","x","y","z","a","b",7554,"f",false);
     }
 
     @Test

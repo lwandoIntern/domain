@@ -26,7 +26,7 @@ public class BookRepositoryImplTest {
                 2166,"MIT","LA","",14);
         publisher = PublisherFactory.createPublisher(author,book,"Norman Publishers","0215489963",8000,"D6",
                 "CPT","WC");
-        book = ArticleFactory.createArticle("1",2012,"Cyberwarfare At its Best",author,publisher,"Technology");
+        book = ArticleFactory.createArticle(2012,"Cyberwarfare At its Best",author,publisher,"Technology");
     }
 
     @Test

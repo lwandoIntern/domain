@@ -34,8 +34,8 @@ public class BorrowRepositoryImplTest {
                 "CPT","WC");
         member = RegularMemberFactory.createRegularMember("John","Sminorf0","0840147521","0217415566",
                 7441,"MIL","CPT","WC");
-        book = ArticleFactory.createArticle("1",2012,"Cyberwarfare At its Best",author,publisher,"Technology");
-        borrow = BorrowFactory.createLoan("125",book,member);
+        book = ArticleFactory.createArticle(2012,"Cyberwarfare At its Best",author,publisher,"Technology");
+        borrow = BorrowFactory.createLoan(book,member);
     }
 
     @Test

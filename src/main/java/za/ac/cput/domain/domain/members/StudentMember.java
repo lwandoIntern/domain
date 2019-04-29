@@ -1,7 +1,9 @@
 package za.ac.cput.domain.domain.members;
 
+import javax.persistence.Entity;
 import java.util.Objects;
 
+@Entity
 public class StudentMember implements Member{
     private int borrowingAmountAllowed;
 

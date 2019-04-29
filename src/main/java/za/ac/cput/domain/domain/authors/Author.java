@@ -9,8 +9,6 @@ import javax.persistence.Id;
 import java.util.Objects;
 @Entity
 public class Author implements Names, Contact, Address {
-
-    @Id
     private String authId;
     private String name,surname,cellphone,telephone,city,suburb,province;
     private int zipCode,numOfBooksWritten;
@@ -135,31 +133,5 @@ public class Author implements Names, Contact, Address {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Author{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", cellphone='" + cellphone + '\'' +
-                ", telephone='" + telephone + '\'' +
-                ", city='" + city + '\'' +
-                ", suburb='" + suburb + '\'' +
-                ", province='" + province + '\'' +
-                ", zipCode=" + zipCode +
-                ", numOfBooksWritten=" + numOfBooksWritten +
-                '}';
-    }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Author author = (Author) o;
-        return authId.equals(author.authId);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(authId);
-    }
 }

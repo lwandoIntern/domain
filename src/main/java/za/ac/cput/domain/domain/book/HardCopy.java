@@ -3,8 +3,10 @@ package za.ac.cput.domain.domain.book;
 import za.ac.cput.domain.domain.authors.Author;
 import za.ac.cput.domain.domain.publishers.Publisher;
 
+import javax.persistence.Entity;
 import java.util.Objects;
 
+@Entity
 public class HardCopy implements Book{
     private boolean availableForLoan;
     private String isbnNum,title,category,condition;

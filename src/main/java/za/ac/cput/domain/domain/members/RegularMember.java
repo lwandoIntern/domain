@@ -1,7 +1,9 @@
 package za.ac.cput.domain.domain.members;
 
+import javax.persistence.Entity;
 import java.util.Objects;
 
+@Entity
 public class RegularMember implements Member{
     private String memberId;
     private String name,surname,cellphone,telephone,suburb,city,province;

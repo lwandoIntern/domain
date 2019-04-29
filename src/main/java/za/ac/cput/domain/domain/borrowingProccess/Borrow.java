@@ -3,8 +3,10 @@ package za.ac.cput.domain.domain.borrowingProccess;
 import za.ac.cput.domain.domain.book.Book;
 import za.ac.cput.domain.domain.members.Member;
 
+import javax.persistence.Entity;
 import java.util.Objects;
 
+@Entity
 public class Borrow {
     private String loanId;
     private Book book;
