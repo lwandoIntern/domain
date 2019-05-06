@@ -3,7 +3,7 @@ package za.ac.cput.domain.domain.employees;
 import javax.persistence.Entity;
 import java.util.Objects;
 
-@Entity
+
 public class Librarian implements Employee{
     private boolean hasAssistant;
     private String employeeId,name,surname,cellphone,telephone,city,suburb,province,positionName;

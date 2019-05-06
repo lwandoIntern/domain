@@ -1,5 +1,6 @@
 package za.ac.cput.domain.domain.authors;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import za.ac.cput.domain.domain.interfaces.Address;
 import za.ac.cput.domain.domain.interfaces.Contact;
 import za.ac.cput.domain.domain.interfaces.Names;
@@ -7,7 +8,7 @@ import za.ac.cput.domain.domain.interfaces.Names;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Objects;
-@Entity
+@EntityScan
 public class Author implements Names, Contact, Address {
     private String authId;
     private String name,surname,cellphone,telephone,city,suburb,province;

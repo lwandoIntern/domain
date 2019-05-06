@@ -5,7 +5,7 @@ import za.ac.cput.domain.domain.members.Member;
 
 import javax.persistence.Entity;
 
-@Entity
+
 public class Return {
 
     private Book book;

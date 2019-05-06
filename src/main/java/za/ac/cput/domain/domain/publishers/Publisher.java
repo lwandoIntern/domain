@@ -9,11 +9,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Objects;
 
-@Entity
+
 public class Publisher implements Contact, Address {
     private Author author;
     private Book book;
-    @Id
+
     private String publishId;
     private String name,cell,tel,suburb,city,province;
     private int zipCode,numOfBooksWritten;

@@ -4,7 +4,7 @@ package za.ac.cput.domain.domain.employees;
 import javax.persistence.Entity;
 import java.util.Objects;
 
-@Entity
+
 public class Admin implements Employee {
 
     private String employeeId,name,surname,cellphone,telephone,city,suburb,province,positionName;

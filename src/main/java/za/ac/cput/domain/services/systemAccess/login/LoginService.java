@@ -1,4 +1,7 @@
 package za.ac.cput.domain.services.systemAccess.login;
 
-public interface LoginService {
+import za.ac.cput.domain.domain.sysemAccess.Login;
+import za.ac.cput.domain.services.Service;
+
+public interface LoginService extends Service<Login,String> {
 }

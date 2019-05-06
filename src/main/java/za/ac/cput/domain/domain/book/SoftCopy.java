@@ -6,7 +6,7 @@ import za.ac.cput.domain.domain.publishers.Publisher;
 import javax.persistence.Entity;
 import java.util.Objects;
 
-@Entity
+
 public class SoftCopy implements Book{
     private boolean downloadable;
     private String isbnNum,title,category;
