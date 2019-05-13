@@ -1,11 +1,13 @@
 package za.ac.cput.domain.repository.sysAccess_repo.loginRepository.impl;
 
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.domain.sysemAccess.Login;
 import za.ac.cput.domain.repository.sysAccess_repo.loginRepository.LoginRepository;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Repository
 public class LoginRepositoryImpl implements LoginRepository {
     private static LoginRepositoryImpl repository = null;
     private Map<String,Login> logins;

@@ -1,11 +1,13 @@
 package za.ac.cput.domain.repository.employ_repo.impl;
 
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.domain.employees.Employee;
 import za.ac.cput.domain.repository.employ_repo.EmployeeRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class EmployeeRepositoryImpl implements EmployeeRepository {
     private static EmployeeRepositoryImpl repository = null;
     List<Employee> employees;

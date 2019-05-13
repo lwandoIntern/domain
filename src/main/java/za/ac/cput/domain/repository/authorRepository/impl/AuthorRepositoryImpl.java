@@ -1,11 +1,13 @@
 package za.ac.cput.domain.repository.authorRepository.impl;
 
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.domain.authors.Author;
 import za.ac.cput.domain.repository.authorRepository.AuthorRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Repository
 public class AuthorRepositoryImpl implements AuthorRepository {
     private static AuthorRepositoryImpl repository = null;
     private Set<Author> authorSet;

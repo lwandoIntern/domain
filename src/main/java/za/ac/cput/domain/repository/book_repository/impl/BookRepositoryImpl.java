@@ -1,11 +1,13 @@
 package za.ac.cput.domain.repository.book_repository.impl;
 
 
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.domain.book.Book;
 import za.ac.cput.domain.repository.book_repository.BookRepository;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class BookRepositoryImpl implements BookRepository {
     private static BookRepositoryImpl repository = null;
     private List<Book> books;

@@ -1,11 +1,13 @@
 package za.ac.cput.domain.repository.sysAccess_repo.register_repository.impl;
 
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.domain.sysemAccess.Register;
 import za.ac.cput.domain.repository.sysAccess_repo.register_repository.RegisterRepository;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Repository
 public class RegisterRepositoryImpl implements RegisterRepository {
     private static RegisterRepositoryImpl repository = null;
     private Map<String,Register> registrations;
