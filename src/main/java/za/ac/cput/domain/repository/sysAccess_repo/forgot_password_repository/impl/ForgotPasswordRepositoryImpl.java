@@ -7,7 +7,7 @@ import za.ac.cput.domain.repository.sysAccess_repo.forgot_password_repository.Fo
 import java.util.ArrayList;
 import java.util.List;
 
-@Repository
+
 public class ForgotPasswordRepositoryImpl implements ForgotPasswordRepository {
     private static ForgotPasswordRepositoryImpl repository = null;
     private List<ForgotPassword> passwords;

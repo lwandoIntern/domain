@@ -7,7 +7,7 @@ import za.ac.cput.domain.repository.borrow_repository.BorrowRepository;
 import java.util.ArrayList;
 import java.util.List;
 
-@Repository
+
 public class BorrowRepositoryImpl implements BorrowRepository {
     private static BorrowRepositoryImpl repository = null;
     private List<Borrow> borrows;

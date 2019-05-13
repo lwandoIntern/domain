@@ -7,7 +7,7 @@ import za.ac.cput.domain.repository.sysAccess_repo.loginRepository.LoginReposito
 import java.util.HashMap;
 import java.util.Map;
 
-@Repository
+
 public class LoginRepositoryImpl implements LoginRepository {
     private static LoginRepositoryImpl repository = null;
     private Map<String,Login> logins;

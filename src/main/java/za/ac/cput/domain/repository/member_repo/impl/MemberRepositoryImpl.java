@@ -7,7 +7,7 @@ import za.ac.cput.domain.repository.member_repo.MemberRepository;
 import java.util.ArrayList;
 import java.util.Collection;
 
-@Repository
+
 public class MemberRepositoryImpl implements MemberRepository {
     private static MemberRepositoryImpl repository = null;
     private Collection<Member> collection;

@@ -9,7 +9,7 @@ import za.ac.cput.domain.repository.publisherRepository.PublisherRepository;
 import java.util.HashMap;
 import java.util.Map;
 
-@Repository
+
 public class PublisherRepoImpl implements PublisherRepository {
     private static PublisherRepoImpl repo = null;
     private Map<String,Publisher> publishers;
@@ -35,7 +35,7 @@ public class PublisherRepoImpl implements PublisherRepository {
 
     @Override
     public Publisher read(Publisher publisher) {
-        return repo.publishers.get(publisher);
+        return repo.publishers.get(publisher.getPublishId());
     }
 
     @Override
