@@ -7,7 +7,7 @@ import za.ac.cput.domain.repository.sysAccess_repo.register_repository.RegisterR
 import java.util.HashMap;
 import java.util.Map;
 
-@Repository
+
 public class RegisterRepositoryImpl implements RegisterRepository {
     private static RegisterRepositoryImpl repository = null;
     private Map<String,Register> registrations;

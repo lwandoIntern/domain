@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/controller/author_controller/AuthorController.java" line="2" mnemonic="2" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d9e7066-4dab-475d-939f-ece112913893" name="Default Changelist" comment="debugging">
+    <list default="true" id="3d9e7066-4dab-475d-939f-ece112913893" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/controller/author_controller/AuthorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/services/book/impl/BookServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/services/loan/impl/BorrwServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Domain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Domain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/controller/author_controller/AuthorController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/authorRepository/impl/AuthorRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/authorRepository/impl/AuthorRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/book_repository/impl/BookRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/book_repository/impl/BookRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/borrow_repository/impl/BorrowRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/borrow_repository/impl/BorrowRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/employ_repo/impl/EmployeeRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/employ_repo/impl/EmployeeRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/member_repo/impl/MemberRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/member_repo/impl/MemberRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/publisherRepository/impl/PublisherRepoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/publisherRepository/impl/PublisherRepoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/sysAccess_repo/forgot_password_repository/impl/ForgotPasswordRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/sysAccess_repo/forgot_password_repository/impl/ForgotPasswordRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/sysAccess_repo/loginRepository/impl/LoginRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/sysAccess_repo/loginRepository/impl/LoginRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/sysAccess_repo/register_repository/impl/RegisterRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/sysAccess_repo/register_repository/impl/RegisterRepositoryImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,9 +29,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Domain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+            <state relative-caret-position="126">
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
               <folding>
+                <element signature="e#270#271#0" expanded="true" />
                 <element signature="e#326#327#0" expanded="true" />
               </folding>
             </state>
@@ -42,10 +40,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/authorRepository/impl/AuthorRepositoryImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/services/loan/impl/BorrwServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="85">
+              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,94 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/book_repository/impl/BookRepositoryImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/borrow_repository/impl/BorrowRepositoryImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-              <folding>
-                <element signature="e#1265#1266#0" expanded="true" />
-                <element signature="e#1309#1310#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/employ_repo/impl/EmployeeRepositoryImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
-              <folding>
-                <element signature="e#1302#1303#0" expanded="true" />
-                <element signature="e#1348#1349#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/member_repo/impl/MemberRepositoryImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
-              <folding>
-                <element signature="e#1271#1272#0" expanded="true" />
-                <element signature="e#1318#1319#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/publisherRepository/impl/PublisherRepoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="37" column="59" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
-              <folding>
-                <element signature="e#988#989#0" expanded="true" />
-                <element signature="e#1041#1042#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/sysAccess_repo/forgot_password_repository/impl/ForgotPasswordRepositoryImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/za/ac/cput/domain/services/loan/impl/BorrwServiceImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
-              <folding>
-                <element signature="e#1511#1512#0" expanded="true" />
-                <element signature="e#1557#1558#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/sysAccess_repo/loginRepository/impl/LoginRepositoryImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/sysAccess_repo/register_repository/impl/RegisterRepositoryImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            <state relative-caret-position="408">
+              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -151,8 +66,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -163,8 +78,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/repository/borrow_repository/impl/BorrowRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/repository/employ_repo/impl/EmployeeRepositoryImplTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/repository/publisherRepository/impl/PublisherRepoImplTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/repository/sysAccess_repo/register_repository/impl/RegisterRepositoryImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/domain/book/Book.java" />
@@ -200,10 +113,8 @@
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/domain/publishers/Publisher.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/domain/sysemAccess/Register.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/controller/AuthorController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/sysAccess_repo/register_repository/impl/RegisterRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/author/AuthorFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/controller/IndexController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/controller/author_controller/AuthorController.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Domain.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/authorRepository/impl/AuthorRepositoryImpl.java" />
@@ -213,7 +124,11 @@
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/member_repo/impl/MemberRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/sysAccess_repo/forgot_password_repository/impl/ForgotPasswordRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/sysAccess_repo/loginRepository/impl/LoginRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/sysAccess_repo/register_repository/impl/RegisterRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/publisherRepository/impl/PublisherRepoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/controller/author_controller/AuthorController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/services/book/impl/BookServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/za/ac/cput/domain/services/loan/impl/BorrwServiceImplTest.java" />
       </list>
     </option>
   </component>
@@ -259,11 +174,6 @@
             <path>
               <item name="domain" type="b2602c69:ProjectViewProjectNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="domain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -294,7 +204,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="domain" type="b2602c69:ProjectViewProjectNode" />
@@ -303,8 +213,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-              <item name="sysAccess_repo" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="loan" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="domain" type="b2602c69:ProjectViewProjectNode" />
@@ -313,20 +223,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-              <item name="sysAccess_repo" type="462c0819:PsiDirectoryNode" />
-              <item name="register_repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="domain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-              <item name="sysAccess_repo" type="462c0819:PsiDirectoryNode" />
-              <item name="register_repository" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="loan" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -352,11 +250,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="za.ac.cput.domain.services.loan.impl" />
+      <recent name="za.ac.cput.domain.services.book.impl" />
       <recent name="za.ac.cput.domain.services.author.impl" />
       <recent name="za.ac.cput.domain.repository.borrow_repository.impl" />
       <recent name="za.ac.cput.domain.repository.sysAccess_repo.register_repository.impl" />
-      <recent name="za.ac.cput.domain.repository.sysAccess_repo.loginRepository.impl" />
-      <recent name="za.ac.cput.domain.repository.sysAccess_repo.forgot_password_repository.impl" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="za.ac.cput.domain.Factory" />
@@ -379,97 +277,100 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Domain">
-    <configuration name="ForgotPasswordRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BookServiceImplTest.read">
+    <configuration name="BookServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="za.ac.cput.domain.repository.sysAccess_repo.forgot_password_repository.impl.*" />
+          <option name="PATTERN" value="za.ac.cput.domain.services.book.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="za.ac.cput.domain.repository.sysAccess_repo.forgot_password_repository.impl" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.domain.repository.sysAccess_repo.forgot_password_repository.impl.ForgotPasswordRepositoryImplTest" />
+      <option name="PACKAGE_NAME" value="za.ac.cput.domain.services.book.impl" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.domain.services.book.impl.BookServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ForgotPasswordRepositoryImplTest.read" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookServiceImplTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="za.ac.cput.domain.repository.sysAccess_repo.forgot_password_repository.impl.*" />
+          <option name="PATTERN" value="za.ac.cput.domain.services.book.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="za.ac.cput.domain.repository.sysAccess_repo.forgot_password_repository.impl" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.domain.repository.sysAccess_repo.forgot_password_repository.impl.ForgotPasswordRepositoryImplTest" />
+      <option name="PACKAGE_NAME" value="za.ac.cput.domain.services.book.impl" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.domain.services.book.impl.BookServiceImplTest" />
+      <option name="METHOD_NAME" value="create" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookServiceImplTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.domain.services.book.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="za.ac.cput.domain.services.book.impl" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.domain.services.book.impl.BookServiceImplTest" />
+      <option name="METHOD_NAME" value="delete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookServiceImplTest.read" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.domain.services.book.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="za.ac.cput.domain.services.book.impl" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.domain.services.book.impl.BookServiceImplTest" />
       <option name="METHOD_NAME" value="read" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookServiceImplTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="za.ac.cput.domain.repository.sysAccess_repo.loginRepository.impl.*" />
+          <option name="PATTERN" value="za.ac.cput.domain.services.book.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="za.ac.cput.domain.repository.sysAccess_repo.loginRepository.impl" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.domain.repository.sysAccess_repo.loginRepository.impl.LoginRepositoryImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegisterRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="domain" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="za.ac.cput.domain.repository.sysAccess_repo.register_repository.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="za.ac.cput.domain.repository.sysAccess_repo.register_repository.impl" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.domain.repository.sysAccess_repo.register_repository.impl.RegisterRepositoryImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Domain" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="domain" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="za.ac.cput.domain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="za.ac.cput.domain.Domain" />
-      <option name="DEBUG_MODE" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="za.ac.cput.domain.services.book.impl" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.domain.services.book.impl.BookServiceImplTest" />
+      <option name="METHOD_NAME" value="update" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ForgotPasswordRepositoryImplTest" />
-      <item itemvalue="JUnit.ForgotPasswordRepositoryImplTest.read" />
-      <item itemvalue="JUnit.LoginRepositoryImplTest" />
-      <item itemvalue="JUnit.RegisterRepositoryImplTest" />
-      <item itemvalue="Spring Boot.Domain" />
+      <item itemvalue="JUnit.BookServiceImplTest" />
+      <item itemvalue="JUnit.BookServiceImplTest.create" />
+      <item itemvalue="JUnit.BookServiceImplTest.update" />
+      <item itemvalue="JUnit.BookServiceImplTest.delete" />
+      <item itemvalue="JUnit.BookServiceImplTest.read" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.Domain" />
-        <item itemvalue="JUnit.RegisterRepositoryImplTest" />
-        <item itemvalue="JUnit.LoginRepositoryImplTest" />
-        <item itemvalue="JUnit.ForgotPasswordRepositoryImplTest" />
-        <item itemvalue="JUnit.ForgotPasswordRepositoryImplTest.read" />
+        <item itemvalue="JUnit.BookServiceImplTest.read" />
+        <item itemvalue="JUnit.BookServiceImplTest.delete" />
+        <item itemvalue="JUnit.BookServiceImplTest.update" />
+        <item itemvalue="JUnit.BookServiceImplTest.create" />
+        <item itemvalue="JUnit.BookServiceImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -497,7 +398,7 @@
       <workItem from="1557149430104" duration="8807000" />
       <workItem from="1557487564134" duration="444000" />
       <workItem from="1557489452041" duration="1143000" />
-      <workItem from="1557749379942" duration="5418000" />
+      <workItem from="1557749379942" duration="9047000" />
     </task>
     <task id="LOCAL-00001" summary="Updating the domain">
       <created>1555436128574</created>
@@ -618,28 +519,17 @@
       <option name="project" value="LOCAL" />
       <updated>1557751781622</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="debugging">
+      <created>1557760039829</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1557760039829</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MemberRepositoryImplTest_destroyAll - 2019.04.27 at 15h 50m 54s.xml">
-      <configuration name="MemberRepositoryImplTest.destroyAll" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MemberRepositoryImplTest_read - 2019.04.27 at 15h 51m 02s.xml">
-      <configuration name="MemberRepositoryImplTest.read" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PublisherRepoImplTest - 2019.04.27 at 15h 57m 30s.xml">
-      <configuration name="PublisherRepoImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PublisherRepoImplTest_create - 2019.04.27 at 15h 59m 52s.xml">
-      <configuration name="PublisherRepoImplTest.create" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PublisherRepoImplTest - 2019.04.27 at 16h 00m 59s.xml">
-      <configuration name="PublisherRepoImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ForgotPasswordRepositoryImplTest - 2019.04.27 at 16h 06m 32s.xml">
-      <configuration name="ForgotPasswordRepositoryImplTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ForgotPasswordRepositoryImplTest_read - 2019.04.27 at 16h 06m 43s.xml">
       <configuration name="ForgotPasswordRepositoryImplTest.read" configurationId="JUnit" />
     </history-entry>
@@ -652,14 +542,33 @@
     <history-entry file="RegisterRepositoryImplTest - 2019.04.27 at 16h 20m 15s.xml">
       <configuration name="RegisterRepositoryImplTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BookServiceImplTest - 2019.05.13 at 18h 05m 22s.xml">
+      <configuration name="BookServiceImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookServiceImplTest_create - 2019.05.13 at 18h 05m 41s.xml">
+      <configuration name="BookServiceImplTest.create" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookServiceImplTest_create - 2019.05.13 at 18h 06m 14s.xml">
+      <configuration name="BookServiceImplTest.create" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookServiceImplTest_update - 2019.05.13 at 18h 06m 37s.xml">
+      <configuration name="BookServiceImplTest.update" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookServiceImplTest_delete - 2019.05.13 at 18h 07m 38s.xml">
+      <configuration name="BookServiceImplTest.delete" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookServiceImplTest_read - 2019.05.13 at 18h 07m 46s.xml">
+      <configuration name="BookServiceImplTest.read" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101522000" />
+    <option name="totallyTimeSpent" value="105151000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21709532" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.45007566" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -669,7 +578,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.32569557" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.32569557" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -679,7 +588,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32405892" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.32569557" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32569557" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32569557" />
       <window_info anchor="bottom" id="Spring" order="13" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -716,63 +625,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="debugging" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/services/publishers/PublisherService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/services/staff/EmployeeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/services/systemAccess/login/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/services/systemAccess/password_reset/ForgotPasswordService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="76" selection-start-line="5" selection-start-column="76" selection-end-line="5" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/services/systemAccess/registration/RegisterService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/domain/authors/Author.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/domain/book/Article.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -993,35 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/services/loan/impl/BorrwServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/author/AuthorFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/za/ac/cput/domain/controller/author_controller/AuthorController.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1042,54 +865,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/controller/author_controller/AuthorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Domain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding>
-            <element signature="e#326#327#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/authorRepository/impl/AuthorRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/book_repository/impl/BookRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/sysAccess_repo/loginRepository/impl/LoginRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/sysAccess_repo/register_repository/impl/RegisterRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1115,17 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/publisherRepository/impl/PublisherRepoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="37" column="59" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
-          <folding>
-            <element signature="e#988#989#0" expanded="true" />
-            <element signature="e#1041#1042#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/borrow_repository/impl/BorrowRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -1145,6 +913,153 @@
             <element signature="e#1511#1512#0" expanded="true" />
             <element signature="e#1557#1558#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/sysAccess_repo/register_repository/impl/RegisterRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#369#370#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Factory/author/AuthorFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="81" selection-start-line="6" selection-start-column="38" selection-end-line="7" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/book_repository/impl/BookRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/publisherRepository/impl/PublisherRepoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
+          <folding>
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1041#1042#0" expanded="true" />
+            <element signature="e#1294#1295#0" expanded="true" />
+            <element signature="e#1335#1336#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/repository/authorRepository/impl/AuthorRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/controller/author_controller/AuthorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
+            <element signature="e#819#820#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+            <element signature="e#1130#1131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/services/author/impl/AuthorServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/za/ac/cput/domain/repository/book_repository/impl/BookRepositoryImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="28" column="107" selection-start-line="26" selection-start-column="8" selection-end-line="28" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/za/ac/cput/domain/services/author/impl/AuthorServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/za/ac/cput/domain/services/book/impl/BookServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+          <folding>
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1440#1441#0" expanded="true" />
+            <element signature="e#1519#1520#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1608#1609#0" expanded="true" />
+            <element signature="e#1652#1653#0" expanded="true" />
+            <element signature="e#1693#1694#0" expanded="true" />
+            <element signature="e#1724#1725#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/services/book/impl/BookServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Domain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/za/ac/cput/domain/services/loan/impl/BorrwServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/za/ac/cput/domain/services/loan/impl/BorrwServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
         </state>
       </provider>
     </entry>
