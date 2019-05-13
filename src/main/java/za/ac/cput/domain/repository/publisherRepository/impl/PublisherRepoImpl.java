@@ -1,6 +1,7 @@
 package za.ac.cput.domain.repository.publisherRepository.impl;
 
 
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.domain.publishers.Publisher;
 
 import za.ac.cput.domain.repository.publisherRepository.PublisherRepository;
@@ -8,6 +9,7 @@ import za.ac.cput.domain.repository.publisherRepository.PublisherRepository;
 import java.util.HashMap;
 import java.util.Map;
 
+@Repository
 public class PublisherRepoImpl implements PublisherRepository {
     private static PublisherRepoImpl repo = null;
     private Map<String,Publisher> publishers;
@@ -38,7 +40,8 @@ public class PublisherRepoImpl implements PublisherRepository {
 
     @Override
     public Publisher update(Publisher publisher) {
-        return repo.publishers.put(publisher.getPublishId(),publisher);
+        repo.publishers.replace(publisher.getPublishId(),publisher);
+        return repo.publishers.get(publisher.getPublishId());
     }
 
     @Override
