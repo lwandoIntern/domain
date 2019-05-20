@@ -1,9 +1,9 @@
 package za.ac.cput.domain.services.author.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.domain.authors.Author;
-import za.ac.cput.domain.repository.authorRepository.AuthorRepository;
-import za.ac.cput.domain.repository.authorRepository.impl.AuthorRepositoryImpl;
+import za.ac.cput.domain.repository.author.AuthorRepository;
 import za.ac.cput.domain.services.author.AuthorService;
 
 import java.util.Set;
@@ -11,17 +11,9 @@ import java.util.Set;
 @Service
 public class AuthorServiceImpl implements AuthorService {
 
-    private AuthorServiceImpl service = null;
+    @Autowired
     private AuthorRepository repository;
 
-    private AuthorServiceImpl(){
-        this.repository = AuthorRepositoryImpl.getAuthorRepository();
-    }
-
-    public AuthorServiceImpl getService() {
-        if (service == null)service = new AuthorServiceImpl();
-        return service;
-    }
 
     @Override
     public Set<Author> getAllAuthors() {

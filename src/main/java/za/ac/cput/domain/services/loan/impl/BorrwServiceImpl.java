@@ -1,24 +1,17 @@
 package za.ac.cput.domain.services.loan.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import za.ac.cput.domain.domain.borrowingProccess.Borrow;
-import za.ac.cput.domain.repository.borrow_repository.BorrowRepository;
-import za.ac.cput.domain.repository.borrow_repository.impl.BorrowRepositoryImpl;
+import za.ac.cput.domain.domain.loan.Borrow;
+import za.ac.cput.domain.repository.loan.BorrowRepository;
 import za.ac.cput.domain.services.loan.BorrowService;
 
 @Service
 public class BorrwServiceImpl implements BorrowService {
 
-    private static BorrwServiceImpl service = null;
+    @Autowired
     private BorrowRepository repository;
 
-    private BorrwServiceImpl(){
-        this.repository = BorrowRepositoryImpl.getRepository();
-    }
-    public static BorrwServiceImpl getService(){
-        if (service == null)service = new BorrwServiceImpl();
-        return service;
-    }
     @Override
     public Borrow create(Borrow borrow) {
         return this.repository.create(borrow);

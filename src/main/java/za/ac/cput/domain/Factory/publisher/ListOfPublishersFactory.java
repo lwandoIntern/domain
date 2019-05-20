@@ -1,7 +1,7 @@
 package za.ac.cput.domain.Factory.publisher;
 
-import za.ac.cput.domain.domain.publishers.ListOfPublishers;
-import za.ac.cput.domain.domain.publishers.Publisher;
+import za.ac.cput.domain.domain.publisher.ListOfPublishers;
+import za.ac.cput.domain.domain.publisher.Publisher;
 
 import java.util.ArrayList;
 

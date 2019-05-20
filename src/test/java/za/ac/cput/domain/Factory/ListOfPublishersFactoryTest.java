@@ -4,8 +4,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import za.ac.cput.domain.Factory.publisher.ListOfPublishersFactory;
-import za.ac.cput.domain.domain.publishers.ListOfPublishers;
-import za.ac.cput.domain.domain.publishers.Publisher;
+import za.ac.cput.domain.domain.publisher.ListOfPublishers;
+import za.ac.cput.domain.domain.publisher.Publisher;
 
 import java.util.ArrayList;
 

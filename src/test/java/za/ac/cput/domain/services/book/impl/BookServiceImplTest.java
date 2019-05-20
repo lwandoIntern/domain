@@ -1,19 +1,14 @@
 package za.ac.cput.domain.services.book.impl;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Factory.author.AuthorFactory;
 import za.ac.cput.domain.Factory.books.ArticleFactory;
-import za.ac.cput.domain.Factory.books.HardCopyFactory;
-import za.ac.cput.domain.Factory.books.SoftCopyFactory;
 import za.ac.cput.domain.Factory.publisher.PublisherFactory;
 import za.ac.cput.domain.domain.authors.Author;
 import za.ac.cput.domain.domain.book.Book;
-import za.ac.cput.domain.domain.publishers.Publisher;
-import za.ac.cput.domain.repository.book_repository.impl.BookRepositoryImpl;
+import za.ac.cput.domain.domain.publisher.Publisher;
 
 import static org.junit.Assert.*;
 

@@ -1,7 +1,7 @@
 package za.ac.cput.domain.Factory.member;
 
-import za.ac.cput.domain.domain.members.Member;
-import za.ac.cput.domain.domain.members.RegularMember;
+import za.ac.cput.domain.domain.member.Member;
+import za.ac.cput.domain.domain.member.RegularMember;
 import za.ac.cput.domain.util.Misc;
 
 public class RegularMemberFactory {

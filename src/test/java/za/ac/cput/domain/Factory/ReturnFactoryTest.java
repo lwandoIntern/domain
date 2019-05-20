@@ -2,8 +2,8 @@ package za.ac.cput.domain.Factory;
 
 import za.ac.cput.domain.Factory.loan.ReturnFactory;
 import za.ac.cput.domain.domain.book.Book;
-import za.ac.cput.domain.domain.borrowingProccess.Return;
-import za.ac.cput.domain.domain.members.Member;
+import za.ac.cput.domain.domain.loan.Return;
+import za.ac.cput.domain.domain.member.Member;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

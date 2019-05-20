@@ -1,7 +1,7 @@
 package za.ac.cput.domain.Factory;
 
 import za.ac.cput.domain.Factory.member.RegularMemberFactory;
-import za.ac.cput.domain.domain.members.Member;
+import za.ac.cput.domain.domain.member.Member;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

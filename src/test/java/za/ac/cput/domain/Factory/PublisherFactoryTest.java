@@ -6,7 +6,7 @@ import za.ac.cput.domain.domain.book.Book;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import za.ac.cput.domain.domain.publishers.Publisher;
+import za.ac.cput.domain.domain.publisher.Publisher;
 
 public class PublisherFactoryTest {
 

@@ -1,7 +1,7 @@
 package za.ac.cput.domain.Factory;
 
-import za.ac.cput.domain.Factory.staff.AdminFactory;
-import za.ac.cput.domain.domain.employees.Employee;
+import za.ac.cput.domain.Factory.employee.AdminFactory;
+import za.ac.cput.domain.domain.employee.Employee;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
