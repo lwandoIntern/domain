@@ -7,7 +7,7 @@ import za.ac.cput.domain.repository.author.AuthorRepository;
 import java.util.HashSet;
 import java.util.Set;
 
-@Repository
+@Repository("InMemory")
 public class AuthorRepositoryImpl implements AuthorRepository {
     private static AuthorRepositoryImpl repository = null;
     private Set<Author> authorSet;

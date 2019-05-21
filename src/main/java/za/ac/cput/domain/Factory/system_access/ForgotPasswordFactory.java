@@ -1,4 +1,4 @@
-package za.ac.cput.domain.Factory.registration;
+package za.ac.cput.domain.Factory.system_access;
 
 import za.ac.cput.domain.domain.sysemAccess.ForgotPassword;
 

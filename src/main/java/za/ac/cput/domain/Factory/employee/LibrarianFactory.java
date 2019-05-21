@@ -19,4 +19,12 @@ public class LibrarianFactory {
                 .hasAssistant(hasAssist)
                 .build();
     }
+    public static Employee createAssistant(String nm,String snm,String cell){
+        return new Librarian.Builder()
+                .employeeId(Misc.generateId())
+                .name(nm)
+                .surname(snm)
+                .cellphone(cell)
+                .build();
+    }
 }

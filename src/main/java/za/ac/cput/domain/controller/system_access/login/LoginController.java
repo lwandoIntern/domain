@@ -9,7 +9,7 @@ import za.ac.cput.domain.domain.sysemAccess.Login;
 import za.ac.cput.domain.services.systemAccess.login.impl.LoginServiceImpl;
 
 @RestController
-@RequestMapping("/domain/controller/employee")
+@RequestMapping("/domain/controller/login")
 public class LoginController {
     @Autowired
     private LoginServiceImpl service;

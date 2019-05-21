@@ -3,7 +3,7 @@ package za.ac.cput.domain.repository.system_access.login.impl;
 import org.junit.Before;
 import org.junit.Test;
 import za.ac.cput.domain.domain.sysemAccess.Login;
-import za.ac.cput.domain.Factory.registration.LoginFactory;
+import za.ac.cput.domain.Factory.system_access.LoginFactory;
 import za.ac.cput.domain.repository.system_access.login.LoginRepository;
 
 import static org.junit.Assert.*;

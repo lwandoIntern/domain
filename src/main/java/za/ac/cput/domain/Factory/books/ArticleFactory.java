@@ -17,4 +17,11 @@ public class ArticleFactory {
                 .category(category)
                 .build();
     }
+    public static Book firstArticle(String title,int year){
+        return new Article.ArticleBuilder()
+                .isbnNum(Misc.generateId())
+                .yearPublished(year)
+                .title(title)
+                .build();
+    }
 }

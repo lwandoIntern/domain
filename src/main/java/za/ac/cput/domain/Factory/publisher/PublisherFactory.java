@@ -19,4 +19,12 @@ public class PublisherFactory {
                 .province(province)
                 .build();
     }
+    public static Publisher createPubHouse(String name,String tel,int zip){
+        return new Publisher.Builder()
+                .publishedId(Misc.generateId())
+                .name(name)
+                .telephone(tel)
+                .zipCode(zip)
+                .build();
+    }
 }
