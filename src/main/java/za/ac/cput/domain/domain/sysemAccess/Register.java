@@ -1,126 +1,82 @@
 package za.ac.cput.domain.domain.sysemAccess;
 
 
-import za.ac.cput.domain.domain.interfaces.Address;
-import za.ac.cput.domain.domain.interfaces.Contact;
-import za.ac.cput.domain.domain.interfaces.Names;
+import org.graalvm.compiler.core.common.type.ArithmeticOpTable;
+import za.ac.cput.domain.domain.value_objects.Address;
+import za.ac.cput.domain.domain.value_objects.Contacts;
+import za.ac.cput.domain.domain.value_objects.Names;
 
-import javax.persistence.Entity;
+import java.util.Objects;
 
-public class Register implements Names,Contact,Address{
+public class Register{
 
-    private String regNum,name,surname,cellphone,telephone,suburb,city,province;
-    private int zipCode;
+    private String regNum;
+    private Names name;
+    private Address address;
+    private Contacts contacts;
 
     private Register(){}
     public Register(Builder builder){
         this.regNum = builder.regNum;
         this.name = builder.name;
-        this.suburb = builder.suburb;
-        this.surname = builder.surname;
-        this.cellphone = builder.cellphone;
-        this.telephone = builder.telephone;
-        this.city = builder.city;
-        this.province = builder.province;
-        this.zipCode = builder.zipCode;
+        this.address = builder.address;
+        this.contacts = builder.contacts;
     }
 
     public String getRegNum() {
         return regNum;
     }
 
-    @Override
-    public int getZipCode() {
-        return 0;
+    public Names getName() {
+        return name;
     }
 
-    @Override
-    public String getSurbub() {
-        return null;
+    public Address getAddress() {
+        return address;
     }
 
-    @Override
-    public String getCity() {
-        return null;
-    }
-
-    @Override
-    public String getProvince() {
-        return null;
-    }
-
-    @Override
-    public String getCellphone() {
-        return null;
-    }
-
-    @Override
-    public String getTelephone() {
-        return null;
-    }
-
-    @Override
-    public String getName() {
-        return null;
-    }
-
-    @Override
-    public String getSurname() {
-        return null;
+    public Contacts getContacts() {
+        return contacts;
     }
 
     public static class Builder{
-        private String regNum,name,surname,cellphone,telephone,suburb,city,province;
-        private int zipCode;
+        private String regNum;
+        private Names name;
+        private Address address;
+        private Contacts contacts;
+
         public Builder regNum(String r){
             this.regNum = r;
             return this;
         }
-        public Builder name(String value){
+        public Builder name(Names value){
             this.name = value;
             return this;
         }
-        public Builder surname(String value){
-            this.surname = value;
+        public Builder contacts(Contacts value){
+            this.contacts = value;
             return this;
         }
-        public Builder cellphone(String val){
-            this.cellphone = val;
+        public Builder address(Address val){
+            this.address = val;
             return this;
         }
-        public Builder telephone(String val){
-            this.telephone = val;
-            return this;
-        }
-        public Builder zipCode(int code){
-            this.zipCode = code;
-            return this;
-        }
-        public Builder suburb(String val){
-            this.suburb = val;
-            return this;
-        }
-        public Builder city(String city){
-            this.city = city;
-            return this;
-        }
-        public Builder province(String prov){
-            this.province = prov;
-            return this;
-        }
-        public Builder copy(Register member){
-            this.name = member.name;
-            this.suburb = member.suburb;
-            this.surname = member.surname;
-            this.cellphone = member.cellphone;
-            this.telephone = member.telephone;
-            this.city =member.city;
-            this.province = member.province;
-            this.zipCode = member.zipCode;
-            return this;
-        }
+
         public Register build(){
             return new Register(this);
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Register register = (Register) o;
+        return regNum.equals(register.regNum);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(regNum);
     }
 }

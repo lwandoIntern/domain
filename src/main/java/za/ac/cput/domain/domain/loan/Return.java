@@ -3,40 +3,53 @@ package za.ac.cput.domain.domain.loan;
 import za.ac.cput.domain.domain.book.Book;
 import za.ac.cput.domain.domain.member.Member;
 
+import java.util.Objects;
+
 
 public class Return {
-
-    private Book book;
-    private Member member;
+    private String id;
+    private String returnDate;
 
     private Return(){}
     public Return(Builder builder){
-        this.book = builder.book;
-        this.member = builder.member;
+
     }
 
-    public Book getBook() {
-        return book;
+    public String getId() {
+        return id;
     }
 
-    public Member getMember() {
-        return member;
+    public String getReturnDate() {
+        return returnDate;
     }
 
     public static class Builder{
-        private Book book;
-        private Member member;
+        private String id;
+        private String returnDate;
 
-        public Builder book(Book book){
-            this.book = book;
+        public Builder id(String id){
+            this.id = id;
             return this;
         }
-        public Builder member(Member member){
-            this.member = member;
+        public Builder returnDate(String returnDate){
+            this.returnDate = returnDate;
             return this;
         }
         public Return build(){
             return new Return(this);
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Return aReturn = (Return) o;
+        return id.equals(aReturn.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

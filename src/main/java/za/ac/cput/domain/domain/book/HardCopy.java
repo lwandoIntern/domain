@@ -9,8 +9,6 @@ import java.util.Objects;
 public class HardCopy implements Book{
     private boolean availableForLoan;
     private String isbnNum,title,category,condition;
-    private Author author;
-    private Publisher publisher;
     private int yearPublished;
 
     private HardCopy(){}
@@ -18,8 +16,6 @@ public class HardCopy implements Book{
         this.isbnNum = builder.isbnNum;
         this.title = builder.title;
         this.category = builder.category;
-        this.author = builder.author;
-        this.publisher = builder.publisher;
         this.condition = builder.condition;
         this.availableForLoan = builder.availableForLoan;
         this.yearPublished = builder.yearPublished;
@@ -85,16 +81,6 @@ public class HardCopy implements Book{
     }
 
     @Override
-    public Author getAuthor() {
-        return author;
-    }
-
-    @Override
-    public Publisher getPublisher() {
-        return publisher;
-    }
-
-    @Override
     public String getCategory() {
         return category;
     }
@@ -115,8 +101,6 @@ public class HardCopy implements Book{
                 ", title='" + title + '\'' +
                 ", category='" + category + '\'' +
                 ", condition='" + condition + '\'' +
-                ", author=" + author +
-                ", publisher=" + publisher +
                 ", yearPublished=" + yearPublished +
                 '}';
     }

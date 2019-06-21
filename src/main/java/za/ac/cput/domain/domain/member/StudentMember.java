@@ -1,5 +1,9 @@
 package za.ac.cput.domain.domain.member;
 
+import za.ac.cput.domain.domain.value_objects.Address;
+import za.ac.cput.domain.domain.value_objects.Contacts;
+import za.ac.cput.domain.domain.value_objects.Names;
+
 import java.util.Objects;
 
 
@@ -7,20 +11,16 @@ public class StudentMember implements Member{
     private int borrowingAmountAllowed;
 
     private String memberId;
-    private String name,surname,cellphone,telephone,suburb,city,province;
-    private int zipCode;
+    private Names name;
+    private Address address;
+    private Contacts contacts;
 
     private StudentMember(){}
     public StudentMember(Builder builder){
         this.memberId = builder.memberId;
         this.name = builder.name;
-        this.suburb = builder.suburb;
-        this.surname = builder.surname;
-        this.cellphone = builder.cellphone;
-        this.telephone = builder.telephone;
-        this.city = builder.city;
-        this.province = builder.province;
-        this.zipCode = builder.zipCode;
+        this.address = builder.address;
+        this.contacts = builder.contacts;
         this.borrowingAmountAllowed = builder.borrowingAmountAllowed;
     }
     @Override
@@ -28,86 +28,43 @@ public class StudentMember implements Member{
         return memberId;
     }
 
-    @Override
-    public String getName() {
-        return null;
+    public Names getName() {
+        return name;
     }
 
-    @Override
-    public String getSurname() {
-        return null;
+    public Address getAddress() {
+        return address;
     }
 
-    @Override
-    public int getZipCode() {
-        return 0;
+    public Contacts getContacts() {
+        return contacts;
     }
 
-    @Override
-    public String getSurbub() {
-        return null;
-    }
-
-    @Override
-    public String getCity() {
-        return null;
-    }
-
-    @Override
-    public String getProvince() {
-        return null;
-    }
-
-    @Override
-    public String getCellphone() {
-        return null;
-    }
-
-    @Override
-    public String getTelephone() {
-        return null;
+    public int getBorrowingAmountAllowed() {
+        return borrowingAmountAllowed;
     }
 
     public static class Builder{
         private String memberId;
-        private String name,surname,cellphone,telephone,suburb,city,province;
-        private int zipCode;
+        private Names name;
+        private Address address;
+        private Contacts contacts;
         private int borrowingAmountAllowed;
 
         public Builder memberId(String id){
             this.memberId = memberId;
             return this;
         }
-        public Builder name(String value){
+        public Builder name(Names value){
             this.name = value;
             return this;
         }
-        public Builder surname(String value){
-            this.surname = value;
+        public Builder address(Address value){
+            this.address = value;
             return this;
         }
-        public Builder cellphone(String val){
-            this.cellphone = val;
-            return this;
-        }
-        public Builder telephone(String val){
-            this.telephone = val;
-            return this;
-        }
-        public Builder zipCode(int code){
-            this.zipCode = code;
-            return this;
-        }
-        public Builder suburb(String val){
-            this.suburb = val;
-            return this;
-        }
-        public Builder city(String city){
-            this.city = city;
-            return this;
-        }
-        public Builder province(String prov){
-            this.province = prov;
+        public Builder contacts(Contacts value){
+            this.contacts = value;
             return this;
         }
         public Builder borrowingAmountAllowed(int amt){
@@ -117,22 +74,6 @@ public class StudentMember implements Member{
         public StudentMember build(){
             return new StudentMember(this);
         }
-    }
-
-    @Override
-    public String toString() {
-        return "StudentMember{" +
-                "borrowingAmountAllowed=" + borrowingAmountAllowed +
-                ", memberId='" + memberId + '\'' +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", cellphone='" + cellphone + '\'' +
-                ", telephone='" + telephone + '\'' +
-                ", suburb='" + suburb + '\'' +
-                ", city='" + city + '\'' +
-                ", province='" + province + '\'' +
-                ", zipCode=" + zipCode +
-                '}';
     }
 
     @Override

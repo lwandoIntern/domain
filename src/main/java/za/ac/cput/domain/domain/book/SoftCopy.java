@@ -9,8 +9,6 @@ import java.util.Objects;
 public class SoftCopy implements Book{
     private boolean downloadable;
     private String isbnNum,title,category;
-    private Author author;
-    private Publisher publisher;
     private int yearPublished;
 
     public SoftCopy(SoftCopyBuilder builder) {
@@ -18,16 +16,12 @@ public class SoftCopy implements Book{
         this.isbnNum = builder.isbnNum;
         this.title = builder.title;
         this.category = builder.category;
-        this.author = builder.author;
-        this.publisher = builder.publisher;
         this.yearPublished = builder.yearPublished;
     }
 
     public static class SoftCopyBuilder{
         private boolean downloadable;
         private String isbnNum,title,category;
-        private Author author;
-        private Publisher publisher;
         private int yearPublished;
 
         public SoftCopyBuilder isbnNum(String id){
@@ -40,14 +34,6 @@ public class SoftCopy implements Book{
         }
         public SoftCopyBuilder category(String cat){
             this.category = cat;
-            return this;
-        }
-        public SoftCopyBuilder author(Author author){
-            this.author = author;
-            return this;
-        }
-        public SoftCopyBuilder publisher(Publisher publisher){
-            this.publisher = publisher;
             return this;
         }
         public SoftCopyBuilder yearPublished(int yearPublished){
@@ -77,17 +63,6 @@ public class SoftCopy implements Book{
     public String getTitle() {
         return null;
     }
-
-    @Override
-    public Author getAuthor() {
-        return null;
-    }
-
-    @Override
-    public Publisher getPublisher() {
-        return null;
-    }
-
     @Override
     public String getCategory() {
         return null;
@@ -102,8 +77,7 @@ public class SoftCopy implements Book{
                 ", isbnNum='" + isbnNum + '\'' +
                 ", title='" + title + '\'' +
                 ", category='" + category + '\'' +
-                ", author=" + author +
-                ", publisher=" + publisher +
+
                 ", yearPublished=" + yearPublished +
                 '}';
     }

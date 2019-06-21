@@ -1,82 +1,52 @@
 package za.ac.cput.domain.domain.publisher;
 
-import za.ac.cput.domain.domain.book.Book;
-import za.ac.cput.domain.domain.interfaces.Address;
-import za.ac.cput.domain.domain.interfaces.Contact;
-import za.ac.cput.domain.domain.authors.Author;
+import za.ac.cput.domain.domain.value_objects.Address;
+import za.ac.cput.domain.domain.value_objects.Contacts;
 
 import java.util.Objects;
 
 
-public class Publisher implements Contact, Address {
-    private Author author;
-    private Book book;
-
+public class Publisher {
     private String publishId;
-    private String name,cell,tel,suburb,city,province;
-    private int zipCode,numOfBooksWritten;
+    private String name;
+    private Address address;
+    private Contacts contacts;
+    private int numOfBooksPublished;
 
     private Publisher(){}
     public Publisher(Builder builder){
+        this.publishId = builder.publishId;
         this.name = builder.name;
-        this.cell = builder.cellphone;
-        this.tel = builder.telephone;
-        this.zipCode = builder.zipCode;
-        this.suburb = builder.suburb;
-        this.city = builder.city;
-        this.province = builder.province;
-        this.author = builder.author;
-        this.book = builder.book;
-        this.numOfBooksWritten = builder.numOfBooksWritten;
+        this.address = builder.address;
+        this.contacts = builder.contacts;
+        this.numOfBooksPublished = builder.numOfBooksPublished;
     }
     public String getPublishId() {
         return publishId;
     }
-    @Override
-    public String getCellphone() {
-        return cell;
+    public Address getAddress() {
+        return address;
     }
 
-    @Override
-    public String getTelephone() {
-        return tel;
+    public Contacts getContacts() {
+        return contacts;
     }
-
-    @Override
-    public int getZipCode() {
-        return zipCode;
-    }
-
-    @Override
-    public String getSurbub() {
-        return suburb;
-    }
-
-    @Override
-    public String getCity() {
-        return city;
-    }
-
-    @Override
-    public String getProvince() {
-        return province;
-    }
-    public int getNumOfBooksWritten(){
-        return numOfBooksWritten;
+    public int getNumOfBooksPublished(){
+        return numOfBooksPublished;
     }
     public static class Builder {
-        private Author author;
-        private Book book;
         private String publishId;
-        private String name, cellphone, telephone, city, suburb, province;
-        private int zipCode, numOfBooksWritten;
+        private String name;
+        private Address address;
+        private Contacts contacts;
+        private int numOfBooksPublished;
 
         public Builder publishedId(String id){
             this.publishId = id;
             return this;
         }
-        public Builder numOfBooksWritten(int v) {
-            this.numOfBooksWritten = v;
+        public Builder numOfBooksPublished(int v) {
+            this.numOfBooksPublished = v;
             return this;
         }
 
@@ -85,41 +55,12 @@ public class Publisher implements Contact, Address {
             return this;
         }
 
-        public Builder cellphone(String value) {
-            this.cellphone = value;
+        public Builder address(Address value){
+            this.address = value;
             return this;
         }
-
-        public Builder telephone(String v) {
-            this.telephone = v;
-            return this;
-        }
-
-        public Builder zipCode(int v) {
-            this.zipCode = v;
-            return this;
-        }
-
-        public Builder city(String a) {
-            this.city = a;
-            return this;
-        }
-
-        public Builder suburb(String c) {
-            this.suburb = c;
-            return this;
-        }
-
-        public Builder province(String x) {
-            this.province = x;
-            return this;
-        }
-        public Builder author(Author value){
-            this.author = value;
-            return this;
-        }
-        public Builder book(Book v){
-            this.book = v;
+        public Builder contacts(Contacts value){
+            this.contacts = value;
             return this;
         }
         public Publisher build() {
@@ -128,32 +69,15 @@ public class Publisher implements Contact, Address {
     }
 
     @Override
-    public String toString() {
-        return "Publisher{" +
-                "author=" + author +
-                ", za.ac.cput.domain.domain.author.book=" + book +
-                ", publishId='" + publishId + '\'' +
-                ", name='" + name + '\'' +
-                ", cell='" + cell + '\'' +
-                ", tel='" + tel + '\'' +
-                ", suburb='" + suburb + '\'' +
-                ", city='" + city + '\'' +
-                ", province='" + province + '\'' +
-                ", zipCode=" + zipCode +
-                ", numOfBooksWritten=" + numOfBooksWritten +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Publisher publisher = (Publisher) o;
-        return author.equals(publisher.author);
+        return publishId.equals(publisher.publishId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(author);
+        return Objects.hash(publishId);
     }
 }

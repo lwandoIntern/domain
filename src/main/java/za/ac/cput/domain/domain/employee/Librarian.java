@@ -1,84 +1,33 @@
 package za.ac.cput.domain.domain.employee;
 
+import za.ac.cput.domain.domain.value_objects.Address;
+import za.ac.cput.domain.domain.value_objects.Contacts;
+import za.ac.cput.domain.domain.value_objects.Names;
+import za.ac.cput.domain.domain.value_objects.Position;
+
 import java.util.Objects;
 
 
 public class Librarian implements Employee{
     private boolean hasAssistant;
-    private String employeeId,name,surname,cellphone,telephone,city,suburb,province,positionName;
-    private boolean hasSubordinates,hasSuperior;
-    private int zipCode;
+    private String employeeId;
+    private Names name;
+    private Address address;
+    private Contacts contacts;
+    private Position position;
 
     private Librarian(){}
     public Librarian(Builder builder){
         this.employeeId = builder.employeeId;
         this.hasAssistant = builder.hasAssistant;
         this.name = builder.name;
-        this.surname = builder.surname;
-        this.cellphone = builder.cellphone;
-        this.telephone = builder.telephone;
-        this.zipCode = builder.zipCode;
-        this.suburb = builder.suburb;
-        this.city = builder.city;
-        this.province = builder.province;
-        this.positionName = builder.positionName;
-        this.hasSubordinates = builder.hasSubordinates;
-        this.hasSuperior = builder.hasSuperior;
+        this.address = builder.address;
+        this.contacts = builder.contacts;
+        this.position = builder.position;
     }
 
-    @Override
-    public String getName() {
+    public Names getName() {
         return name;
-    }
-
-    @Override
-    public String getSurname() {
-        return surname;
-    }
-
-    @Override
-    public String getCellphone() {
-        return cellphone;
-    }
-
-    @Override
-    public String getTelephone() {
-        return telephone;
-    }
-
-    @Override
-    public int getZipCode() {
-        return zipCode;
-    }
-
-    @Override
-    public String getSurbub() {
-        return suburb;
-    }
-
-    @Override
-    public String getCity() {
-        return city;
-    }
-
-    @Override
-    public String getProvince() {
-        return province;
-    }
-
-    @Override
-    public String getPosition() {
-        return positionName;
-    }
-
-    @Override
-    public boolean isSuperior() {
-        return hasSuperior;
-    }
-
-    @Override
-    public boolean isSubordinates() {
-        return hasSubordinates;
     }
 
     @Override
@@ -88,56 +37,30 @@ public class Librarian implements Employee{
 
     public static class Builder{
         private boolean hasAssistant;
-        private String employeeId,name,surname,cellphone,telephone,city,suburb,province,positionName;
-        private boolean hasSuperior,hasSubordinates;
-        private int zipCode;
+        private String employeeId;
+        private Names name;
+        private Address address;
+        private Contacts contacts;
+        private Position position;
 
         public Builder employeeId(String value){
             this.employeeId = value;
             return this;
         }
-        public Builder name(String value){
+        public Builder name(Names value){
             this.name = value;
             return this;
         }
-        public Builder surname(String value){
-            this.surname = value;
+        public Builder position(Position value){
+            this.position = value;
             return this;
         }
-        public Builder cellphone(String value){
-            this.cellphone = value;
+        public Builder address(Address value){
+            this.address = value;
             return this;
         }
-        public Builder telephone(String v){
-            this.telephone = v;
-            return this;
-        }
-        public Builder zipCode(int v){
-            this.zipCode = v;
-            return this;
-        }
-        public Builder city(String a){
-            this.city = a;
-            return this;
-        }
-        public Builder suburb(String c){
-            this.suburb = c;
-            return this;
-        }
-        public Builder province(String x){
-            this.province = x;
-            return this;
-        }
-        public Builder positionName(String val){
-            this.positionName = val;
-            return this;
-        }
-        public Builder hasSuperior(boolean v){
-            this.hasSuperior = v;
-            return this;
-        }
-        public Builder hasSubordinates(boolean v){
-            this.hasSubordinates = v;
+        public Builder contacts(Contacts v){
+            this.contacts = v;
             return this;
         }
         public Builder hasAssistant(boolean hasAssistant){
@@ -147,25 +70,6 @@ public class Librarian implements Employee{
         public Librarian build(){
             return new Librarian(this);
         }
-    }
-
-    @Override
-    public String toString() {
-        return "Librarian{" +
-                "hasAssistant=" + hasAssistant +
-                ", employeeId='" + employeeId + '\'' +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", cellphone='" + cellphone + '\'' +
-                ", telephone='" + telephone + '\'' +
-                ", city='" + city + '\'' +
-                ", suburb='" + suburb + '\'' +
-                ", province='" + province + '\'' +
-                ", positionName='" + positionName + '\'' +
-                ", hasSubordinates=" + hasSubordinates +
-                ", hasSuperior=" + hasSuperior +
-                ", zipCode=" + zipCode +
-                '}';
     }
 
     @Override

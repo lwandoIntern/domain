@@ -12,10 +12,6 @@ public interface Book {
 
      String getTitle();
 
-     Author getAuthor();
-
-     Publisher getPublisher();
-
      String getCategory();
 
 }

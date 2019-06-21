@@ -9,18 +9,14 @@ public class Article implements Book{
     private String datePublished;
     private boolean downloadable;
     private String isbnNum,title,category;
-    private Author author;
-    private Publisher publisher;
     private int yearPublished;
 
     private Article(){}
     public Article(ArticleBuilder builder){
         this.isbnNum = builder.isbnNum;
         this.title = builder.title;
-        this.author = builder.author;
         this.category = builder.category;
         this.downloadable = builder.downloadable;
-        this.publisher = builder.publisher;
         this.datePublished = builder.datePublished;
         this.yearPublished = builder.yearPublished;
     }
@@ -28,8 +24,7 @@ public class Article implements Book{
         private String datePublished;
         private boolean downloadable;
         private String isbnNum,title,category;
-        private Author author;
-        private Publisher publisher;
+
         private int yearPublished;
 
         public ArticleBuilder datePublished(String datePublished){
@@ -50,14 +45,6 @@ public class Article implements Book{
         }
         public ArticleBuilder category(String category){
             this.category = category;
-            return this;
-        }
-        public ArticleBuilder author(Author author){
-            this.author = author;
-            return this;
-        }
-        public ArticleBuilder publisher(Publisher p){
-            this.publisher = p;
             return this;
         }
         public ArticleBuilder yearPublished(int yearPublished){
@@ -81,16 +68,6 @@ public class Article implements Book{
     @Override
     public String getTitle() {
         return title;
-    }
-
-    @Override
-    public Author getAuthor() {
-        return author;
-    }
-
-    @Override
-    public Publisher getPublisher() {
-        return publisher;
     }
 
     @Override
