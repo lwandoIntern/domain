@@ -46,4 +46,9 @@ public class CourseServiceImpl implements CourseService {
     public Set<Course> getAll() {
         return this.courseRepository.getAll();
     }
+
+    @Override
+    public Course getCourseByName(String courseName) {
+        return this.courseRepository.getCourseByName(courseName);
+    }
 }

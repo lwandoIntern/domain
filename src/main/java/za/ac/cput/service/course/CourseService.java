@@ -4,4 +4,5 @@ import za.ac.cput.domain.course.Course;
 import za.ac.cput.service.IService;
 
 public interface CourseService extends IService<Course,String> {
+    Course getCourseByName(String courseName);
 }

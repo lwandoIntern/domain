@@ -4,15 +4,12 @@ import java.util.Date;
 import java.util.Objects;
 
 public class StudentDemography {
-    private String studentId,raceId,genderId,studentTitle;
-    private Date dateOfBirth;
+    private String studentId,raceId,genderId;
 
-    public StudentDemography(String studentId, String raceId, String genderId, String studentTitle, Date dateOfBirth) {
+    public StudentDemography(String studentId, String raceId, String genderId) {
         this.studentId = studentId;
         this.raceId = raceId;
         this.genderId = genderId;
-        this.studentTitle = studentTitle;
-        this.dateOfBirth = dateOfBirth;
     }
 
     public String getStudentId() {
@@ -25,14 +22,6 @@ public class StudentDemography {
 
     public String getGenderId() {
         return genderId;
-    }
-
-    public String getStudentTitle() {
-        return studentTitle;
-    }
-
-    public Date getDateOfBirth() {
-        return dateOfBirth;
     }
 
     @Override
@@ -54,8 +43,6 @@ public class StudentDemography {
                 "studentId='" + studentId + '\'' +
                 ", raceId='" + raceId + '\'' +
                 ", genderId='" + genderId + '\'' +
-                ", studentTitle='" + studentTitle + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
                 '}';
     }
 }

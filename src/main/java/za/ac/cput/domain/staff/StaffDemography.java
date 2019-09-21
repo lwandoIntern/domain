@@ -4,16 +4,13 @@ import java.util.Date;
 import java.util.Objects;
 
 public class StaffDemography {
-    private String staffNum,genderId,raceId,staffTitle;
-    private Date dateOfBirth;
+    private String staffNum,genderId,raceId;
 
     private StaffDemography(){}
-    public StaffDemography(String staffNum, String genderId, String raceId, String staffTitle, Date dateOfBirth) {
+    public StaffDemography(String staffNum, String genderId, String raceId) {
         this.staffNum = staffNum;
         this.genderId = genderId;
         this.raceId = raceId;
-        this.staffTitle = staffTitle;
-        this.dateOfBirth = dateOfBirth;
     }
 
     public String getStaffNum() {
@@ -26,14 +23,6 @@ public class StaffDemography {
 
     public String getRaceId() {
         return raceId;
-    }
-
-    public String getStaffTitle() {
-        return staffTitle;
-    }
-
-    public Date getDateOfBirth() {
-        return dateOfBirth;
     }
 
     @Override
@@ -55,8 +44,6 @@ public class StaffDemography {
                 "staffNum='" + staffNum + '\'' +
                 ", genderId='" + genderId + '\'' +
                 ", raceId='" + raceId + '\'' +
-                ", staffTitle='" + staffTitle + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
                 '}';
     }
 }

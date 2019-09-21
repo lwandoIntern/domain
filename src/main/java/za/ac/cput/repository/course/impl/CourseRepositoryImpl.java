@@ -57,4 +57,12 @@ public class CourseRepositoryImpl implements CourseRepository {
     public Set<Course> getAll() {
         return this.courses;
     }
+
+    @Override
+    public Course getCourseByName(String courseName) {
+        return this.courses.stream()
+                .filter(course -> course.getCourseName().equalsIgnoreCase(courseName))
+                .findAny()
+                .orElse(null);
+    }
 }

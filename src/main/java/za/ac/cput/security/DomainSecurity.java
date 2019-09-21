@@ -22,8 +22,8 @@ public class DomainSecurity extends WebSecurityConfigurerAdapter {
                 .password(encoder().encode("staff"))
                 .roles(USER_ROLE)
                 .and()
-                .withUser(encoder().encode("admin"))
-                .password("admin")
+                .withUser("admin")
+                .password(encoder().encode("admin"))
                 .roles(USER_ROLE,ADIMN_ROLE);
     }
 
@@ -32,7 +32,7 @@ public class DomainSecurity extends WebSecurityConfigurerAdapter {
         http.httpBasic()
                 .and()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET,"/domain/**").hasRole(USER_ROLE)
+                .antMatchers(HttpMethod.GET,"/domain/**/create/**").hasRole(ADIMN_ROLE)
                 .and()
                 .csrf()
                 .disable()
