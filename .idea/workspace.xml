@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d9e7066-4dab-475d-939f-ece112913893" name="Default Changelist" comment="" />
+    <list default="true" id="3d9e7066-4dab-475d-939f-ece112913893" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/author/AuthorFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +35,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -217,6 +220,7 @@
       <workItem from="1558358476373" duration="12008000" />
       <workItem from="1561145095316" duration="5726000" />
       <workItem from="1569054243771" duration="1497000" />
+      <workItem from="1569059332077" duration="670000" />
     </task>
     <task id="LOCAL-00001" summary="Updating the domain">
       <created>1555436128574</created>
@@ -415,7 +419,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
