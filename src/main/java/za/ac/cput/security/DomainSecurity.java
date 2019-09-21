@@ -12,7 +12,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 public class DomainSecurity extends WebSecurityConfigurerAdapter {
     private static final String USER_ROLE = "USER";
-    private static final String ADIMN_ROLE = "ADMIN";
+    private static final String ADMIN_ROLE = "ADMIN";
 
 
     @Override
@@ -24,7 +24,7 @@ public class DomainSecurity extends WebSecurityConfigurerAdapter {
                 .and()
                 .withUser("admin")
                 .password(encoder().encode("admin"))
-                .roles(USER_ROLE,ADIMN_ROLE);
+                .roles(USER_ROLE,ADMIN_ROLE);
     }
 
     @Override
@@ -32,7 +32,7 @@ public class DomainSecurity extends WebSecurityConfigurerAdapter {
         http.httpBasic()
                 .and()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET,"/domain/**/create/**").hasRole(ADIMN_ROLE)
+                .antMatchers(HttpMethod.GET,"/domain/**/create/**").hasRole(ADMIN_ROLE)
                 .and()
                 .csrf()
                 .disable()
