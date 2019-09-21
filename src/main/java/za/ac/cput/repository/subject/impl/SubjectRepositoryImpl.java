@@ -57,4 +57,11 @@ public class SubjectRepositoryImpl implements SubjectRepository {
     public Set<Subject> getAll() {
         return this.subjectsDB;
     }
+
+    @Override
+    public Subject getByName(String subjectName) {
+        return this.subjectsDB.stream().filter(subject -> subject.getSubjectName().equalsIgnoreCase(subjectName))
+                .findAny()
+                .orElse(null);
+    }
 }

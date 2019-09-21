@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d9e7066-4dab-475d-939f-ece112913893" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/author/AuthorFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/request/NewCourse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/request/NewPublisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/publisher/PublisherAddressRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/publisher/impl/PublisherAddressRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/publisher/PublisherAddressService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/publisher/impl/PublisherAddressServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/author/AuthorAddressFactoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/course/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/course/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/publisher/PublisherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/publisher/PublisherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/subject/SubjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/subject/SubjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/subject/impl/SubjectRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/subject/impl/SubjectRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/subject/SubjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/subject/SubjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/subject/impl/SubjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/subject/impl/SubjectServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/author/AuthorFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/author/AuthorFactoryTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,9 +47,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit4 Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -75,11 +88,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="za.ac.cput.factory.author" />
       <recent name="za.ac.cput.domain.controller.system_access.registration" />
       <recent name="za.ac.cput.domain.controller.system_access.login" />
       <recent name="za.ac.cput.domain.controller.system_access.forgot_password" />
       <recent name="za.ac.cput.domain.controller.publisher" />
-      <recent name="za.ac.cput.domain.controller.member" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="za.ac.cput.domain.Factory" />
@@ -91,6 +104,11 @@
     </key>
   </component>
   <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
     <option name="ruleStates">
       <list>
         <RuleState>
@@ -102,33 +120,35 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Domain (1)">
-    <configuration name="ForgotPasswordControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AuthorAddressFactoryTest.createAuthorAddress">
+    <configuration name="AuthorAddressFactoryTest.createAuthorAddress" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="za.ac.cput.domain.controller.system_access.forgot_password.*" />
+          <option name="PATTERN" value="za.ac.cput.factory.author.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="za.ac.cput.domain.controller.system_access.forgot_password" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.domain.controller.system_access.forgot_password.ForgotPasswordControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="za.ac.cput.factory.author" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.factory.author.AuthorAddressFactoryTest" />
+      <option name="METHOD_NAME" value="createAuthorAddress" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AuthorFactoryTest.createAuthor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="za.ac.cput.domain.controller.system_access.login.*" />
+          <option name="PATTERN" value="za.ac.cput.factory.author.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="za.ac.cput.domain.controller.system_access.login" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.domain.controller.system_access.login.LoginControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="za.ac.cput.factory.author" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.factory.author.AuthorFactoryTest" />
+      <option name="METHOD_NAME" value="createAuthor" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -175,21 +195,41 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ForgotPasswordControllerTest" />
-      <item itemvalue="JUnit.LoginControllerTest" />
       <item itemvalue="JUnit.RegisterControllerTest" />
       <item itemvalue="Spring Boot.Domain" />
       <item itemvalue="Spring Boot.Domain (1)" />
+      <item itemvalue="JUnit.AuthorFactoryTest.createAuthor" />
+      <item itemvalue="JUnit.AuthorAddressFactoryTest.createAuthorAddress" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AuthorAddressFactoryTest.createAuthorAddress" />
+        <item itemvalue="JUnit.AuthorFactoryTest.createAuthor" />
         <item itemvalue="Spring Boot.Domain (1)" />
         <item itemvalue="Spring Boot.Domain" />
         <item itemvalue="JUnit.RegisterControllerTest" />
-        <item itemvalue="JUnit.LoginControllerTest" />
-        <item itemvalue="JUnit.ForgotPasswordControllerTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e1444d64" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e1444d64" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@8ce2472c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -221,6 +261,7 @@
       <workItem from="1561145095316" duration="5726000" />
       <workItem from="1569054243771" duration="1497000" />
       <workItem from="1569059332077" duration="670000" />
+      <workItem from="1569067893597" duration="5842000" />
     </task>
     <task id="LOCAL-00001" summary="Updating the domain">
       <created>1555436128574</created>
@@ -378,38 +419,6 @@
     </task>
     <option name="localTasksCounter" value="23" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="AuthorControllerTest_create - 2019.05.21 at 21h 55m 34s.xml">
-      <configuration name="AuthorControllerTest.create" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AuthorControllerTest_create - 2019.05.21 at 21h 56m 22s.xml">
-      <configuration name="AuthorControllerTest.create" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BookControllerTest - 2019.05.21 at 22h 10m 15s.xml">
-      <configuration name="BookControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmployeeControllerTest,create_and_3_more - 2019.05.21 at 22h 20m 45s.xml">
-      <configuration name="EmployeeControllerTest,create and 3 more" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BorrowControllerTest - 2019.05.21 at 22h 31m 23s.xml">
-      <configuration name="BorrowControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MemberControllerTest - 2019.05.21 at 22h 43m 34s.xml">
-      <configuration name="MemberControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PublisherControllerTest - 2019.05.21 at 22h 51m 08s.xml">
-      <configuration name="PublisherControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ForgotPasswordControllerTest - 2019.05.21 at 23h 01m 17s.xml">
-      <configuration name="ForgotPasswordControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LoginControllerTest - 2019.05.21 at 23h 12m 24s.xml">
-      <configuration name="LoginControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterControllerTest - 2019.05.21 at 23h 18m 49s.xml">
-      <configuration name="RegisterControllerTest" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
