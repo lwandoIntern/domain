@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d9e7066-4dab-475d-939f-ece112913893" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/security/DomainSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/security/DomainSecurity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/subject/SubjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/subject/SubjectController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +70,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-    <property name="settings.editor.selected.configurable" value="http.proxy" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -106,7 +107,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Domain (1)">
+  <component name="RunManager" selected="Application.Domain">
+    <configuration name="Domain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.Domain" />
+      <module name="domain" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AuthorAddressFactoryTest.createAuthorAddress" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domain" />
       <extension name="coverage">
@@ -167,32 +181,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Domain" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="domain" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="za.ac.cput.domain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="za.ac.cput.domain.Domain" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="JUnit.RegisterControllerTest" />
-      <item itemvalue="Spring Boot.Domain" />
-      <item itemvalue="Spring Boot.Domain (1)" />
       <item itemvalue="JUnit.AuthorFactoryTest.createAuthor" />
       <item itemvalue="JUnit.AuthorAddressFactoryTest.createAuthorAddress" />
+      <item itemvalue="Application.Domain" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.Domain (1)" />
+        <item itemvalue="Application.Domain" />
         <item itemvalue="JUnit.AuthorAddressFactoryTest.createAuthorAddress" />
         <item itemvalue="JUnit.AuthorFactoryTest.createAuthor" />
-        <item itemvalue="Spring Boot.Domain" />
         <item itemvalue="JUnit.RegisterControllerTest" />
       </list>
     </recent_temporary>
