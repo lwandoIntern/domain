@@ -19,11 +19,11 @@ public class DomainSecurity extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
                 .withUser("user")
-                .password(encoder().encode("staff"))
+                .password(passwordEncoder().encode("staff"))
                 .roles(USER_ROLE)
                 .and()
                 .withUser("admin")
-                .password(encoder().encode("admin"))
+                .password(passwordEncoder().encode("admin"))
                 .roles(USER_ROLE,ADMIN_ROLE);
     }
 
@@ -41,7 +41,7 @@ public class DomainSecurity extends WebSecurityConfigurerAdapter {
 
     }
     @Bean
-    public PasswordEncoder encoder(){
+    public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
 }

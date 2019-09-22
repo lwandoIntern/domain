@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3d9e7066-4dab-475d-939f-ece112913893" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/subject/SubjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/subject/SubjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/security/DomainSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/security/DomainSecurity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -421,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569082253985</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="subject controller">
+      <created>1569162505343</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1569162505343</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,7 +469,8 @@
     <MESSAGE value="updated project structure and added spring security" />
     <MESSAGE value="publisherAddress fixed" />
     <MESSAGE value="more controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="more controllers" />
+    <MESSAGE value="subject controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="subject controller" />
   </component>
   <component name="masterDetails">
     <states>
