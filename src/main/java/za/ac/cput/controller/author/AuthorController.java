@@ -53,7 +53,9 @@ public class AuthorController {
     public String hello(){
         return "Hello";
     }
-    @PostMapping(value = "/create",consumes = MediaType.APPLICATION_JSON_VALUE)
+
+
+    @GetMapping(value = "/create",consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity createEmployee(@RequestBody NewAuthor author){
         System.out.println(author);
         ResponseObject responseObject = ResponseObjectFactory.buildGenericResponseObject(HttpStatus.OK.toString(),"Employee create!");
