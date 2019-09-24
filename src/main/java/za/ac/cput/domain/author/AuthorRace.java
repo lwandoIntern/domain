@@ -3,15 +3,15 @@ package za.ac.cput.domain.author;
 import java.util.Objects;
 
 public class AuthorRace {
-    private String authorId,raceId;
+    private String authorEmail,raceId;
 
-    public AuthorRace(String authorId, String raceId) {
-        this.authorId = authorId;
+    public AuthorRace(String authorEmail, String raceId) {
+        this.authorEmail = authorEmail;
         this.raceId = raceId;
     }
 
-    public String getAuthorId() {
-        return authorId;
+    public String getAuthorEmail() {
+        return authorEmail;
     }
 
     public String getRaceId() {
@@ -23,11 +23,11 @@ public class AuthorRace {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AuthorRace that = (AuthorRace) o;
-        return authorId.equals(that.authorId);
+        return authorEmail.equals(that.authorEmail);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(authorId);
+        return Objects.hash(authorEmail);
     }
 }

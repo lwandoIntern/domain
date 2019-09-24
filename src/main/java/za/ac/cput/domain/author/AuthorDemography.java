@@ -1,20 +1,19 @@
 package za.ac.cput.domain.author;
 
-import java.util.Date;
 import java.util.Objects;
 
 public class AuthorDemography {
-    private String authorId,raceId,genderId;
+    private String authorEmail,raceId,genderId;
 
     private AuthorDemography(){}
-    public AuthorDemography(String authorId, String raceId, String genderId) {
-        this.authorId = authorId;
+    public AuthorDemography(String authorEmail, String raceId, String genderId) {
+        this.authorEmail = authorEmail;
         this.raceId = raceId;
         this.genderId = genderId;
     }
 
-    public String getAuthorId() {
-        return authorId;
+    public String getAuthorEmail() {
+        return authorEmail;
     }
 
     public String getRaceId() {
@@ -30,18 +29,18 @@ public class AuthorDemography {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AuthorDemography that = (AuthorDemography) o;
-        return authorId.equals(that.authorId);
+        return authorEmail.equals(that.authorEmail);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(authorId);
+        return Objects.hash(authorEmail);
     }
 
     @Override
     public String toString() {
         return "AuthorDemography{" +
-                "authorId='" + authorId + '\'' +
+                "authorId='" + authorEmail + '\'' +
                 ", raceId='" + raceId + '\'' +
                 ", genderId='" + genderId + '\'' +
                 '}';

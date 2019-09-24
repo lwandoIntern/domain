@@ -3,20 +3,20 @@ package za.ac.cput.domain.author;
 import java.util.Objects;
 
 public class Author {
-    private String authorId;
+    private String authorEmail;
     private String firstName;
     private String lastName;
     private int numOfBooksWritten;
 
     public Author(Builder builder) {
-        this.authorId = builder.authorId;
+        this.authorEmail = builder.authorId;
         this.firstName = builder.firstName;
         this.lastName = builder.lastName;
         this.numOfBooksWritten = builder.numOfBooksWritten;
     }
 
-    public String getAuthorId() {
-        return authorId;
+    public String getAuthorEmail() {
+        return authorEmail;
     }
 
     public String getFirstName() {
@@ -36,18 +36,18 @@ public class Author {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Author author = (Author) o;
-        return authorId.equals(author.authorId);
+        return authorEmail.equals(author.authorEmail);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(authorId);
+        return Objects.hash(authorEmail);
     }
 
     @Override
     public String toString() {
         return "Author{" +
-                "authorId='" + authorId + '\'' +
+                "authorId='" + authorEmail + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", numOfBooksWritten=" + numOfBooksWritten +

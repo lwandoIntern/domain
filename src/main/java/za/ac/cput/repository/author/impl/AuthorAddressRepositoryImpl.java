@@ -21,7 +21,7 @@ public class AuthorAddressRepositoryImpl implements AuthorAddressRepository {
 
     private AuthorAddress findAuthorAddress(String id){
         return this.authorAddresses.stream()
-                .filter(authorAddress -> authorAddress.getAuthorId().trim().equalsIgnoreCase(id))
+                .filter(authorAddress -> authorAddress.getAuthorEmail().trim().equalsIgnoreCase(id))
                 .findAny()
                 .orElse(null);
     }
@@ -39,7 +39,7 @@ public class AuthorAddressRepositoryImpl implements AuthorAddressRepository {
 
     @Override
     public AuthorAddress update(AuthorAddress authorAddress) {
-        AuthorAddress toDelete = findAuthorAddress(authorAddress.getAuthorId());
+        AuthorAddress toDelete = findAuthorAddress(authorAddress.getAuthorEmail());
         if (toDelete != null){
             this.authorAddresses.remove(authorAddress);
             return create(authorAddress);

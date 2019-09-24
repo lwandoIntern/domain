@@ -1,7 +1,6 @@
 package za.ac.cput.repository.author.impl;
 
 import za.ac.cput.domain.author.AuthorBook;
-import za.ac.cput.repository.IRepository;
 import za.ac.cput.repository.author.AuthorBookRepository;
 
 import java.util.HashSet;
@@ -22,7 +21,7 @@ public class AuthorBookRepositoryImpl implements AuthorBookRepository {
 
     private AuthorBook findAuthorBook(String id){
         return this.authorBooks.stream()
-                .filter(authorBook -> authorBook.getAuthorId().trim().equalsIgnoreCase(id))
+                .filter(authorBook -> authorBook.getAuthorEmail().trim().equalsIgnoreCase(id))
                 .findAny()
                 .orElse(null);
     }
@@ -40,7 +39,7 @@ public class AuthorBookRepositoryImpl implements AuthorBookRepository {
 
     @Override
     public AuthorBook update(AuthorBook authorBook) {
-        AuthorBook toDelete = findAuthorBook(authorBook.getAuthorId());
+        AuthorBook toDelete = findAuthorBook(authorBook.getAuthorEmail());
         if (toDelete !=null){
             this.authorBooks.remove(toDelete);
             return create(authorBook);

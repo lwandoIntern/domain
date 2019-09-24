@@ -4,11 +4,10 @@ import za.ac.cput.domain.author.Author;
 import za.ac.cput.util.Helper;
 
 public class AuthorFactory {
-    private static final String SUFFIX = Helper.getSuffixFromClassName(AuthorFactory.class); // Expecting GF from (G)ender(F)actory.
-    public static Author createAuthor(String name,String lastName,int booksWritten){
-        String id = Helper.generateRandomGivenSuffix(SUFFIX);
+
+    public static Author createAuthor(String email,String name,String lastName,int booksWritten){
         return new Author.Builder()
-                .authorId(id)
+                .authorId(email)
                 .firstName(name)
                 .lastName(lastName)
                 .numOfBooksWritten(booksWritten)

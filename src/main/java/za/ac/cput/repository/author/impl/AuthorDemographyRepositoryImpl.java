@@ -22,7 +22,7 @@ public class AuthorDemographyRepositoryImpl implements AuthorDemographyRepositor
 
     private AuthorDemography findAuthorDemography(String authorId){
         return this.authorDemographies.stream()
-                .filter(authorDemography -> authorDemography.getAuthorId().trim().equalsIgnoreCase(authorId))
+                .filter(authorDemography -> authorDemography.getAuthorEmail().trim().equalsIgnoreCase(authorId))
                 .findAny()
                 .orElse(null);
     }
@@ -40,7 +40,7 @@ public class AuthorDemographyRepositoryImpl implements AuthorDemographyRepositor
 
     @Override
     public AuthorDemography update(AuthorDemography authorDemography) {
-        AuthorDemography toDelete = findAuthorDemography(authorDemography.getAuthorId());
+        AuthorDemography toDelete = findAuthorDemography(authorDemography.getAuthorEmail());
         if (toDelete != null){
             this.authorDemographies.remove(toDelete);
             return create(authorDemography);

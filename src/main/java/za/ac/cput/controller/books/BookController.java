@@ -86,7 +86,7 @@ public class BookController {
         return bookCategoryService.create(bookCategory);
     }
     private AuthorBook saveAuthorBook(Author newAuthor,Book book){
-        AuthorBook authorBook = AuthorBookFactory.createAuthorBook(newAuthor.getAuthorId(),book.getIsbn());
+        AuthorBook authorBook = AuthorBookFactory.createAuthorBook(newAuthor.getAuthorEmail(),book.getIsbn());
         return authorBookService.create(authorBook);
     }
     private BookPublisher saveBookPublisher(Book book,Publisher publisher){
