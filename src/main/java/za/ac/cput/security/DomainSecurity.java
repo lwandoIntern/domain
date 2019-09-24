@@ -34,6 +34,10 @@ public class DomainSecurity extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers(HttpMethod.GET,"/domain/**/create").hasRole(ADMIN_ROLE)
+                .antMatchers(HttpMethod.GET,"/domain/**/update").hasRole(ADMIN_ROLE)
+                .antMatchers(HttpMethod.POST,"/domain/**/delete").hasRole(ADMIN_ROLE)
+                .antMatchers(HttpMethod.GET,"/domain/**/getAll").hasAnyRole(ADMIN_ROLE,USER_ROLE)
+                .antMatchers(HttpMethod.GET,"/domain/**/read").hasAnyRole(ADMIN_ROLE,USER_ROLE)
                 .antMatchers("/domain/author/hello").hasRole(USER_ROLE)
                 .antMatchers("/").permitAll()
                 .and()

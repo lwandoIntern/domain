@@ -11,7 +11,7 @@ public class AuthorFactoryTest {
     private Author author;
     @Before
     public void setUp() throws Exception {
-        author = AuthorFactory.createAuthor("Nceba","Goniwe",12);
+        author = AuthorFactory.createAuthor("2016maila","Nceba","Goniwe",12);
     }
 
     @Test

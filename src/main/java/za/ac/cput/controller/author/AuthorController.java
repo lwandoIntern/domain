@@ -29,8 +29,7 @@ import za.ac.cput.service.demography.impl.GenderServiceImpl;
 import za.ac.cput.service.demography.impl.RaceServiceImpl;
 import za.ac.cput.service.location.impl.AddressServiceImpl;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 @RestController
 @RequestMapping("/domain/author")
@@ -144,8 +143,8 @@ public class AuthorController {
         NewAuthor toDelete = findNewAuthor(newAuthor.getAuthorEmail());
         if (toDelete != null || authorService.read(newAuthor.getAuthorEmail()) != null){
             this.newAuthors.remove(toDelete);
-            authorService.delete(newAuthor.getAuthorEmail());
-            Author author = authorService.create(AuthorFactory.createAuthor(newAuthor.getAuthorEmail(),newAuthor.getFirstName(),newAuthor.getLastName(),newAuthor.getNumOfBooks()));
+            this.newAuthors.add(newAuthor);
+            Author author = authorService.update(AuthorFactory.createAuthor(newAuthor.getAuthorEmail(),newAuthor.getFirstName(),newAuthor.getLastName(),newAuthor.getNumOfBooks()));
             responseObject.setResponse(author);
         }else {
             responseObject.setResponse(HttpStatus.PRECONDITION_FAILED.toString());
@@ -160,7 +159,18 @@ public class AuthorController {
      */
     @PostMapping("/delete")
     public void delete(String email){
+        NewAuthor newAuthor = findNewAuthor(email);
+        this.newAuthors.remove(newAuthor);
         authorService.delete(email);
+    }
+
+    /**
+     *
+     * @return authors
+     */
+    @GetMapping("/getAll")
+    public Set<NewAuthor> getAll(){
+        return this.newAuthors;
     }
     /**
      *
