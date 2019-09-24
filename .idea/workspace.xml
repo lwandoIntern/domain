@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3d9e7066-4dab-475d-939f-ece112913893" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/author/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/author/AuthorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/student/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/student/StudentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/security/DomainSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/security/DomainSecurity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/application.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -185,10 +182,10 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Domain" />
       <item itemvalue="JUnit.RegisterControllerTest" />
       <item itemvalue="JUnit.AuthorFactoryTest.createAuthor" />
       <item itemvalue="JUnit.AuthorAddressFactoryTest.createAuthorAddress" />
-      <item itemvalue="Application.Domain" />
     </list>
     <recent_temporary>
       <list>
@@ -438,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569167508433</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="spring security...">
+      <created>1569247395062</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1569247395062</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +485,8 @@
     <MESSAGE value="more controllers" />
     <MESSAGE value="subject controller" />
     <MESSAGE value="security...fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="security...fixes" />
+    <MESSAGE value="spring security..." />
+    <option name="LAST_COMMIT_MESSAGE" value="spring security..." />
   </component>
   <component name="masterDetails">
     <states>

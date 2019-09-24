@@ -31,16 +31,13 @@ public class DomainSecurity extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.httpBasic()
-                .and()
+        http
                 .authorizeRequests()
-                .antMatchers("/domain/author/hello").authenticated()
                 .antMatchers(HttpMethod.GET,"/domain/**/create").hasRole(ADMIN_ROLE)
+                .antMatchers("/domain/author/hello").hasRole(USER_ROLE)
+                .antMatchers("/").permitAll()
                 .and()
-                .csrf()
-                .disable()
-                .formLogin()
-                .disable();
+                .formLogin();
 
     }
     @Bean
