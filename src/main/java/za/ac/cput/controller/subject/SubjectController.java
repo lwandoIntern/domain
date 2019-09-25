@@ -35,7 +35,7 @@ public class SubjectController {
         return subject;
     }
 
-    @GetMapping(value = "/read")
+    @GetMapping(value = "/read",consumes = MediaType.APPLICATION_JSON_VALUE)
     public Subject read(@PathVariable String subjId){
         ResponseObject responseObject = ResponseObjectFactory.buildGenericResponseObject(HttpStatus.OK.toString(),"Reading Subject");
         Subject subject = subjectService.read(subjId);
@@ -48,7 +48,7 @@ public class SubjectController {
         return subject;
     }
 
-    @GetMapping(value = "/update")
+    @GetMapping(value = "/update",consumes = MediaType.APPLICATION_JSON_VALUE)
     public Subject update(@RequestBody Subject subject){
         ResponseObject responseObject = ResponseObjectFactory.buildGenericResponseObject(HttpStatus.OK.toString(),"Updating subject");
         Subject subject1 = subjectService.update(subject);
