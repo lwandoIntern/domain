@@ -19,7 +19,7 @@ public class SubjectController {
     @Autowired
     SubjectServiceImpl subjectService;
 
-    @GetMapping(value = "/create",consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/create",consumes = MediaType.APPLICATION_JSON_VALUE)
     public Subject create(@RequestBody Subject subject){
         System.out.println(subject);
         ResponseObject responseObject = ResponseObjectFactory.buildGenericResponseObject(HttpStatus.OK.toString(),"Subject created!");
@@ -48,14 +48,14 @@ public class SubjectController {
         return subject;
     }
 
-    @GetMapping(value = "/update",consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/update",consumes = MediaType.APPLICATION_JSON_VALUE)
     public Subject update(@RequestBody Subject subject){
         ResponseObject responseObject = ResponseObjectFactory.buildGenericResponseObject(HttpStatus.OK.toString(),"Updating subject");
         Subject subject1 = subjectService.update(subject);
         return subject1;
     }
 
-    @PostMapping("/delete")
+    @DeleteMapping("/delete")
     public void delete(@PathVariable String subhId){
         subjectService.delete(subhId);
     }

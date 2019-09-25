@@ -62,7 +62,7 @@ public class AuthorController {
      * @param author
      * @return an Author object, accepts a NewAuthor object: which contains gender,address,race,book
      */
-    @GetMapping(value = "/create",consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/create",consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity create(@RequestBody NewAuthor author){
         System.out.println(author);
         ResponseObject responseObject = ResponseObjectFactory.buildGenericResponseObject(HttpStatus.OK.toString(),
@@ -137,7 +137,7 @@ public class AuthorController {
      * @param newAuthor
      * @return an update Author
      */
-    @GetMapping("/update")
+    @PutMapping("/update")
     public ResponseEntity update(@RequestBody NewAuthor newAuthor){
         ResponseObject responseObject = ResponseObjectFactory.buildGenericResponseObject(HttpStatus.OK.toString(),"updating author!");
         NewAuthor toDelete = findNewAuthor(newAuthor.getAuthorEmail());
@@ -157,7 +157,7 @@ public class AuthorController {
      * DELETE METHOD
      * @param email
      */
-    @PostMapping("/delete")
+    @DeleteMapping("/delete")
     public void delete(String email){
         NewAuthor newAuthor = findNewAuthor(email);
         this.newAuthors.remove(newAuthor);
