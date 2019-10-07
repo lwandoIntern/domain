@@ -1,10 +1,20 @@
 package za.ac.cput.domain.publisher;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Publisher {
-    private String publisherId,name;
+@Entity
+public class Publisher implements Serializable {
+    @Id
+    @Column(name = "publisher_id")
+    private String publisherId;
+    @Column(name = "publisher_name")
+    private String name;
 
+    private Publisher(){}
     public Publisher(Builder builder) {
         this.publisherId = builder.publisherId;
         this.name = builder.name;

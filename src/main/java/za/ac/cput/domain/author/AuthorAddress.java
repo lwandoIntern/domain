@@ -1,10 +1,21 @@
 package za.ac.cput.domain.author;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class AuthorAddress {
-    private String authorEmail,addressId;
+@Entity
+public class AuthorAddress implements Serializable {
+    @Id
+    @Column(name = "email")
+    private String authorEmail;
+    @Id
+    @Column(name = "address_id")
+    private String addressId;
 
+    private AuthorAddress(){}
     public AuthorAddress(String authorEmail, String addressId) {
         this.authorEmail = authorEmail;
         this.addressId = addressId;

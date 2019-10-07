@@ -1,10 +1,21 @@
 package za.ac.cput.domain.author;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class AuthorGender {
-    private String authorEmail,genderId;
+@Entity
+public class AuthorGender implements Serializable {
+    @Id
+    @Column(name = "email")
+    private String authorEmail;
+    @Id
+    @Column(name = "gender_id")
+    private String genderId;
 
+    private AuthorGender(){}
     public AuthorGender(String authorEmail, String genderId) {
         this.authorEmail = authorEmail;
         this.genderId = genderId;

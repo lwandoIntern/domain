@@ -24,94 +24,37 @@ import za.ac.cput.service.location.impl.AddressServiceImpl;
 import za.ac.cput.service.student.impl.*;
 import za.ac.cput.service.subject.impl.SubjectServiceImpl;
 
+import java.util.Set;
+
 @RestController
 @RequestMapping("/domain/student")
 public class StudentController {
     @Autowired
     StudentServiceImpl studentService;
-    @Autowired
-    SubjectServiceImpl subjectService;
-    @Autowired
-    CourseServiceImpl courseService;
-    @Autowired
-    GenderServiceImpl genderService;
-    @Autowired
-    RaceServiceImpl raceService;
-    @Autowired
-    AddressServiceImpl addressService;
-    @Autowired
-    StudentSubjectServiceImpl studentSubjectService;
-    @Autowired
-    StudentCourseServiceImpl studentCourseService;
-    @Autowired
-    StudentAddressServiceImpl studentAddressService;
-    @Autowired
-    StudentDemographyServiceImpl studentDemographyService;
 
-    @PostMapping(value = "/create",consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity createStudent(@RequestBody NewStudent newStudent){
-        System.out.println(newStudent);
-        ResponseObject responseObject = ResponseObjectFactory.buildGenericResponseObject(HttpStatus.OK.toString(),"Student created");
-        if (newStudent.getFirstName() == null || newStudent.getLastName() == null || newStudent.getStudyLevel() <=0){
-            responseObject.setResponse(HttpStatus.PRECONDITION_FAILED.toString());
-            responseObject.setResponseDescription("Please provide a name and/or surname and/or level of study");
-        }else {
-            Address address = getAddress(newStudent);
-            Gender gender = getGender(newStudent);
-            Race race = getRace(newStudent);
-            Course course = getCourse(newStudent);
-            Subject subject = getSubject(newStudent);
-            if (address == null || gender == null || race == null || course == null || subject == null){
-                String message = address == null ? "Address not found!":"";
-                message += gender == null ? "Gender not found!":"";
-                message += race == null ? "Race not found":"";
-                message += course == null ? "Course not found":"";
-                message += subject == null ? "Subject not found":"";
-                responseObject.setResponse(message);
-            }else {
-                Student theStudent = saveStudent(newStudent);
-                StudentDemography theDemography = saveDemography(theStudent,gender,race);
-                StudentAddress studentAddress = saveStudentAddress(theStudent,address);
-                StudentCourse studentCourse = saveStudentCourse(theStudent,course);
-                StudentSubject studentSubject = saveStudentSubject(theStudent,subject);
-                responseObject.setResponse(theStudent);
-            }
-        }
-        return ResponseEntity.ok(responseObject);
+    @PostMapping(value = "/create")
+    @ResponseBody
+    public Student create(@RequestBody Student student){
+        return this.studentService.create(student);
     }
-    private Student saveStudent(NewStudent newStudent){
-        return studentService.create(StudentFactory.createStudent(newStudent.getFirstName(),newStudent.getLastName(),newStudent.getStudyLevel()));
+    @GetMapping(value = "/read/{id}")
+    @ResponseBody
+    public Student read(@PathVariable String s){
+        return this.studentService.read(s);
     }
-    private StudentSubject saveStudentSubject(Student student,Subject subject){
-        return studentSubjectService.create(StudentSubjectFactory.createStudentSubject(student.getStudentId(),subject.getSubjectId()));
+    @PutMapping(value = "/update")
+    @ResponseBody
+    public Student update(@RequestBody Student student){
+        return this.studentService.update(student);
     }
-    private StudentCourse saveStudentCourse(Student student,Course course){
-        return studentCourseService.create(StudentCourseFactory.createStudentCourse(student.getStudentId(),course.getCourseId()));
+    @DeleteMapping(value = "/delete/{id}")
+    public void delete(@PathVariable String id){
+        this.studentService.delete(id);
     }
-    private StudentAddress saveStudentAddress(Student student,Address address){
-        return studentAddressService.create(StudentAddressFactory.createStudentAddress(student.getStudentId(),address.getAddressId()));
-    }
-    private StudentDemography saveDemography(Student student,Gender gender,Race race){
-        return studentDemographyService.create(StudentDemographyFactory.createStudentDemography(student.getStudentId(),race.getRaceId(),gender.getGenderId()));
-    }
-    private Gender getGender(NewStudent newStudent){
-        return genderService.getByDesc(newStudent.getAddressByTown());
-    }
-    private Race getRace(NewStudent newStudent){
-        return raceService.getByDesc(newStudent.getAddressByTown());
-    }
-    private Course getCourse(NewStudent newStudent){
-        return courseService.getCourseByName(newStudent.getCourseName());
-    }
-    private Subject getSubject(NewStudent newStudent){
-        return subjectService.getByName(newStudent.getSubjectName());
-    }
-    private Address getAddress(NewStudent newStudent){
-        return addressService.getByTown(newStudent.getAddressByTown());
+    @GetMapping(value = "/getall")
+    @ResponseBody
+    public Set<Student> getAll(){
+        return this.studentService.getAll();
     }
 
-//    @GetMapping("/read")
-//    public ResponseEntity readStudent(){
-//
-//    }
 }

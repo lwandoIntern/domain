@@ -1,8 +1,10 @@
 package za.ac.cput.repository.location;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.location.Address;
-import za.ac.cput.repository.IRepository;
 
-public interface AddressRepository extends IRepository<Address,String> {
-    Address getByTown(String town);
+@Repository
+public interface AddressRepository extends JpaRepository<Address,String> {
+
 }

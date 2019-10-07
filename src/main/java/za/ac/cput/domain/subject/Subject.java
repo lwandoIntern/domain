@@ -1,11 +1,26 @@
 package za.ac.cput.domain.subject;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Subject {
-    private String subjectId,subjectName,priority,prerequisite;
+@Entity
+public class Subject implements Serializable {
+    @Id
+    @Column(name = "subject_id")
+    private String subjectId;
+    @Column(name = "subject_name")
+    private String subjectName;
+    @Column(name = "priority")
+    private String priority;
+    @Column(name = "prerequisite")
+    private String prerequisite;
+    @Column(name = "subject_duration")
     private int duration;
 
+    private Subject(){}
     public Subject(Builder builder) {
         this.subjectId = builder.subjectId;
         this.subjectName = builder.subjectName;

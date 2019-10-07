@@ -1,10 +1,22 @@
 package za.ac.cput.domain.books;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class BookPublisher {
-    private String isbn,publisherId;
+@Entity
+public class BookPublisher implements Serializable {
+    @Id
+    @Column(name = "isbn_number")
+    private String isbn;
+    @Id
+    @Column(name = "publisher_id")
+    private String publisherId;
 
+
+    private BookPublisher(){}
     public BookPublisher(String isbn, String publisherId) {
         this.isbn = isbn;
         this.publisherId = publisherId;

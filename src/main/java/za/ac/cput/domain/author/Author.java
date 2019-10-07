@@ -1,13 +1,24 @@
 package za.ac.cput.domain.author;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Author {
+@Entity
+public class Author implements Serializable {
+    @Id
+    @Column(name="email")
     private String authorEmail;
+    @Column(name = "first_name")
     private String firstName;
+    @Column(name = "last_name")
     private String lastName;
+    @Column(name = "number_of_books_written")
     private int numOfBooksWritten;
 
+    private Author(){}
     public Author(Builder builder) {
         this.authorEmail = builder.authorId;
         this.firstName = builder.firstName;
@@ -47,12 +58,13 @@ public class Author {
     @Override
     public String toString() {
         return "Author{" +
-                "authorId='" + authorEmail + '\'' +
+                "authorEmail='" + authorEmail + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", numOfBooksWritten=" + numOfBooksWritten +
                 '}';
     }
+
     public static class Builder{
         private String authorId;
         private String firstName;

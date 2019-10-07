@@ -1,10 +1,20 @@
 package za.ac.cput.domain.demography;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Race {
-    private String raceId,raceDescription;
+@Entity
+public class Race implements Serializable {
+    @Id
+    @Column(name = "race_id")
+    private String raceId;
+    @Column(name = "description")
+    private String raceDescription;
 
+    private Race(){}
     public Race(Builder builder) {
         this.raceId = builder.raceId;
         this.raceDescription = builder.raceDescription;

@@ -1,7 +1,9 @@
 package za.ac.cput.repository.books;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.books.BookCategory;
-import za.ac.cput.repository.IRepository;
 
-public interface BookCategoryRepository extends IRepository<BookCategory,String> {
+@Repository
+public interface BookCategoryRepository extends JpaRepository<BookCategory,String> {
 }

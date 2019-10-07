@@ -1,10 +1,19 @@
 package za.ac.cput.domain.demography;
 
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Gender {
-    private String genderId,genderDescription;
+@Entity
+public class Gender implements Serializable {
+    @Id
+    @Column(name = "gender_id")
+    private String genderId;
+    @Id
+    @Column(name = "gender_description")
+    private String genderDescription;
 
+    private Gender(){}
     public Gender(Builder builder) {
         this.genderId = builder.genderId;
         this.genderDescription = builder.genderDescription;

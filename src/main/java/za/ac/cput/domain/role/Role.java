@@ -1,10 +1,21 @@
 package za.ac.cput.domain.role;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Role {
-    private String roleId,roleType;
 
+@Entity
+public class Role implements Serializable {
+    @Id
+    @Column(name = "role_id")
+    private String roleId;
+    @Column(name = "role_type")
+    private String roleType;
+
+    private Role(){}
     public Role(Builder builder) {
         this.roleId = builder.roleId;
         this.roleType = builder.roleType;

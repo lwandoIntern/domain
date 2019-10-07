@@ -1,11 +1,24 @@
 package za.ac.cput.domain.location;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Address {
-    private String addressId,town,city;
+@Entity
+public class Address implements Serializable {
+    @Id
+    @Column(name = "address_id")
+    private String addressId;
+    @Column(name = "town")
+    private String town;
+    @Column(name = "city")
+    private String city;
+    @Column(name = "zip_code")
     private int zipCode;
 
+    private Address(){}
     public Address(Builder builder) {
         this.addressId = builder.addressId;
         this.town = builder.town;

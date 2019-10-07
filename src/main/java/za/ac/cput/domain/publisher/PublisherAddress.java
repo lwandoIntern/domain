@@ -1,10 +1,22 @@
 package za.ac.cput.domain.publisher;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class PublisherAddress {
-    private String publisherId,addressId;
 
+@Entity
+public class PublisherAddress implements Serializable {
+    @Id
+    @Column(name = "publisher_id")
+    private String publisherId;
+    @Id
+    @Column(name = "address_id")
+    private String addressId;
+
+    private PublisherAddress(){}
     public PublisherAddress(String publisherId, String addressId) {
         this.publisherId = publisherId;
         this.addressId = addressId;

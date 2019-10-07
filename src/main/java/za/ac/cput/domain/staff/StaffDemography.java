@@ -1,10 +1,23 @@
 package za.ac.cput.domain.staff;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
-public class StaffDemography {
-    private String staffNum,genderId,raceId;
+@Entity
+public class StaffDemography implements Serializable {
+    @Id
+    @Column(name = "staff_number")
+    private String staffNum;
+    @Id
+    @Column(name = "gender_id")
+    private String genderId;
+    @Id
+    @Column(name = "race_id")
+    private String raceId;
 
     private StaffDemography(){}
     public StaffDemography(String staffNum, String genderId, String raceId) {

@@ -1,12 +1,26 @@
 package za.ac.cput.domain.loan;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
-public class Borrow {
-    private String loanId,loanDesc;
-    private Date dateBorrowed,dateReturned;
+@Entity
+public class Borrow implements Serializable {
+    @Id
+    @Column(name = "loan_id")
+    private String loanId;
+    @Column(name = "description")
+    private String loanDesc;
+    @Column(name = "date_borrowed")
+    private Date dateBorrowed;
+    @Column(name = "date_returned")
+    private Date dateReturned;
 
+
+    private Borrow(){}
     public Borrow(Builder builder) {
         this.loanId = builder.loanId;
         this.loanDesc = builder.loanDesc;

@@ -1,10 +1,22 @@
 package za.ac.cput.domain.course;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class CourseSubject {
-    private String courseId,subjectId;
 
+@Entity
+public class CourseSubject implements Serializable {
+    @Id
+    @Column(name = "course_id")
+    private String courseId;
+    @Id
+    @Column(name = "subject_id")
+    private String subjectId;
+
+    private CourseSubject(){}
     public CourseSubject(String courseId, String subjectId) {
         this.courseId = courseId;
         this.subjectId = subjectId;

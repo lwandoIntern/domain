@@ -1,8 +1,10 @@
 package za.ac.cput.repository.staff;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.staff.Staff;
-import za.ac.cput.repository.IRepository;
 
-public interface StaffRepository extends IRepository<Staff,String> {
+@Repository
+public interface StaffRepository extends JpaRepository<Staff,String> {
     
 }

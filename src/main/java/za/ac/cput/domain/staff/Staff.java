@@ -1,14 +1,30 @@
 package za.ac.cput.domain.staff;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Staff {
-    private String staffNum,name,surname;
+@Entity
+public class Staff implements Serializable {
+    @Id
+    @Column(name = "staff_number")
+    private String staffNum;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "surname")
+    private String surname;
+    @Column(name = "password")
+    private String password;
 
+
+    private Staff(){}
     public Staff(Builder builder) {
         this.staffNum = builder.staffNum;
         this.name = builder.name;
         this.surname = builder.surname;
+        this.password = builder.password;
     }
 
     public String getStaffNum() {
@@ -21,6 +37,9 @@ public class Staff {
 
     public String getSurname() {
         return surname;
+    }
+    public String getPassword() {
+        return password;
     }
 
     @Override
@@ -42,10 +61,12 @@ public class Staff {
                 "staffNum='" + staffNum + '\'' +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
+
     public static class Builder{
-        private String staffNum,name,surname;
+        private String staffNum,name,surname,password;
         public Builder staffNum(String staffId){
             this.staffNum = staffId;
             return this;
@@ -56,6 +77,10 @@ public class Staff {
         }
         public Builder surname(String lastName){
             this.surname = lastName;
+            return this;
+        }
+        public Builder password(String psw){
+            this.password = psw;
             return this;
         }
         public Staff build(){

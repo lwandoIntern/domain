@@ -1,9 +1,21 @@
 package za.ac.cput.domain.author;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Objects;
-
-public class AuthorDemography {
-    private String authorEmail,raceId,genderId;
+@Entity
+public class AuthorDemography implements Serializable {
+    @Id
+    @Column(name = "email")
+    private String authorEmail;
+    @Id
+    @Column(name = "race_id")
+    private String raceId;
+    @Id
+    @Column(name = "gender_id")
+    private String genderId;
 
     private AuthorDemography(){}
     public AuthorDemography(String authorEmail, String raceId, String genderId) {

@@ -1,13 +1,25 @@
 package za.ac.cput.domain.books;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Date;
 import java.util.Objects;
 
+@Entity
 public class Book {
-    private String isbn,title;
+    @Id
+    @Column(name = "isbn_number")
+    private String isbn;
+    @Column(name = "book_title")
+    private String title;
+    @Column(name = "edition")
     private int editionNum;
+    @Column(name = "year_published")
     private Date yearPublished;
 
+
+    private Book(){}
     public Book(Builder builder) {
         this.isbn = builder.isbn;
         this.title = builder.title;

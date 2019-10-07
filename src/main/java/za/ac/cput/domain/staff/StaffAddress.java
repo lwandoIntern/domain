@@ -1,10 +1,21 @@
 package za.ac.cput.domain.staff;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class StaffAddress {
-    private String staffNum,addressId;
+@Entity
+public class StaffAddress implements Serializable {
+    @Id
+    @Column(name = "staff_number")
+    private String staffNum;
+    @Id
+    @Column(name = "address_id")
+    private String addressId;
 
+    private StaffAddress(){}
     public StaffAddress(String staffNum, String addressId) {
         this.staffNum = staffNum;
         this.addressId = addressId;

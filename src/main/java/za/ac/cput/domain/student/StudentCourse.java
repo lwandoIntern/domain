@@ -1,17 +1,28 @@
 package za.ac.cput.domain.student;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class StudentCourse {
-    private String studentId,courseId;
+@Entity
+public class StudentCourse implements Serializable {
+    @Id
+    @Column(name = "student_email")
+    private String studentEmail;
+    @Id
+    @Column(name = "course_id")
+    private String courseId;
 
-    public StudentCourse(String studentId, String courseId) {
-        this.studentId = studentId;
+    private StudentCourse(){}
+    public StudentCourse(String studentEmail, String courseId) {
+        this.studentEmail = studentEmail;
         this.courseId = courseId;
     }
 
-    public String getStudentId() {
-        return studentId;
+    public String getStudentEmail() {
+        return studentEmail;
     }
 
     public String getCourseId() {
@@ -23,12 +34,12 @@ public class StudentCourse {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         StudentCourse that = (StudentCourse) o;
-        return studentId.equals(that.studentId) &&
+        return studentEmail.equals(that.studentEmail) &&
                 courseId.equals(that.courseId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(studentId, courseId);
+        return Objects.hash(studentEmail, courseId);
     }
 }
