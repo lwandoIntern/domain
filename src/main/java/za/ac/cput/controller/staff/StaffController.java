@@ -35,34 +35,73 @@ import java.util.Set;
 @RequestMapping("/domain/staff")
 public class StaffController {
     @Autowired
+    StaffRoleServiceImpl staffRoleService;
+    @Autowired
+    StaffDemographyServiceImpl staffDemographyService;
+    @Autowired
+    GenderServiceImpl genderService;
+    @Autowired
+    RaceServiceImpl raceService;
+    @Autowired
+    AddressServiceImpl addressService;
+    @Autowired
+    StaffAddressServiceImpl staffAddressService;
+    @Autowired
+    RoleServiceImpl roleService;
+    @Autowired
     StaffServiceImpl staffService;
 
-    @PostMapping(value = "/create")
-    @ResponseBody
-    public Staff create(@RequestBody Staff staff){
-        return this.staffService.create(staff);
+    @PostMapping(value = "/create",consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity createStaff(@RequestBody NewStaff newStaff) {
+        System.out.println(newStaff);
+        ResponseObject responseObject = ResponseObjectFactory.buildGenericResponseObject(HttpStatus.OK.toString(), "Staff created");
+        if (newStaff.getFirstName() == null || newStaff.getLastName() == null) {
+            responseObject.setResponse(HttpStatus.PRECONDITION_FAILED.toString());
+            responseObject.setResponseDescription("Please provide a name and/or last name");
+        } else {
+            Address address = getAddress(newStaff);
+            Gender gender = getGender(newStaff);
+            Race race = getRace(newStaff);
+            Role role = getRole(newStaff);
+            if (address == null || gender == null || race == null || role == null) {
+                String message = address == null ? "Address not found|" : "";
+                message += gender == null ? "Gender not found|" : "";
+                message += race == null ? "Race not found|" : "";
+                message += role == null ? "Role not found" : "";
+                responseObject.setResponse(message);
+            } else {
+                Staff theStaff = saveStaff(newStaff);
+                StaffAddress staffAddress = saveStaffAddress(theStaff, address);
+                StaffDemography staffDemography = saveStaffDemography(theStaff, gender, race);
+                StaffRole staffRole = saveStaffRole(theStaff, role);
+                responseObject.setResponse(theStaff);
+            }
+        }
+        return ResponseEntity.ok(responseObject);
+    }
+    private Staff saveStaff(NewStaff newStaff){
+        return staffService.create(StaffFactory.createStaff(newStaff.getFirstName(),newStaff.getLastName()));
+    }
+    private StaffRole saveStaffRole(Staff staff,Role role){
+        return staffRoleService.create(StaffRoleFactory.createStaffRole(staff.getStaffNum(),role.getRoleId()));
+    }
+    private StaffDemography saveStaffDemography(Staff staff,Gender gender,Race race){
+        return staffDemographyService.create(StaffDemographyFactory.createStaffDemography(staff.getStaffNum(),gender.getGenderId(),race.getRaceId()));
+    }
+    private StaffAddress saveStaffAddress(Staff staff,Address address){
+        return staffAddressService.create(StaffAddressFactory.createStaffAddress(staff.getStaffNum(),address.getAddressId()));
+    }
+    private Address getAddress(NewStaff newStaff) {
+        return addressService.getByTown(newStaff.getAddressByTown());
+    }
+    private Role getRole(NewStaff newStaff) {
+        return roleService.getRoleType(newStaff.getRole());
+    }
+    private Gender getGender(NewStaff newStaff) {
+        return genderService.getByDesc(newStaff.getGender());
+    }
+    private Race getRace(NewStaff newStaff) {
+        return raceService.getByDesc(newStaff.getRace());
     }
 
-    @GetMapping(value = "/read")
-    @ResponseBody
-    public Staff update(@PathVariable String id){
-        return this.staffService.read(id);
-    }
-
-    @PutMapping(value = "/update")
-    @ResponseBody
-    public Staff update(@RequestBody Staff staff){
-        return this.staffService.update(staff);
-    }
-
-    @DeleteMapping(value = "/delete")
-    public void delete(@PathVariable String id){
-        this.staffService.delete(id);
-    }
-
-    @GetMapping(value = "/getall")
-    @ResponseBody
-    public Set<Staff> getAll(){
-        return this.staffService.getAll();
-    }
 }

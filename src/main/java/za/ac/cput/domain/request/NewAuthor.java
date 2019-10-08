@@ -13,6 +13,7 @@ public class NewAuthor {
     private String gender;
     private String race;
     private String address;
+
     private String book;
     private int numOfBooks;
 

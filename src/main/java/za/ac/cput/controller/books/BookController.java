@@ -35,28 +35,71 @@ import java.util.Set;
 public class BookController {
     @Autowired
     BookServiceImpl bookService;
+    @Autowired
+    CategoryServiceImpl categoryService;
+    @Autowired
+    BookPublisherServiceImpl bookPublisherService;
+    @Autowired
+    BookCategoryServiceImpl bookCategoryService;
+    @Autowired
+    AuthorBookServiceImpl authorBookService;
+    @Autowired
+    AuthorServiceImpl authorService;
+    @Autowired
+    PublisherServiceImpl publisherService;
 
-    @RequestMapping(value = "/create",method = RequestMethod.POST)
-    public @ResponseBody Book create(@RequestBody Book book){
-        return this.bookService.create(book);
+    @PostMapping(value = "/create",consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity createBook(@RequestBody NewBook newBook){
+        System.out.println(newBook);
+        ResponseObject responseObject = ResponseObjectFactory.buildGenericResponseObject(HttpStatus.OK.toString(),"Book create!");
+        if (newBook.getBookTitle() == null || newBook.getCategoryName() == null || newBook.getEditionNumber() <= 0 || newBook.getYearPublished() == null){
+            responseObject.setResponse(HttpStatus.PRECONDITION_FAILED.toString());
+            responseObject.setResponseDescription("Please provide book title and/or category name and/or edition number and/or year of publishing");
+        }else {
+            Category category = getCategory(newBook);
+            Author author = getAuthor(newBook);
+            Publisher publisher = getPublisher(newBook);
+
+            if (category == null || author == null || publisher == null){
+                responseObject.setResponseCode(HttpStatus.PRECONDITION_FAILED.toString());
+                String msg = category == null ? "Category not found|":"";
+                msg += author == null ? "Author not found|":"";
+                msg += publisher == null ? "Publisher not found":"";
+                responseObject.setResponseDescription(msg);
+            }else {
+                Book saveBoo = saveBook(newBook);
+                BookCategory saveBookCat = saveBookCategory(saveBoo,category);
+                BookPublisher saveBookPublish = saveBookPublisher(saveBoo,publisher);
+                AuthorBook saveAuthBook = saveAuthorBook(author,saveBoo);
+                responseObject.setResponse(saveBoo);
+            }
+        }
+        return ResponseEntity.ok(responseObject);
+    }
+    private Book saveBook(NewBook book){
+        Book book1 = BookFactory.createBook(book.getBookTitle(),book.getEditionNumber(),book.getYearPublished());
+        return bookService.create(book1);
+    }
+    private BookCategory saveBookCategory(Book book,Category saveCat){
+        BookCategory bookCategory = BookCategoryFactory.createBookCategory(book.getIsbn(),saveCat.getCategoryId());
+        return bookCategoryService.create(bookCategory);
+    }
+    private AuthorBook saveAuthorBook(Author newAuthor,Book book) {
+        AuthorBook authorBook = AuthorBookFactory.createAuthorBook(newAuthor.getAuthorEmail(), book.getIsbn());
+        return authorBookService.create(authorBook);
+    }
+    private BookPublisher saveBookPublisher(Book book,Publisher publisher) {
+        BookPublisher bookPublisher = BookPublisherFactory.createBookPublisher(book.getIsbn(), publisher.getPublisherId());
+        return bookPublisherService.create(bookPublisher);
+    }
+    private Category getCategory(NewBook book) {
+        return categoryService.getByCategoryName(book.getCategoryName());
+    }
+    private Publisher getPublisher(NewBook newBook) {
+        return publisherService.getByName(newBook.getPublisherName());
+    }
+    private Author getAuthor(NewBook newBook) {
+        return authorService.getByFullName(newBook.getFullname());
     }
 
-    @RequestMapping(value = "/read",method = RequestMethod.GET)
-    public @ResponseBody Book read(@PathVariable String isbn){
-        return this.bookService.read(isbn);
-    }
-
-    @RequestMapping(value = "/update",method = RequestMethod.PUT)
-    public Book update(@RequestBody Book book){
-        return this.bookService.update(book);
-    }
-    @RequestMapping(value = "/delete",method = RequestMethod.DELETE)
-    public void delete(@PathVariable String s){
-        this.bookService.delete(s);
-    }
-
-    @RequestMapping(value = "/getall",method = RequestMethod.GET)
-    public Set<Book> getAll(){
-        return this.bookService.getAll();
-    }
 }
