@@ -1,7 +1,9 @@
 package za.ac.cput.repository.course;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.course.CourseSubject;
-import za.ac.cput.repository.IRepository;
 
-public interface CourseSubjectRepository extends IRepository<CourseSubject,String> {
+@Repository
+public interface CourseSubjectRepository extends JpaRepository<CourseSubject,String> {
 }

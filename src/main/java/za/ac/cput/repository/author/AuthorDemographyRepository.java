@@ -1,7 +1,9 @@
 package za.ac.cput.repository.author;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.author.AuthorDemography;
-import za.ac.cput.repository.IRepository;
 
-public interface AuthorDemographyRepository extends IRepository<AuthorDemography,String> {
+@Repository
+public interface AuthorDemographyRepository extends JpaRepository<AuthorDemography,String> {
 }

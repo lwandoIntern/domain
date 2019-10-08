@@ -1,8 +1,10 @@
 package za.ac.cput.repository.subject;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.subject.Subject;
-import za.ac.cput.repository.IRepository;
 
-public interface SubjectRepository extends IRepository<Subject,String> {
-    Subject getByName(String subjectName);
+@Repository
+public interface SubjectRepository extends JpaRepository<Subject,String> {
+
 }

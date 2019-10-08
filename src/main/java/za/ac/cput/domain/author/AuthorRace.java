@@ -1,9 +1,16 @@
 package za.ac.cput.domain.author;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class AuthorRace {
-    private String authorEmail,raceId;
+    @Id
+    @Column(name = "author_email",nullable = false,columnDefinition = "VARCHAR(100)")
+    private String authorEmail;
+    private String raceId;
 
     public AuthorRace(String authorEmail, String raceId) {
         this.authorEmail = authorEmail;
@@ -23,7 +30,8 @@ public class AuthorRace {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AuthorRace that = (AuthorRace) o;
-        return authorEmail.equals(that.authorEmail);
+        return Objects.equals(authorEmail, that.authorEmail) &&
+                Objects.equals(raceId, that.raceId);
     }
 
     @Override

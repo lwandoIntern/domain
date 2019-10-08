@@ -5,9 +5,9 @@ import za.ac.cput.util.Helper;
 
 public class AuthorFactory {
 
-    public static Author createAuthor(String email,String name,String lastName,int booksWritten){
+    public static Author createAuthor(String email,String name, String lastName, int booksWritten){
         return new Author.Builder()
-                .authorId(email)
+                .authorEmail(email)
                 .firstName(name)
                 .lastName(lastName)
                 .numOfBooksWritten(booksWritten)

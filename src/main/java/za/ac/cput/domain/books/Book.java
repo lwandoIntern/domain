@@ -1,10 +1,15 @@
 package za.ac.cput.domain.books;
 
+import javax.persistence.*;
 import java.util.Date;
-import java.util.Objects;
 
+@Entity
 public class Book {
-    private String isbn,title;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "isbn_number",nullable = false,columnDefinition = "VARCHAR(20)")
+    private String isbn;
+    private String title;
     private int editionNum;
     private Date yearPublished;
 
@@ -43,7 +48,8 @@ public class Book {
                 '}';
     }
     public static class Builder{
-        private String isbn,title;
+        private String isbn;
+        private String title;
         private int editionNum;
         private Date yearPublished;
         public Builder isbn(String isbn){

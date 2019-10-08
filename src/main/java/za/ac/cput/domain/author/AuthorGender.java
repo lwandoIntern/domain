@@ -1,11 +1,18 @@
 package za.ac.cput.domain.author;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class AuthorGender {
-    private String authorEmail,genderId;
+    @Id
+    @Column(name = "author_email",nullable = false,columnDefinition = "VARCHAR(100)")
+    private String authorEmail;
+    private int genderId;
 
-    public AuthorGender(String authorEmail, String genderId) {
+    public AuthorGender(String authorEmail, int genderId) {
         this.authorEmail = authorEmail;
         this.genderId = genderId;
     }
@@ -14,7 +21,7 @@ public class AuthorGender {
         return authorEmail;
     }
 
-    public String getGenderId() {
+    public int getGenderId() {
         return genderId;
     }
 
@@ -23,7 +30,8 @@ public class AuthorGender {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AuthorGender that = (AuthorGender) o;
-        return Objects.equals(authorEmail, that.authorEmail);
+        return authorEmail == that.authorEmail &&
+                genderId == that.genderId;
     }
 
     @Override

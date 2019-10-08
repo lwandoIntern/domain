@@ -1,9 +1,16 @@
 package za.ac.cput.domain.student;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
 public class Student {
-    private String studentId,firstName,lastName;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "student_id",nullable = false,columnDefinition = "VARCHAR(8)")
+    private String studentId;
+    private String firstName;
+    private String lastName;
     private int studyLevel;
 
     public Student(Builder builder) {
@@ -34,7 +41,7 @@ public class Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return studentId.equals(student.studentId);
+        return studentId == student.studentId;
     }
 
     @Override
@@ -42,7 +49,9 @@ public class Student {
         return Objects.hash(studentId);
     }
     public static class Builder{
-        private String studentId,firstName,lastName;
+        private String studentId;
+        private String firstName;
+        private String lastName;
         private int studyLevel;
         public Builder studentId(String id){
             this.studentId = id;

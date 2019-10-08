@@ -1,7 +1,14 @@
 package za.ac.cput.domain.request;
 
 public class NewStudent {
-    private String studentNum,firstName,lastName,addressByTown,gender,race,courseName,subjectName;
+    private String studentNum;
+    private String firstName;
+    private String lastName;
+    private String addressByTown;
+    private String gender;
+    private String race;
+    private String courseName;
+    private String subjectName;
     private int studyLevel;
 
     public NewStudent(String studentNum, String firstName, String lastName, String addressByTown, String gender, String race, String courseName, String subjectName, int studyLevel) {

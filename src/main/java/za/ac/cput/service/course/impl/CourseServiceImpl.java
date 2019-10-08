@@ -1,20 +1,23 @@
 package za.ac.cput.service.course.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.course.Course;
 import za.ac.cput.repository.course.CourseRepository;
-import za.ac.cput.repository.course.impl.CourseRepositoryImpl;
+
 import za.ac.cput.service.course.CourseService;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Service
 public class CourseServiceImpl implements CourseService {
     private static CourseService courseService = null;
+    @Autowired
     private CourseRepository courseRepository;
 
     private CourseServiceImpl(){
-        this.courseRepository = CourseRepositoryImpl.getCourseRepository();
+
     }
 
     public static CourseService getCourseService() {
@@ -23,32 +26,37 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
+    public Course getCourseByName(String courseName) {
+        return this.courseRepository.findAll().stream()
+                .filter(course -> course.getCourseName().equalsIgnoreCase(courseName))
+                .findAny()
+                .get();
+    }
+
+    @Override
     public Course create(Course course) {
-        return this.courseRepository.create(course);
+        return this.courseRepository.save(course);
     }
 
     @Override
     public Course read(String s) {
-        return this.courseRepository.read(s);
+        return this.courseRepository.getOne(s);
     }
 
     @Override
     public Course update(Course course) {
-        return this.courseRepository.update(course);
+        return this.courseRepository.save(course);
     }
 
     @Override
     public void delete(String s) {
-        this.courseRepository.delete(s);
+        this.courseRepository.deleteById(s);
     }
 
     @Override
     public Set<Course> getAll() {
-        return this.courseRepository.getAll();
-    }
-
-    @Override
-    public Course getCourseByName(String courseName) {
-        return this.courseRepository.getCourseByName(courseName);
+        Set<Course> courses = new HashSet<>();
+        courses.addAll(this.courseRepository.findAll());
+        return courses;
     }
 }

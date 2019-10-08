@@ -1,20 +1,24 @@
 package za.ac.cput.service.author.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.author.AuthorAddress;
+import za.ac.cput.domain.author.AuthorBook;
 import za.ac.cput.repository.author.AuthorAddressRepository;
-import za.ac.cput.repository.author.impl.AuthorAddressRepositoryImpl;
+
 import za.ac.cput.service.author.AuthorAddressService;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Service
 public class AuthorAddressServiceImpl implements AuthorAddressService {
     private static AuthorAddressService service = null;
+    @Autowired
     private AuthorAddressRepository repository;
 
     private AuthorAddressServiceImpl(){
-        this.repository = AuthorAddressRepositoryImpl.getRepository();
+
     }
 
     public static AuthorAddressService getService() {
@@ -22,28 +26,31 @@ public class AuthorAddressServiceImpl implements AuthorAddressService {
         return service;
     }
 
+
     @Override
     public AuthorAddress create(AuthorAddress authorAddress) {
-        return repository.create(authorAddress);
+        return this.repository.save(authorAddress);
     }
 
     @Override
     public AuthorAddress read(String s) {
-        return repository.read(s);
+        return this.repository.getOne(s);
     }
 
     @Override
     public AuthorAddress update(AuthorAddress authorAddress) {
-        return repository.update(authorAddress);
+        return this.repository.save(authorAddress);
     }
 
     @Override
     public void delete(String s) {
-        repository.delete(s);
+        this.repository.deleteById(s);
     }
 
     @Override
     public Set<AuthorAddress> getAll() {
-        return repository.getAll();
+        Set<AuthorAddress> set = new HashSet<>();
+        set.addAll(this.repository.findAll());
+        return set;
     }
 }

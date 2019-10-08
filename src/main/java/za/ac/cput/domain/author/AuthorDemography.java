@@ -1,9 +1,17 @@
 package za.ac.cput.domain.author;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class AuthorDemography {
-    private String authorEmail,raceId,genderId;
+    @Id
+    @Column(name = "author_email",nullable = false,columnDefinition = "VARCHAR(100)")
+    private String authorEmail;
+    private String raceId;
+    private String genderId;
 
     private AuthorDemography(){}
     public AuthorDemography(String authorEmail, String raceId, String genderId) {
@@ -29,7 +37,9 @@ public class AuthorDemography {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AuthorDemography that = (AuthorDemography) o;
-        return authorEmail.equals(that.authorEmail);
+        return authorEmail == that.authorEmail &&
+                raceId == that.raceId &&
+                genderId == that.genderId;
     }
 
     @Override

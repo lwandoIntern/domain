@@ -1,9 +1,16 @@
 package za.ac.cput.domain.publisher;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class PublisherAddress {
-    private String publisherId,addressId;
+    @Id
+    @Column(name = "publisher_id",nullable = false,columnDefinition = "VARCHAR(20)")
+    private String publisherId;
+    private String addressId;
 
     public PublisherAddress(String publisherId, String addressId) {
         this.publisherId = publisherId;
@@ -23,7 +30,8 @@ public class PublisherAddress {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PublisherAddress that = (PublisherAddress) o;
-        return publisherId.equals(that.publisherId);
+        return publisherId == that.publisherId &&
+                addressId == that.addressId;
     }
 
     @Override

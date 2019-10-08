@@ -1,10 +1,15 @@
 package za.ac.cput.domain.loan;
 
+import javax.persistence.*;
 import java.util.Date;
-import java.util.Objects;
 
+@Entity
 public class Borrow {
-    private String loanId,loanDesc;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "loan_id",nullable = false,columnDefinition = "VARCHAR(20)")
+    private String loanId;
+    private String loanDesc;
     private Date dateBorrowed,dateReturned;
 
     public Borrow(Builder builder) {
@@ -40,7 +45,8 @@ public class Borrow {
                 '}';
     }
     public static class Builder{
-        private String loanId,loanDesc;
+        private String loanId;
+        private String loanDesc;
         private Date dateBorrowed,dateReturned;
 
         public Builder loanId(String loanId){

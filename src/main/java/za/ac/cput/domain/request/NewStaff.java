@@ -1,7 +1,13 @@
 package za.ac.cput.domain.request;
 
 public class NewStaff {
-    private String staffNum,firstName,lastName,addressByTown,gender,race,role;
+    private String staffNum;
+    private String firstName;
+    private String lastName;
+    private String addressByTown;
+    private String gender;
+    private String race;
+    private String role;
 
     public NewStaff(String staffNum, String firstName, String lastName, String addressByTown, String gender, String race, String role) {
         this.staffNum = staffNum;

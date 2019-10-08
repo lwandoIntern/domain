@@ -1,9 +1,16 @@
 package za.ac.cput.domain.student;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class StudentCourse {
-    private String studentId,courseId;
+    @Id
+    @Column(name = "student_id",nullable = false,columnDefinition = "VARCHAR(8)")
+    private String studentId;
+    private String courseId;
 
     public StudentCourse(String studentId, String courseId) {
         this.studentId = studentId;
@@ -23,8 +30,8 @@ public class StudentCourse {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         StudentCourse that = (StudentCourse) o;
-        return studentId.equals(that.studentId) &&
-                courseId.equals(that.courseId);
+        return studentId == that.studentId &&
+                courseId == that.courseId;
     }
 
     @Override

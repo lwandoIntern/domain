@@ -1,10 +1,17 @@
 package za.ac.cput.domain.staff;
 
-import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class StaffDemography {
-    private String staffNum,genderId,raceId;
+    @Id
+    @Column(name = "staff_id",nullable = false,columnDefinition = "VARCHAR(15)")
+    private String staffNum;
+    private String genderId;
+    private String raceId;
 
     private StaffDemography(){}
     public StaffDemography(String staffNum, String genderId, String raceId) {
@@ -30,7 +37,9 @@ public class StaffDemography {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         StaffDemography that = (StaffDemography) o;
-        return staffNum.equals(that.staffNum);
+        return staffNum == that.staffNum &&
+                genderId == that.genderId &&
+                raceId == that.raceId;
     }
 
     @Override

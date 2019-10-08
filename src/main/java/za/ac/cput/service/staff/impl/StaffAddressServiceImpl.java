@@ -1,20 +1,23 @@
 package za.ac.cput.service.staff.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.staff.StaffAddress;
 import za.ac.cput.repository.staff.StaffAddressRepository;
-import za.ac.cput.repository.staff.impl.StaffAddressRepositoryImpl;
+
 import za.ac.cput.service.staff.StaffAddressService;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Service
 public class StaffAddressServiceImpl implements StaffAddressService {
     private static StaffAddressService staffAddressService = null;
+    @Autowired
     private StaffAddressRepository staffAddressRepository;
 
     private StaffAddressServiceImpl(){
-        this.staffAddressRepository = StaffAddressRepositoryImpl.getStaffAddressRepository();
+
     }
 
     public static StaffAddressService getStaffAddressService() {
@@ -22,28 +25,31 @@ public class StaffAddressServiceImpl implements StaffAddressService {
         return staffAddressService;
     }
 
+
     @Override
     public StaffAddress create(StaffAddress staffAddress) {
-        return this.staffAddressRepository.create(staffAddress);
+        return this.staffAddressRepository.save(staffAddress);
     }
 
     @Override
     public StaffAddress read(String s) {
-        return this.staffAddressRepository.read(s);
+        return this.staffAddressRepository.getOne(s);
     }
 
     @Override
     public StaffAddress update(StaffAddress staffAddress) {
-        return this.staffAddressRepository.update(staffAddress);
+        return this.staffAddressRepository.save(staffAddress);
     }
 
     @Override
     public void delete(String s) {
-        this.staffAddressRepository.delete(s);
+        this.staffAddressRepository.deleteById(s);
     }
 
     @Override
     public Set<StaffAddress> getAll() {
-        return this.staffAddressRepository.getAll();
+        Set set = new HashSet();
+        set.addAll(this.staffAddressRepository.findAll());
+        return set;
     }
 }

@@ -3,7 +3,11 @@ package za.ac.cput.domain.request;
 import java.util.Date;
 
 public class NewBook {
-    private String isbn,bookTitle,categoryName,publisherName,fullname;
+    private String isbn;
+    private String bookTitle;
+    private String categoryName;
+    private String publisherName;
+    private String fullname;
     private int editionNumber;
     private Date yearPublished;
 

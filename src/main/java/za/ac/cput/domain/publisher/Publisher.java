@@ -1,9 +1,15 @@
 package za.ac.cput.domain.publisher;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
 public class Publisher {
-    private String publisherId,name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "publisher_id",nullable = false,columnDefinition = "VARCHAR(20)")
+    private String publisherId;
+    private String name;
 
     public Publisher(Builder builder) {
         this.publisherId = builder.publisherId;
@@ -23,7 +29,7 @@ public class Publisher {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Publisher publisher = (Publisher) o;
-        return publisherId.equals(publisher.publisherId);
+        return publisherId == publisher.publisherId;
     }
 
     @Override
@@ -39,7 +45,8 @@ public class Publisher {
                 '}';
     }
     public static class Builder{
-        private String publisherId,name;
+        private String publisherId;
+        private String name;
         public Builder publisherId(String pubId){
             this.publisherId = pubId;
             return this;

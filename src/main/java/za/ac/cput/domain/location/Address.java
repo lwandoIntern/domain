@@ -1,9 +1,16 @@
 package za.ac.cput.domain.location;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
 public class Address {
-    private String addressId,town,city;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "address_id",nullable = false,columnDefinition = "VARCHAR(20)")
+    private String addressId;
+    private String town;
+    private String city;
     private int zipCode;
 
     public Address(Builder builder) {
@@ -40,7 +47,9 @@ public class Address {
                 '}';
     }
     public static class Builder{
-        private String addressId,town,city;
+        private String addressId;
+        private String town;
+        private String city;
         private int zipCode;
         public Builder addressId(String id){
             this.addressId = id;

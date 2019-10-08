@@ -1,9 +1,14 @@
 package za.ac.cput.domain.demography;
 
-import java.util.Objects;
+import javax.persistence.*;
 
+@Entity
 public class Gender {
-    private String genderId,genderDescription;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "gender_id",nullable = false,columnDefinition = "VARCHAR(20)")
+    private String genderId;
+    private String genderDescription;
 
     public Gender(Builder builder) {
         this.genderId = builder.genderId;
@@ -26,7 +31,8 @@ public class Gender {
                 '}';
     }
     public static class Builder{
-        private String genderId,genderDescription;
+        private String genderId;
+        private String genderDescription;
         public Builder genderId(String id){
             this.genderId = id;
             return this;

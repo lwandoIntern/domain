@@ -1,9 +1,15 @@
 package za.ac.cput.domain.books;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
 public class Category {
-    private String categoryId,categoryName;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "isbn_number",nullable = false,columnDefinition = "VARCHAR(20)")
+    private String categoryId;
+    private String categoryName;
     private int numOfBooksInCategory;
 
     public Category(Builder builder) {
@@ -32,7 +38,8 @@ public class Category {
     }
 
     public static class Builder{
-        private String categoryId,categoryName;
+        private String categoryId;
+        private String categoryName;
         private int numOfBooksInCategory;
         public Builder categoryId(String id){
             this.categoryId = id;

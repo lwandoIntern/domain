@@ -62,7 +62,8 @@ public class AuthorController {
      * @param author
      * @return an Author object, accepts a NewAuthor object: which contains gender,address,race,book
      */
-    @PostMapping(value = "/create",consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/create/{email}/{firstName}/{lastName}/{gender}/{race}/{address}/{book}/{numberOfBooks}",consumes = MediaType.APPLICATION_JSON_VALUE,method = RequestMethod.GET)
+    @ResponseBody
     public ResponseEntity create(@RequestBody NewAuthor author){
         System.out.println(author);
         ResponseObject responseObject = ResponseObjectFactory.buildGenericResponseObject(HttpStatus.OK.toString(),
@@ -99,7 +100,8 @@ public class AuthorController {
      * @return a Response entity: that is if successful a NewAuthor object(an Author object with gender, race, address and books written)
      *
      */
-    @GetMapping(value = "/read")
+    @RequestMapping(value = "/read",method = RequestMethod.GET)
+    @ResponseBody
     public ResponseEntity read(@PathVariable String email){
         ResponseObject responseObject = ResponseObjectFactory.buildGenericResponseObject(HttpStatus.OK.toString(),"Author retrieved");
         if (findNewAuthor(email) == null || email ==null){
@@ -137,7 +139,8 @@ public class AuthorController {
      * @param newAuthor
      * @return an update Author
      */
-    @PutMapping("/update")
+    @RequestMapping(value = "/update",method = RequestMethod.GET)
+    @ResponseBody
     public ResponseEntity update(@RequestBody NewAuthor newAuthor){
         ResponseObject responseObject = ResponseObjectFactory.buildGenericResponseObject(HttpStatus.OK.toString(),"updating author!");
         NewAuthor toDelete = findNewAuthor(newAuthor.getAuthorEmail());
@@ -157,7 +160,7 @@ public class AuthorController {
      * DELETE METHOD
      * @param email
      */
-    @DeleteMapping("/delete")
+    @RequestMapping(value = "/delete")
     public void delete(String email){
         NewAuthor newAuthor = findNewAuthor(email);
         this.newAuthors.remove(newAuthor);
@@ -168,7 +171,7 @@ public class AuthorController {
      *
      * @return authors
      */
-    @GetMapping("/getAll")
+    @RequestMapping(value = "/getAll",method = RequestMethod.GET)
     public Set<NewAuthor> getAll(){
         return this.newAuthors;
     }

@@ -7,7 +7,13 @@ package za.ac.cput.domain.request;
  *
  */
 public class NewAuthor {
-    private String authorEmail,firstName,lastName,gender,race,address,book;
+    private String authorEmail;
+    private String firstName;
+    private String lastName;
+    private String gender;
+    private String race;
+    private String address;
+    private String book;
     private int numOfBooks;
 
     public NewAuthor(String authorEmail, String firstName, String lastName, String gender, String race, String address, String book, int numOfBooks) {

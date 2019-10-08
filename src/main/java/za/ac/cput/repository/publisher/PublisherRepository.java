@@ -1,8 +1,10 @@
 package za.ac.cput.repository.publisher;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.publisher.Publisher;
-import za.ac.cput.repository.IRepository;
 
-public interface PublisherRepository extends IRepository<Publisher,String> {
-    Publisher getByName(String name);
+@Repository
+public interface PublisherRepository extends JpaRepository<Publisher,String> {
+
 }

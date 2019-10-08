@@ -1,9 +1,15 @@
 package za.ac.cput.domain.staff;
 
+import javax.persistence.*;
 import java.util.Objects;
-
+@Entity
 public class Staff {
-    private String staffNum,name,surname;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "staff_id",nullable = false,columnDefinition = "VARCHAR(15)")
+    private String staffNum;
+    private String name;
+    private String surname;
 
     public Staff(Builder builder) {
         this.staffNum = builder.staffNum;
@@ -28,7 +34,7 @@ public class Staff {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Staff staff = (Staff) o;
-        return staffNum.equals(staff.staffNum);
+        return staffNum == staff.staffNum;
     }
 
     @Override
@@ -45,7 +51,9 @@ public class Staff {
                 '}';
     }
     public static class Builder{
-        private String staffNum,name,surname;
+        private String staffNum;
+        private String name;
+        private String surname;
         public Builder staffNum(String staffId){
             this.staffNum = staffId;
             return this;

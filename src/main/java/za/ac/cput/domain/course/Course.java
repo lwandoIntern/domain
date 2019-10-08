@@ -1,9 +1,15 @@
 package za.ac.cput.domain.course;
 
-import java.util.Objects;
+import javax.persistence.*;
 
+@Entity
 public class Course {
-    private String courseId,courseName,courseType;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "course_id",nullable = false,columnDefinition = "VARCHAR(20)")
+    private String courseId;
+    private String courseName;
+    private String courseType;
     private int duration,numOfSubjects;
 
     public Course(Builder builder) {
@@ -45,7 +51,9 @@ public class Course {
                 '}';
     }
     public static class Builder{
-        private String courseId,courseName,courseType;
+        private String courseId;
+        private String courseName;
+        private String courseType;
         private int duration,numOfSubjects;
 
         public Builder courseId(String id){

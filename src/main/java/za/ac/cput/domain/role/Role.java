@@ -1,9 +1,15 @@
 package za.ac.cput.domain.role;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
 public class Role {
-    private String roleId,roleType;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "roles_id",nullable = false,columnDefinition = "VARCHAR(20)")
+    private String roleId;
+    private String roleType;
 
     public Role(Builder builder) {
         this.roleId = builder.roleId;
@@ -23,7 +29,7 @@ public class Role {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Role role = (Role) o;
-        return roleId.equals(role.roleId);
+        return roleId == role.roleId;
     }
 
     @Override
@@ -31,7 +37,8 @@ public class Role {
         return Objects.hash(roleId);
     }
     public static class Builder{
-        private String roleId,roleType;
+        private String roleId;
+        private String roleType;
 
         public Builder roleId(String id){
             this.roleId = id;

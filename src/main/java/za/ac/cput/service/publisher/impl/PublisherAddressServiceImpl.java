@@ -1,20 +1,23 @@
 package za.ac.cput.service.publisher.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.publisher.PublisherAddress;
 import za.ac.cput.repository.publisher.PublisherAddressRepository;
-import za.ac.cput.repository.publisher.impl.PublisherAddressRepositoryImpl;
+
 import za.ac.cput.service.publisher.PublisherAddressService;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Service
 public class PublisherAddressServiceImpl implements PublisherAddressService {
     private static PublisherAddressService publisherAddressService = null;
+    @Autowired
     private PublisherAddressRepository publisherAddressRepository;
 
     private PublisherAddressServiceImpl(){
-        this.publisherAddressRepository = PublisherAddressRepositoryImpl.getPublisherAddressRepository();
+
     }
 
     public static PublisherAddressService getPublisherAddressService() {
@@ -24,26 +27,28 @@ public class PublisherAddressServiceImpl implements PublisherAddressService {
 
     @Override
     public PublisherAddress create(PublisherAddress publisherAddress) {
-        return publisherAddressRepository.create(publisherAddress);
+        return this.publisherAddressRepository.save(publisherAddress);
     }
 
     @Override
     public PublisherAddress read(String s) {
-        return this.publisherAddressRepository.read(s);
+        return this.publisherAddressRepository.getOne(s);
     }
 
     @Override
     public PublisherAddress update(PublisherAddress publisherAddress) {
-        return this.publisherAddressRepository.update(publisherAddress);
+        return this.publisherAddressRepository.save(publisherAddress);
     }
 
     @Override
     public void delete(String s) {
-        this.publisherAddressRepository.delete(s);
+        this.publisherAddressRepository.deleteById(s);
     }
 
     @Override
     public Set<PublisherAddress> getAll() {
-        return this.publisherAddressRepository.getAll();
+        Set set = new HashSet();
+        set.addAll(this.publisherAddressRepository.findAll());
+        return set;
     }
 }

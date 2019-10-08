@@ -1,9 +1,17 @@
 package za.ac.cput.domain.subject;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
 public class Subject {
-    private String subjectId,subjectName,priority,prerequisite;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "subject_id",nullable = false,columnDefinition = "VARCHAR(8)")
+    private String subjectId;
+    private String subjectName;
+    private String priority;
+    private String prerequisite;
     private int duration;
 
     public Subject(Builder builder) {
@@ -39,7 +47,7 @@ public class Subject {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Subject subject = (Subject) o;
-        return subjectId.equals(subject.subjectId);
+        return subjectId == subject.subjectId;
     }
 
     @Override
@@ -58,7 +66,10 @@ public class Subject {
                 '}';
     }
     public static class Builder{
-        private String subjectId,subjectName,priority,prerequisite;
+        private String subjectId;
+        private String subjectName;
+        private String priority;
+        private String prerequisite;
         private int duration;
         public Builder subjectId(String id){
             this.subjectId = id;

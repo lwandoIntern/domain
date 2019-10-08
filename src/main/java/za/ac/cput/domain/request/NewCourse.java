@@ -1,7 +1,10 @@
 package za.ac.cput.domain.request;
 
 public class NewCourse {
-    private String courseId,courseName,courseType,subjectName;
+    private String courseId;
+    private String courseName;
+    private String courseType;
+    private String subjectName;
     private int duration;
     private int numberOfSubjects;
 

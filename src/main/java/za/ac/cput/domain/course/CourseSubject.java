@@ -1,9 +1,18 @@
 package za.ac.cput.domain.course;
 
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class CourseSubject {
-    private String courseId,subjectId;
+    @Id
+    @Column(name = "course_id",nullable = false,columnDefinition = "VARCHAR(20)")
+    private String courseId;
+    private String subjectId;
 
     public CourseSubject(String courseId, String subjectId) {
         this.courseId = courseId;
@@ -23,8 +32,8 @@ public class CourseSubject {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CourseSubject that = (CourseSubject) o;
-        return courseId.equals(that.courseId) &&
-                subjectId.equals(that.subjectId);
+        return courseId == that.courseId &&
+                subjectId == that.subjectId;
     }
 
     @Override

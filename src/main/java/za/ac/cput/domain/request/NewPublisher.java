@@ -1,19 +1,21 @@
 package za.ac.cput.domain.request;
 
 public class NewPublisher {
-    private String publisherId,publisherName,publisherAddress;
+    private int publisherId;
+    private String publisherName;
+    private String publisherAddress;
 
-    public NewPublisher(String publisherId, String publisherName, String publisherAddress) {
+    public NewPublisher(int publisherId, String publisherName, String publisherAddress) {
         this.publisherId = publisherId;
         this.publisherName = publisherName;
         this.publisherAddress = publisherAddress;
     }
 
-    public String getPublisherId() {
+    public int getPublisherId() {
         return publisherId;
     }
 
-    public void setPublisherId(String publisherId) {
+    public void setPublisherId(int publisherId) {
         this.publisherId = publisherId;
     }
 

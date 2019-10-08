@@ -1,21 +1,24 @@
 package za.ac.cput.service.books.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.books.BookPublisher;
 import za.ac.cput.repository.books.BookPublisherRepository;
-import za.ac.cput.repository.books.impl.BookPublisherRepositoryImpl;
+
 import za.ac.cput.service.books.BookPublisherService;
 
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Service
 public class BookPublisherServiceImpl implements BookPublisherService {
     private static BookPublisherService bookPublisherService = null;
-    private BookPublisherRepository bookPublishers;
+    @Autowired
+    private BookPublisherRepository repository;
 
     private BookPublisherServiceImpl(){
-        this.bookPublishers = BookPublisherRepositoryImpl.getBookPublisherRepository();
+
     }
 
     public static BookPublisherService getBookPublisherService() {
@@ -26,26 +29,28 @@ public class BookPublisherServiceImpl implements BookPublisherService {
 
     @Override
     public BookPublisher create(BookPublisher bookPublisher) {
-        return this.bookPublishers.create(bookPublisher);
+        return this.repository.save(bookPublisher);
     }
 
     @Override
     public BookPublisher read(String s) {
-        return this.bookPublishers.read(s);
+        return this.repository.getOne(s);
     }
 
     @Override
     public BookPublisher update(BookPublisher bookPublisher) {
-        return this.bookPublishers.update(bookPublisher);
+        return this.repository.save(bookPublisher);
     }
 
     @Override
     public void delete(String s) {
-         this.bookPublishers.delete(s);
+        this.repository.deleteById(s);
     }
 
     @Override
     public Set<BookPublisher> getAll() {
-        return this.bookPublishers.getAll();
+        Set<BookPublisher> bookPublishersSet = new HashSet<>();
+        bookPublishersSet.addAll(this.repository.findAll());
+        return bookPublishersSet;
     }
 }

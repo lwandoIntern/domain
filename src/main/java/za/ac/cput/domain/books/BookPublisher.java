@@ -1,9 +1,16 @@
 package za.ac.cput.domain.books;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class BookPublisher {
-    private String isbn,publisherId;
+    @Id
+    @Column(name = "isbn_number",nullable = false,columnDefinition = "VARCHAR(20)")
+    private String isbn;
+    private String publisherId;
 
     public BookPublisher(String isbn, String publisherId) {
         this.isbn = isbn;
@@ -23,8 +30,8 @@ public class BookPublisher {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         BookPublisher that = (BookPublisher) o;
-        return isbn.equals(that.isbn) &&
-                publisherId.equals(that.publisherId);
+        return isbn == that.isbn &&
+                publisherId == that.publisherId;
     }
 
     @Override

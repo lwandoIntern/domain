@@ -1,9 +1,14 @@
 package za.ac.cput.domain.demography;
 
-import java.util.Objects;
+import javax.persistence.*;
 
+@Entity
 public class Race {
-    private String raceId,raceDescription;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "race_id",nullable = false,columnDefinition = "VARCHAR(20)")
+    private String raceId;
+    private String raceDescription;
 
     public Race(Builder builder) {
         this.raceId = builder.raceId;
@@ -26,7 +31,8 @@ public class Race {
                 '}';
     }
     public static class Builder{
-        private String raceId,raceDescription;
+        private String raceId;
+        private String raceDescription;
         public Builder raceId(String id){
             this.raceId = id;
             return this;

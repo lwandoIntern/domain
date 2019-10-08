@@ -1,9 +1,16 @@
 package za.ac.cput.domain.staff;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class StaffAddress {
-    private String staffNum,addressId;
+    @Id
+    @Column(name = "staff_id",nullable = false,columnDefinition = "VARCHAR(15)")
+    private String staffNum;
+    private String addressId;
 
     public StaffAddress(String staffNum, String addressId) {
         this.staffNum = staffNum;
@@ -23,8 +30,8 @@ public class StaffAddress {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         StaffAddress that = (StaffAddress) o;
-        return staffNum.equals(that.staffNum) &&
-                addressId.equals(that.addressId);
+        return staffNum == that.staffNum &&
+                addressId == that.addressId;
     }
 
     @Override
