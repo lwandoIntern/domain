@@ -79,6 +79,7 @@ public class StaffController {
         }
         return ResponseEntity.ok(responseObject);
     }
+
     private Staff saveStaff(NewStaff newStaff){
         return staffService.create(StaffFactory.createStaff(newStaff.getFirstName(),newStaff.getLastName()));
     }

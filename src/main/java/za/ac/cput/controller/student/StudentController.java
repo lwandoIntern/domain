@@ -22,6 +22,7 @@ import za.ac.cput.service.location.impl.AddressServiceImpl;
 import za.ac.cput.service.student.impl.*;
 import za.ac.cput.service.subject.impl.SubjectServiceImpl;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @RestController
@@ -48,8 +49,8 @@ public class StudentController {
     @Autowired
     StudentDemographyServiceImpl studentDemographyService;
 
-    @PostMapping(value = "/create",consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity createStudent(@RequestBody NewStudent newStudent){
+    @RequestMapping(value = "/create",consumes = MediaType.APPLICATION_JSON_VALUE,method = RequestMethod.GET)
+    public @ResponseBody ResponseEntity createStudent(@RequestBody NewStudent newStudent){
         System.out.println(newStudent);
         ResponseObject responseObject = ResponseObjectFactory.buildGenericResponseObject(HttpStatus.OK.toString(),"Student created");
         if (newStudent.getFirstName() == null || newStudent.getLastName() == null || newStudent.getStudyLevel() <=0){
@@ -78,6 +79,30 @@ public class StudentController {
             }
         }
         return ResponseEntity.ok(responseObject);
+    }
+
+    @RequestMapping(value = "/read",method = RequestMethod.GET)
+    public @ResponseBody ResponseEntity read(@PathVariable String id){
+        return ResponseEntity.ok(studentService.read(id));
+    }
+
+    @RequestMapping(value = "/update",method = RequestMethod.GET)
+    public @ResponseBody ResponseEntity update(@RequestBody NewStudent newStudent){
+        return ResponseEntity.ok(newStudent);
+    }
+
+    @RequestMapping(value = "/delete")
+    public void delete(@PathVariable String id){
+
+    }
+
+    @RequestMapping(value = "/getAll",method = RequestMethod.GET)
+    public @ResponseBody Set<ResponseEntity> getAll(){
+        Set<ResponseEntity> responseEntities = new HashSet<>();
+        for (Student student: studentService.getAll()){
+            responseEntities.add(ResponseEntity.ok(student));
+        }
+        return responseEntities;
     }
     private Student saveStudent(NewStudent newStudent){
         return studentService.create(StudentFactory.createStudent(newStudent.getFirstName(),newStudent.getLastName(),newStudent.getStudyLevel()));

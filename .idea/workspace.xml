@@ -23,11 +23,9 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d9e7066-4dab-475d-939f-ece112913893" name="Default Changelist" comment="can create db tables automatically">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/books/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/books/BookController.java" afterDir="false" />
+    <list default="true" id="3d9e7066-4dab-475d-939f-ece112913893" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/staff/StaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/staff/StaffController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/request/NewAuthor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/request/NewAuthor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/student/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/student/StudentController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -312,7 +310,7 @@
       <workItem from="1569054243771" duration="1497000" />
       <workItem from="1569059332077" duration="670000" />
       <workItem from="1569067893597" duration="14539000" />
-      <workItem from="1570549703352" duration="2313000" />
+      <workItem from="1570549703352" duration="3391000" />
     </task>
     <task id="LOCAL-00001" summary="Updating the domain">
       <created>1555436128574</created>
@@ -524,7 +522,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570550786109</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="returned necessary logic on controllers">
+      <created>1570552283328</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1570552283328</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +549,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="errors fixed" />
     <MESSAGE value="new repositories added" />
     <MESSAGE value="Author repository tested successfully" />
     <MESSAGE value="all repositories implemented and tested successfully" />
@@ -569,7 +573,8 @@
     <MESSAGE value="updated controllers" />
     <MESSAGE value="subject update" />
     <MESSAGE value="can create db tables automatically" />
-    <option name="LAST_COMMIT_MESSAGE" value="can create db tables automatically" />
+    <MESSAGE value="returned necessary logic on controllers" />
+    <option name="LAST_COMMIT_MESSAGE" value="returned necessary logic on controllers" />
   </component>
   <component name="masterDetails">
     <states>
